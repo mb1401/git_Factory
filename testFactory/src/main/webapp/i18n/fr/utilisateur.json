@@ -1,0 +1,33 @@
+
+{
+    "testJhypsterApp": {
+        "utilisateur" : {
+            "home": {
+                "title": "Utilisateurs",
+                "createLabel": "Créer un nouveau Utilisateur",
+                "createOrEditLabel": "Créer ou éditer un Utilisateur"
+            },
+            "created": "Un nouveau Utilisateur a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Utilisateur avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Utilisateur avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Utilisateur {{ id }} ?"
+            },
+            "detail": {
+                "title": "Utilisateur"
+            },
+            "nom": "Nom",
+            "prenom": "Prenom",
+            "numeroRue": "Numero Rue",
+            "rue": "Rue",
+            "codePostal": "Code Postal",
+            "ville": "Ville",
+            "pays": "Pays",
+            "mail": "Mail",
+            "numeroTel": "Numero Tel",
+            "username": "Username",
+            "password": "Password",
+            "enable": "Enable"
+        }
+    }
+}

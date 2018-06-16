@@ -1,0 +1,85 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myUtilisateurLabel" jhiTranslate="testJhypsterApp.utilisateur.home.createOrEditLabel">Create or edit a Utilisateur</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!utilisateur.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="utilisateur.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.nom" for="field_nom">Nom</label>
+            <input type="text" class="form-control" name="nom" id="field_nom"
+                [(ngModel)]="utilisateur.nom" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.prenom" for="field_prenom">Prenom</label>
+            <input type="text" class="form-control" name="prenom" id="field_prenom"
+                [(ngModel)]="utilisateur.prenom" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.numeroRue" for="field_numeroRue">Numero Rue</label>
+            <input type="text" class="form-control" name="numeroRue" id="field_numeroRue"
+                [(ngModel)]="utilisateur.numeroRue" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.rue" for="field_rue">Rue</label>
+            <input type="text" class="form-control" name="rue" id="field_rue"
+                [(ngModel)]="utilisateur.rue" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.codePostal" for="field_codePostal">Code Postal</label>
+            <input type="text" class="form-control" name="codePostal" id="field_codePostal"
+                [(ngModel)]="utilisateur.codePostal" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.ville" for="field_ville">Ville</label>
+            <input type="text" class="form-control" name="ville" id="field_ville"
+                [(ngModel)]="utilisateur.ville" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.pays" for="field_pays">Pays</label>
+            <input type="text" class="form-control" name="pays" id="field_pays"
+                [(ngModel)]="utilisateur.pays" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.mail" for="field_mail">Mail</label>
+            <input type="text" class="form-control" name="mail" id="field_mail"
+                [(ngModel)]="utilisateur.mail" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.numeroTel" for="field_numeroTel">Numero Tel</label>
+            <input type="text" class="form-control" name="numeroTel" id="field_numeroTel"
+                [(ngModel)]="utilisateur.numeroTel" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.username" for="field_username">Username</label>
+            <input type="text" class="form-control" name="username" id="field_username"
+                [(ngModel)]="utilisateur.username" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.password" for="field_password">Password</label>
+            <input type="text" class="form-control" name="password" id="field_password"
+                [(ngModel)]="utilisateur.password" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="testJhypsterApp.utilisateur.enable" for="field_enable">Enable</label>
+            <input type="checkbox" class="form-control" name="enable" id="field_enable"
+                [(ngModel)]="utilisateur.enable" />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

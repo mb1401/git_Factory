@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Formation.
+    -->
+    <changeSet id="20180616083555-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="formations_id"
+                                 baseTableName="formation_formateur"
+                                 constraintName="fk_formation_formateur_formations_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="formation"/>
+        <addForeignKeyConstraint baseColumnNames="formateurs_id"
+                                 baseTableName="formation_formateur"
+                                 constraintName="fk_formation_formateur_formateurs_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="formateur"/>
+        
+        <addForeignKeyConstraint baseColumnNames="gestionnaire_id"
+                                 baseTableName="formation"
+                                 constraintName="fk_formation_gestionnaire_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="gestionnaire"/>
+
+    </changeSet>
+</databaseChangeLog>

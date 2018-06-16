@@ -1,0 +1,10 @@
+{
+    "testJhypsterApp": {
+        "Niveau" : {
+            "null": "",
+            "FACILE": "FACILE",
+            "MOYEN": "MOYEN",
+            "DIFFICILE": "DIFFICILE"
+        }
+    }
+}

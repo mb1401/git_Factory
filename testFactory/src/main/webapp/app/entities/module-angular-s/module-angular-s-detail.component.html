@@ -1,0 +1,76 @@
+
+<div *ngIf="module">
+    <h2><span jhiTranslate="testJhypsterApp.module.detail.title">Module</span> {{module.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="testJhypsterApp.module.tire">Tire</span></dt>
+        <dd>
+            <span>{{module.tire}}</span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.contenu">Contenu</span></dt>
+        <dd>
+            <span>{{module.contenu}}</span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.objectif">Objectif</span></dt>
+        <dd>
+            <span>{{module.objectif}}</span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.niveau">Niveau</span></dt>
+        <dd>
+            <span jhiTranslate="{{'testJhypsterApp.Niveau.' + module.niveau}}">{{module.niveau}}</span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.dateDebut">Date Debut</span></dt>
+        <dd>
+            <span>{{module.dateDebut | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.dateFin">Date Fin</span></dt>
+        <dd>
+            <span>{{module.dateFin | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.formation">Formation</span></dt>
+        <dd>
+            <div *ngIf="module.formationId">
+                <a [routerLink]="['/formation-angular-s', module.formationId]">{{module.formationId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.formateur">Formateur</span></dt>
+        <dd>
+            <div *ngIf="module.formateurId">
+                <a [routerLink]="['/formateur-angular-s', module.formateurId]">{{module.formateurId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.matiere">Matiere</span></dt>
+        <dd>
+            <div *ngIf="module.matiereId">
+                <a [routerLink]="['/matiere-angular-s', module.matiereId]">{{module.matiereId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.salle">Salle</span></dt>
+        <dd>
+            <div *ngIf="module.salleId">
+                <a [routerLink]="['/salle-angular-s', module.salleId]">{{module.salleId}}</a>
+            </div>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.module.videoProjecteur">Video Projecteur</span></dt>
+        <dd>
+            <div *ngIf="module.videoProjecteurId">
+                <a [routerLink]="['/video-projecteur-angular-s', module.videoProjecteurId]">{{module.videoProjecteurId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'module-angular-s/'+ module.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

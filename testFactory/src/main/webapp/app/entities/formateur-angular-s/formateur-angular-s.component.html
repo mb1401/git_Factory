@@ -1,0 +1,86 @@
+<div>
+    <h2>
+        <span jhiTranslate="testJhypsterApp.formateur.home.title">Formateurs</span>
+        <button class="btn btn-primary float-right jh-create-entity create-formateur-angular-s" [routerLink]="['/', { outlets: { popup: ['formateur-angular-s-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="testJhypsterApp.formateur.home.createLabel">
+            Create new Formateur
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="formateurs">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.nom">Nom</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.prenom">Prenom</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.numeroRue">Numero Rue</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.rue">Rue</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.codePostal">Code Postal</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.ville">Ville</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.pays">Pays</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.mail">Mail</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.numeroTel">Numero Tel</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.username">Username</span></th>
+                <th><span jhiTranslate="testJhypsterApp.utilisateur.password">Password</span></th>
+            <th></th>
+            </tr>
+            <tr>
+                <th><span jhiTranslate="global.field.nom">ID</span></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th><span jhiTranslate="global.field.prenom">ID</span></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let formateur of formateurs ;trackBy: trackId">
+                <td><a [routerLink]="['../formateur-angular-s', formateur.id ]">{{formateur.id}}</a></td>
+                <td>{{formateur.nom}}</td>
+                <td>{{formateur.prenom}}</td>
+                <td>{{formateur.numeroRue}}</td>
+                <td>{{formateur.rue}}</td>
+                <td>{{formateur.codePostal}}</td>
+                <td>{{formateur.ville}}</td>
+                <td>{{formateur.pays}}</td>
+                <td>{{formateur.mail}}</td>
+                <td>{{formateur.numeroTel}}</td>
+                <td>{{formateur.username}}</td>
+                <td>{{formateur.password}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../formateur-angular-s', formateur.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'formateur-angular-s/'+ formateur.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'formateur-angular-s/'+ formateur.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

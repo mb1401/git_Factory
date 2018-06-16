@@ -1,0 +1,17 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "cout",
+            "fieldType": "Float"
+        }
+    ],
+    "changelogDate": "20180616083551",
+    "entityTableName": "ressource",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "angularS"
+}

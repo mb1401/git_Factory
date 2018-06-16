@@ -1,0 +1,46 @@
+
+<div *ngIf="formation">
+    <h2><span jhiTranslate="testJhypsterApp.formation.detail.title">Formation</span> {{formation.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="testJhypsterApp.formation.dateDebut">Date Debut</span></dt>
+        <dd>
+            <span>{{formation.dateDebut | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.formation.dateFin">Date Fin</span></dt>
+        <dd>
+            <span>{{formation.dateFin | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.formation.description">Description</span></dt>
+        <dd>
+            <span>{{formation.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.formation.formateur">Formateur</span></dt>
+        <dd>
+            <span *ngFor="let formateur of formation.formateurs; let last = last">
+                <a [routerLink]="['/formateur-angular-s', formateur?.id ]">{{formateur.id}}</a>{{last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span jhiTranslate="testJhypsterApp.formation.gestionnaire">Gestionnaire</span></dt>
+        <dd>
+            <div *ngIf="formation.gestionnaireId">
+                <a [routerLink]="['/gestionnaire-angular-s', formation.gestionnaireId]">{{formation.gestionnaireId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'formation-angular-s/'+ formation.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

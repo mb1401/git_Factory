@@ -1,0 +1,24 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "module",
+            "otherEntityName": "module",
+            "otherEntityRelationshipName": "salle"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "capacite",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20180616083554",
+    "entityTableName": "salle",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "angularS"
+}
