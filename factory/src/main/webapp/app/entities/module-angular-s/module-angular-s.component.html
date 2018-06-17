@@ -1,0 +1,98 @@
+<div>
+    <h2>
+        <span jhiTranslate="factoryApp.module.home.title">Modules</span>
+        <button class="btn btn-primary float-right jh-create-entity create-module-angular-s" [routerLink]="['/', { outlets: { popup: ['module-angular-s-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="factoryApp.module.home.createLabel">
+            Create new Module
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="modules">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="factoryApp.module.tire">Tire</span></th>
+            <th><span jhiTranslate="factoryApp.module.contenu">Contenu</span></th>
+            <th><span jhiTranslate="factoryApp.module.objectif">Objectif</span></th>
+            <th><span jhiTranslate="factoryApp.module.niveau">Niveau</span></th>
+            <th><span jhiTranslate="factoryApp.module.dateDebut">Date Debut</span></th>
+            <th><span jhiTranslate="factoryApp.module.dateFin">Date Fin</span></th>
+            <th><span jhiTranslate="factoryApp.module.formation">Formation</span></th>
+            <th><span jhiTranslate="factoryApp.module.formateur">Formateur</span></th>
+            <th><span jhiTranslate="factoryApp.module.matiere">Matiere</span></th>
+            <th><span jhiTranslate="factoryApp.module.salle">Salle</span></th>
+            <th><span jhiTranslate="factoryApp.module.videoProjecteur">Video Projecteur</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let module of modules ;trackBy: trackId">
+                <td><a [routerLink]="['../module-angular-s', module.id ]">{{module.id}}</a></td>
+                <td>{{module.tire}}</td>
+                <td>{{module.contenu}}</td>
+                <td>{{module.objectif}}</td>
+                <td jhiTranslate="{{'factoryApp.Niveau.' + module.niveau}}">{{module.niveau}}</td>
+                <td>{{module.dateDebut | date:'mediumDate'}}</td>
+                <td>{{module.dateFin | date:'mediumDate'}}</td>
+                <td>
+                    <div *ngIf="module.formationId">
+                        <a [routerLink]="['../formation-angular-s', module.formationId  ]" >{{module.formationId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="module.formateurId">
+                        <a [routerLink]="['../formateur-angular-s', module.formateurId  ]" >{{module.formateurId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="module.matiereId">
+                        <a [routerLink]="['../matiere-angular-s', module.matiereId  ]" >{{module.matiereId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="module.salleId">
+                        <a [routerLink]="['../salle-angular-s', module.salleId  ]" >{{module.salleId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="module.videoProjecteurId">
+                        <a [routerLink]="['../video-projecteur-angular-s', module.videoProjecteurId  ]" >{{module.videoProjecteurId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../module-angular-s', module.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'module-angular-s/'+ module.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'module-angular-s/'+ module.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

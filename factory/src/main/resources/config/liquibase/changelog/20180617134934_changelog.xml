@@ -1,0 +1,121 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="Matthieu (generated)" id="1529243407135-1">
+        <addColumn tableName="ressource">
+            <column name="capacite" type="int4"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-2">
+        <addColumn tableName="ressource">
+            <column name="date_achat" type="bytea"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-3">
+        <addColumn tableName="utilisateur">
+            <column name="formation_id" type="int8"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-4">
+        <addColumn tableName="utilisateur">
+            <column name="ordinateur_id" type="int8"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-5">
+        <addColumn tableName="ressource">
+            <column name="processeur" type="varchar(255)"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-6">
+        <addColumn tableName="ressource">
+            <column name="quantite_dd" type="int4"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-7">
+        <addColumn tableName="ressource">
+            <column name="ram" type="int4"/>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-8">
+        <addColumn tableName="ressource">
+            <column name="type" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-9">
+        <addColumn tableName="utilisateur">
+            <column name="type" type="varchar(20)">
+                <constraints nullable="false"/>
+            </column>
+        </addColumn>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-10">
+        <addForeignKeyConstraint baseColumnNames="gestionnaire_id" baseTableName="formation" constraintName="FKacwjjyegrt7dfqpu77ssfd95v" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="utilisateur"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-11">
+        <addForeignKeyConstraint baseColumnNames="formateur_id" baseTableName="module" constraintName="FKawu2u40n3nkwu23ekv195ey2o" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="utilisateur"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-12">
+        <addForeignKeyConstraint baseColumnNames="video_projecteur_id" baseTableName="module" constraintName="FKcc7jg2u564dbdl688v8es4a92" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="ressource"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-13">
+        <addForeignKeyConstraint baseColumnNames="ordinateur_id" baseTableName="utilisateur" constraintName="FKhit92afmx3rg1icu11b7tm5p4" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="ressource"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-14">
+        <addForeignKeyConstraint baseColumnNames="salle_id" baseTableName="module" constraintName="FKi1bcjbn0m1ddagf914dfgsxvn" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="ressource"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-15">
+        <addForeignKeyConstraint baseColumnNames="formation_id" baseTableName="utilisateur" constraintName="FKivnrv8jb5qfclw0my2cta6hqq" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="formation"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-16">
+        <addForeignKeyConstraint baseColumnNames="formateur_id" baseTableName="formation" constraintName="FKjwt02vcwv7yykxm00oxdpwjps" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="utilisateur"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-17">
+        <addForeignKeyConstraint baseColumnNames="formateurs_id" baseTableName="matiere_formateur" constraintName="FKqm8u6eqwva6klrvw3w889m52j" deferrable="false" initiallyDeferred="false" referencedColumnNames="id" referencedTableName="utilisateur"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-18">
+        <dropForeignKeyConstraint baseTableName="formation" constraintName="fk_formation_formateur_id"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-19">
+        <dropForeignKeyConstraint baseTableName="formation" constraintName="fk_formation_gestionnaire_id"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-20">
+        <dropForeignKeyConstraint baseTableName="matiere_formateur" constraintName="fk_matiere_formateur_formateurs_id"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-21">
+        <dropForeignKeyConstraint baseTableName="module" constraintName="fk_module_formateur_id"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-22">
+        <dropForeignKeyConstraint baseTableName="module" constraintName="fk_module_salle_id"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-23">
+        <dropForeignKeyConstraint baseTableName="module" constraintName="fk_module_video_projecteur_id"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-24">
+        <dropForeignKeyConstraint baseTableName="stagiaire" constraintName="fk_stagiaire_formation_id"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-25">
+        <dropForeignKeyConstraint baseTableName="stagiaire" constraintName="fk_stagiaire_ordinateur_id"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-26">
+        <dropTable tableName="formateur"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-27">
+        <dropTable tableName="gestionnaire"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-28">
+        <dropTable tableName="ordinateur"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-29">
+        <dropTable tableName="salle"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-30">
+        <dropTable tableName="stagiaire"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-31">
+        <dropTable tableName="technicien"/>
+    </changeSet>
+    <changeSet author="Matthieu (generated)" id="1529243407135-32">
+        <dropTable tableName="video_projecteur"/>
+    </changeSet>
+</databaseChangeLog>

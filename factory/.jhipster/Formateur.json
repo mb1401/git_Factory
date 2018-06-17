@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "formation",
+            "otherEntityName": "formation",
+            "otherEntityRelationshipName": "formateur"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "module",
+            "otherEntityName": "module",
+            "otherEntityRelationshipName": "formateur"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "relationshipName": "matiere",
+            "otherEntityName": "matiere",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "formateur"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20180617132803",
+    "entityTableName": "formateur",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "angularS"
+}

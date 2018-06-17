@@ -1,0 +1,37 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "stagiaire",
+            "otherEntityName": "stagiaire",
+            "otherEntityRelationshipName": "ordinateur"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "processeur",
+            "fieldType": "Processeur",
+            "fieldValues": "P1,P2,P3"
+        },
+        {
+            "fieldName": "ram",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "quantiteDD",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "dateAchat",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180617132754",
+    "entityTableName": "ordinateur",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "angularS"
+}

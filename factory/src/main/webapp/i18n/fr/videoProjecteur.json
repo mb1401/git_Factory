@@ -1,0 +1,22 @@
+
+{
+    "factoryApp": {
+        "videoProjecteur" : {
+            "home": {
+                "title": "VideoProjecteurs",
+                "createLabel": "Créer un nouveau Video Projecteur",
+                "createOrEditLabel": "Créer ou éditer un Video Projecteur"
+            },
+            "created": "Un nouveau Video Projecteur a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Video Projecteur avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Video Projecteur avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Video Projecteur {{ id }} ?"
+            },
+            "detail": {
+                "title": "Video Projecteur"
+            },
+            "module": "Module"
+        }
+    }
+}

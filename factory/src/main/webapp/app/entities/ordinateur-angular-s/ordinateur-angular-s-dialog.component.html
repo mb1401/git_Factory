@@ -1,0 +1,53 @@
+<form name="editForm" role="form" novalidate (ngSubmit)="save()" #editForm="ngForm">
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myOrdinateurLabel" jhiTranslate="factoryApp.ordinateur.home.createOrEditLabel">Create or edit a Ordinateur</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                (click)="clear()">&times;</button>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" [hidden]="!ordinateur.id">
+            <label for="id" jhiTranslate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   [(ngModel)]="ordinateur.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="factoryApp.ordinateur.processeur" for="field_processeur">Processeur</label>
+            <select class="form-control" name="processeur" [(ngModel)]="ordinateur.processeur" id="field_processeur" >
+                <option value="P1">{{'factoryApp.Processeur.P1' | translate}}</option>
+                <option value="P2">{{'factoryApp.Processeur.P2' | translate}}</option>
+                <option value="P3">{{'factoryApp.Processeur.P3' | translate}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="factoryApp.ordinateur.ram" for="field_ram">Ram</label>
+            <input type="number" class="form-control" name="ram" id="field_ram"
+                [(ngModel)]="ordinateur.ram" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="factoryApp.ordinateur.quantiteDD" for="field_quantiteDD">Quantite DD</label>
+            <input type="number" class="form-control" name="quantiteDD" id="field_quantiteDD"
+                [(ngModel)]="ordinateur.quantiteDD" />
+        </div>
+        <div class="form-group">
+            <label class="form-control-label" jhiTranslate="factoryApp.ordinateur.dateAchat" for="field_dateAchat">Date Achat</label>
+            <div class="input-group">
+                <input id="field_dateAchat" type="text" class="form-control" name="dateAchat" ngbDatepicker  #dateAchatDp="ngbDatepicker" [(ngModel)]="ordinateur.dateAchat"
+                />
+                <span class="input-group-append">
+                    <button type="button" class="btn btn-secondary" (click)="dateAchatDp.toggle()"><i class="fa fa-calendar"></i></button>
+                </span>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="clear()">
+            <span class="fa fa-ban"></span>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" [disabled]="editForm.form.invalid || isSaving" class="btn btn-primary">
+            <span class="fa fa-save"></span>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

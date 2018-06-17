@@ -1,0 +1,69 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "formation",
+            "otherEntityName": "formation",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "formateur",
+            "otherEntityName": "formateur",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "matiere",
+            "otherEntityName": "matiere",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "salle",
+            "otherEntityName": "salle",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "videoProjecteur",
+            "otherEntityName": "videoProjecteur",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "tire",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contenu",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "objectif",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "niveau",
+            "fieldType": "Niveau",
+            "fieldValues": "FACILE,MOYEN,DIFFICILE"
+        },
+        {
+            "fieldName": "dateDebut",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "dateFin",
+            "fieldType": "LocalDate"
+        }
+    ],
+    "changelogDate": "20180617132758",
+    "entityTableName": "module",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "angularS"
+}

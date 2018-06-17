@@ -1,0 +1,68 @@
+<div>
+    <h2>
+        <span jhiTranslate="factoryApp.stagiaire.home.title">Stagiaires</span>
+        <button class="btn btn-primary float-right jh-create-entity create-stagiaire-angular-s" [routerLink]="['/', { outlets: { popup: ['stagiaire-angular-s-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="factoryApp.stagiaire.home.createLabel">
+            Create new Stagiaire
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="stagiaires">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="factoryApp.stagiaire.formation">Formation</span></th>
+            <th><span jhiTranslate="factoryApp.stagiaire.ordinateur">Ordinateur</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let stagiaire of stagiaires ;trackBy: trackId">
+                <td><a [routerLink]="['../stagiaire-angular-s', stagiaire.id ]">{{stagiaire.id}}</a></td>
+                <td>
+                    <div *ngIf="stagiaire.formationId">
+                        <a [routerLink]="['../formation-angular-s', stagiaire.formationId  ]" >{{stagiaire.formationId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="stagiaire.ordinateurId">
+                        <a [routerLink]="['../ordinateur-angular-s', stagiaire.ordinateurId  ]" >{{stagiaire.ordinateurId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../stagiaire-angular-s', stagiaire.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'stagiaire-angular-s/'+ stagiaire.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'stagiaire-angular-s/'+ stagiaire.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

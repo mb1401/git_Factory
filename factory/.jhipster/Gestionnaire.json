@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "formation",
+            "otherEntityName": "formation",
+            "otherEntityRelationshipName": "gestionnaire"
+        }
+    ],
+    "fields": [],
+    "changelogDate": "20180617132801",
+    "entityTableName": "gestionnaire",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "angularJSSuffix": "angularS"
+}

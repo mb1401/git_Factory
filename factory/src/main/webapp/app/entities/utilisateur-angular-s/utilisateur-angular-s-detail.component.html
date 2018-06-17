@@ -1,0 +1,70 @@
+
+<div *ngIf="utilisateur">
+    <h2><span jhiTranslate="factoryApp.utilisateur.detail.title">Utilisateur</span> {{utilisateur.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="factoryApp.utilisateur.nom">Nom</span></dt>
+        <dd>
+            <span>{{utilisateur.nom}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.prenom">Prenom</span></dt>
+        <dd>
+            <span>{{utilisateur.prenom}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.numeroRue">Numero Rue</span></dt>
+        <dd>
+            <span>{{utilisateur.numeroRue}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.rue">Rue</span></dt>
+        <dd>
+            <span>{{utilisateur.rue}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.codePostal">Code Postal</span></dt>
+        <dd>
+            <span>{{utilisateur.codePostal}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.ville">Ville</span></dt>
+        <dd>
+            <span>{{utilisateur.ville}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.pays">Pays</span></dt>
+        <dd>
+            <span>{{utilisateur.pays}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.mail">Mail</span></dt>
+        <dd>
+            <span>{{utilisateur.mail}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.numeroTel">Numero Tel</span></dt>
+        <dd>
+            <span>{{utilisateur.numeroTel}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.username">Username</span></dt>
+        <dd>
+            <span>{{utilisateur.username}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.password">Password</span></dt>
+        <dd>
+            <span>{{utilisateur.password}}</span>
+        </dd>
+        <dt><span jhiTranslate="factoryApp.utilisateur.enable">Enable</span></dt>
+        <dd>
+            <span>{{utilisateur.enable}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'utilisateur-angular-s/'+ utilisateur.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
