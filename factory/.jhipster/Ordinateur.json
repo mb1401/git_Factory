@@ -10,6 +10,10 @@
     ],
     "fields": [
         {
+            "fieldName": "cout",
+            "fieldType": "Float"
+        },
+        {
             "fieldName": "processeur",
             "fieldType": "Processeur",
             "fieldValues": "P1,P2,P3"

@@ -17,12 +17,36 @@
             <thead>
             <tr>
             <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.nom">Nom</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.prenom">Prenom</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.numeroRue">Numero Rue</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.rue">Rue</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.codePostal">Code Postal</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.ville">Ville</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.pays">Pays</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.mail">Mail</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.numeroTel">Numero Tel</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.username">Username</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.password">Password</span></th>
+            <th><span jhiTranslate="factoryApp.technicien.enable">Enable</span></th>
             <th></th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let technicien of techniciens ;trackBy: trackId">
                 <td><a [routerLink]="['../technicien-angular-s', technicien.id ]">{{technicien.id}}</a></td>
+                <td>{{technicien.nom}}</td>
+                <td>{{technicien.prenom}}</td>
+                <td>{{technicien.numeroRue}}</td>
+                <td>{{technicien.rue}}</td>
+                <td>{{technicien.codePostal}}</td>
+                <td>{{technicien.ville}}</td>
+                <td>{{technicien.pays}}</td>
+                <td>{{technicien.mail}}</td>
+                <td>{{technicien.numeroTel}}</td>
+                <td>{{technicien.username}}</td>
+                <td>{{technicien.password}}</td>
+                <td>{{technicien.enable}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

@@ -13,12 +13,22 @@ public class VideoProjecteurDTO implements Serializable {
 
     private Long id;
 
+    private Float cout;
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Float getCout() {
+        return cout;
+    }
+
+    public void setCout(Float cout) {
+        this.cout = cout;
     }
 
     @Override
@@ -46,6 +56,7 @@ public class VideoProjecteurDTO implements Serializable {
     public String toString() {
         return "VideoProjecteurDTO{" +
             "id=" + getId() +
+            ", cout=" + getCout() +
             "}";
     }
 }

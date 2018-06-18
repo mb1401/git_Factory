@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-18T14:34:22+0200",
+    date = "2018-06-18T17:50:51+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -24,6 +24,18 @@ public class FormateurMapperImpl implements FormateurMapper {
         FormateurDTO formateurDTO = new FormateurDTO();
 
         formateurDTO.setId( entity.getId() );
+        formateurDTO.setNom( entity.getNom() );
+        formateurDTO.setPrenom( entity.getPrenom() );
+        formateurDTO.setNumeroRue( entity.getNumeroRue() );
+        formateurDTO.setRue( entity.getRue() );
+        formateurDTO.setCodePostal( entity.getCodePostal() );
+        formateurDTO.setVille( entity.getVille() );
+        formateurDTO.setPays( entity.getPays() );
+        formateurDTO.setMail( entity.getMail() );
+        formateurDTO.setNumeroTel( entity.getNumeroTel() );
+        formateurDTO.setUsername( entity.getUsername() );
+        formateurDTO.setPassword( entity.getPassword() );
+        formateurDTO.setEnable( entity.isEnable() );
 
         return formateurDTO;
     }
@@ -65,6 +77,18 @@ public class FormateurMapperImpl implements FormateurMapper {
         Formateur formateur = new Formateur();
 
         formateur.setId( formateurDTO.getId() );
+        formateur.setNom( formateurDTO.getNom() );
+        formateur.setPrenom( formateurDTO.getPrenom() );
+        formateur.setNumeroRue( formateurDTO.getNumeroRue() );
+        formateur.setRue( formateurDTO.getRue() );
+        formateur.setCodePostal( formateurDTO.getCodePostal() );
+        formateur.setVille( formateurDTO.getVille() );
+        formateur.setPays( formateurDTO.getPays() );
+        formateur.setMail( formateurDTO.getMail() );
+        formateur.setNumeroTel( formateurDTO.getNumeroTel() );
+        formateur.setUsername( formateurDTO.getUsername() );
+        formateur.setPassword( formateurDTO.getPassword() );
+        formateur.setEnable( formateurDTO.isEnable() );
 
         return formateur;
     }

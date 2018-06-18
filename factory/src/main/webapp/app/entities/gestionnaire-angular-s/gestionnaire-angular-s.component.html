@@ -17,12 +17,36 @@
             <thead>
             <tr>
             <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.nom">Nom</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.prenom">Prenom</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.numeroRue">Numero Rue</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.rue">Rue</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.codePostal">Code Postal</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.ville">Ville</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.pays">Pays</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.mail">Mail</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.numeroTel">Numero Tel</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.username">Username</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.password">Password</span></th>
+            <th><span jhiTranslate="factoryApp.gestionnaire.enable">Enable</span></th>
             <th></th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let gestionnaire of gestionnaires ;trackBy: trackId">
                 <td><a [routerLink]="['../gestionnaire-angular-s', gestionnaire.id ]">{{gestionnaire.id}}</a></td>
+                <td>{{gestionnaire.nom}}</td>
+                <td>{{gestionnaire.prenom}}</td>
+                <td>{{gestionnaire.numeroRue}}</td>
+                <td>{{gestionnaire.rue}}</td>
+                <td>{{gestionnaire.codePostal}}</td>
+                <td>{{gestionnaire.ville}}</td>
+                <td>{{gestionnaire.pays}}</td>
+                <td>{{gestionnaire.mail}}</td>
+                <td>{{gestionnaire.numeroTel}}</td>
+                <td>{{gestionnaire.username}}</td>
+                <td>{{gestionnaire.password}}</td>
+                <td>{{gestionnaire.enable}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

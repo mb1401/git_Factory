@@ -15,7 +15,19 @@
             },
             "detail": {
                 "title": "Technicien"
-            }
+            },
+            "nom": "Nom",
+            "prenom": "Prenom",
+            "numeroRue": "Numero Rue",
+            "rue": "Rue",
+            "codePostal": "Code Postal",
+            "ville": "Ville",
+            "pays": "Pays",
+            "mail": "Mail",
+            "numeroTel": "Numero Tel",
+            "username": "Username",
+            "password": "Password",
+            "enable": "Enable"
         }
     }
 }

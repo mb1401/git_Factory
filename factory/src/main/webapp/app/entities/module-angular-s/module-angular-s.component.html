@@ -17,7 +17,7 @@
             <thead>
             <tr>
             <th><span jhiTranslate="global.field.id">ID</span></th>
-            <th><span jhiTranslate="factoryApp.module.tire">Tire</span></th>
+            <th><span jhiTranslate="factoryApp.module.titre">Titre</span></th>
             <th><span jhiTranslate="factoryApp.module.contenu">Contenu</span></th>
             <th><span jhiTranslate="factoryApp.module.objectif">Objectif</span></th>
             <th><span jhiTranslate="factoryApp.module.niveau">Niveau</span></th>
@@ -34,7 +34,7 @@
             <tbody>
             <tr *ngFor="let module of modules ;trackBy: trackId">
                 <td><a [routerLink]="['../module-angular-s', module.id ]">{{module.id}}</a></td>
-                <td>{{module.tire}}</td>
+                <td>{{module.titre}}</td>
                 <td>{{module.contenu}}</td>
                 <td>{{module.objectif}}</td>
                 <td jhiTranslate="{{'factoryApp.Niveau.' + module.niveau}}">{{module.niveau}}</td>

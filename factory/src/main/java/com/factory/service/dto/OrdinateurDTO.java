@@ -15,6 +15,8 @@ public class OrdinateurDTO implements Serializable {
 
     private Long id;
 
+    private Float cout;
+
     private Processeur processeur;
 
     private Integer ram;
@@ -29,6 +31,14 @@ public class OrdinateurDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Float getCout() {
+        return cout;
+    }
+
+    public void setCout(Float cout) {
+        this.cout = cout;
     }
 
     public Processeur getProcesseur() {
@@ -88,6 +98,7 @@ public class OrdinateurDTO implements Serializable {
     public String toString() {
         return "OrdinateurDTO{" +
             "id=" + getId() +
+            ", cout=" + getCout() +
             ", processeur='" + getProcesseur() + "'" +
             ", ram=" + getRam() +
             ", quantiteDD=" + getQuantiteDD() +

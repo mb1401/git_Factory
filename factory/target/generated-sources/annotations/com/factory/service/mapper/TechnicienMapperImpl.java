@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-18T14:34:22+0200",
+    date = "2018-06-18T17:50:50+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -24,6 +24,18 @@ public class TechnicienMapperImpl implements TechnicienMapper {
         Technicien technicien = new Technicien();
 
         technicien.setId( dto.getId() );
+        technicien.setNom( dto.getNom() );
+        technicien.setPrenom( dto.getPrenom() );
+        technicien.setNumeroRue( dto.getNumeroRue() );
+        technicien.setRue( dto.getRue() );
+        technicien.setCodePostal( dto.getCodePostal() );
+        technicien.setVille( dto.getVille() );
+        technicien.setPays( dto.getPays() );
+        technicien.setMail( dto.getMail() );
+        technicien.setNumeroTel( dto.getNumeroTel() );
+        technicien.setUsername( dto.getUsername() );
+        technicien.setPassword( dto.getPassword() );
+        technicien.setEnable( dto.isEnable() );
 
         return technicien;
     }
@@ -37,6 +49,18 @@ public class TechnicienMapperImpl implements TechnicienMapper {
         TechnicienDTO technicienDTO = new TechnicienDTO();
 
         technicienDTO.setId( entity.getId() );
+        technicienDTO.setNom( entity.getNom() );
+        technicienDTO.setPrenom( entity.getPrenom() );
+        technicienDTO.setNumeroRue( entity.getNumeroRue() );
+        technicienDTO.setRue( entity.getRue() );
+        technicienDTO.setCodePostal( entity.getCodePostal() );
+        technicienDTO.setVille( entity.getVille() );
+        technicienDTO.setPays( entity.getPays() );
+        technicienDTO.setMail( entity.getMail() );
+        technicienDTO.setNumeroTel( entity.getNumeroTel() );
+        technicienDTO.setUsername( entity.getUsername() );
+        technicienDTO.setPassword( entity.getPassword() );
+        technicienDTO.setEnable( entity.isEnable() );
 
         return technicienDTO;
     }

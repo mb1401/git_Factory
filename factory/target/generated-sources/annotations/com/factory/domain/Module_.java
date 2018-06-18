@@ -13,6 +13,7 @@ public abstract class Module_ {
 	public static volatile SingularAttribute<Module, Formateur> formateur;
 	public static volatile SingularAttribute<Module, LocalDate> dateDebut;
 	public static volatile SingularAttribute<Module, Salle> salle;
+	public static volatile SingularAttribute<Module, String> titre;
 	public static volatile SingularAttribute<Module, String> objectif;
 	public static volatile SingularAttribute<Module, Long> id;
 	public static volatile SingularAttribute<Module, LocalDate> dateFin;
@@ -20,7 +21,6 @@ public abstract class Module_ {
 	public static volatile SingularAttribute<Module, VideoProjecteur> videoProjecteur;
 	public static volatile SingularAttribute<Module, String> contenu;
 	public static volatile SingularAttribute<Module, Niveau> niveau;
-	public static volatile SingularAttribute<Module, String> tire;
 	public static volatile SingularAttribute<Module, Matiere> matiere;
 
 }

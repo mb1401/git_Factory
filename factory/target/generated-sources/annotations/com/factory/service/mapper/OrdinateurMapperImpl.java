@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-18T14:34:22+0200",
+    date = "2018-06-18T17:50:51+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -24,6 +24,7 @@ public class OrdinateurMapperImpl implements OrdinateurMapper {
         OrdinateurDTO ordinateurDTO = new OrdinateurDTO();
 
         ordinateurDTO.setId( entity.getId() );
+        ordinateurDTO.setCout( entity.getCout() );
         ordinateurDTO.setProcesseur( entity.getProcesseur() );
         ordinateurDTO.setRam( entity.getRam() );
         ordinateurDTO.setQuantiteDD( entity.getQuantiteDD() );
@@ -69,6 +70,7 @@ public class OrdinateurMapperImpl implements OrdinateurMapper {
         Ordinateur ordinateur = new Ordinateur();
 
         ordinateur.setId( ordinateurDTO.getId() );
+        ordinateur.setCout( ordinateurDTO.getCout() );
         ordinateur.setProcesseur( ordinateurDTO.getProcesseur() );
         ordinateur.setRam( ordinateurDTO.getRam() );
         ordinateur.setQuantiteDD( ordinateurDTO.getQuantiteDD() );

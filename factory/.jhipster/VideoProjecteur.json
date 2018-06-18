@@ -8,7 +8,12 @@
             "otherEntityRelationshipName": "videoProjecteur"
         }
     ],
-    "fields": [],
+    "fields": [
+        {
+            "fieldName": "cout",
+            "fieldType": "Float"
+        }
+    ],
     "changelogDate": "20180617132755",
     "entityTableName": "video_projecteur",
     "dto": "mapstruct",

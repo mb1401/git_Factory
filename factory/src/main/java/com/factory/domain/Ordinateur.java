@@ -16,12 +16,18 @@ import com.factory.domain.enumeration.Processeur;
  * A Ordinateur.
  */
 @Entity
-@DiscriminatorValue("ordinateur")
-public class Ordinateur extends Ressource implements Serializable {
+@Table(name = "ordinateur")
+public class Ordinateur implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-   
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
+    private Long id;
+
+    @Column(name = "cout")
+    private Float cout;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "processeur")
@@ -40,7 +46,27 @@ public class Ordinateur extends Ressource implements Serializable {
     @JsonIgnore
     private Set<Stagiaire> stagiaires = new HashSet<>();
 
-  
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Float getCout() {
+        return cout;
+    }
+
+    public Ordinateur cout(Float cout) {
+        this.cout = cout;
+        return this;
+    }
+
+    public void setCout(Float cout) {
+        this.cout = cout;
+    }
 
     public Processeur getProcesseur() {
         return processeur;
@@ -144,6 +170,7 @@ public class Ordinateur extends Ressource implements Serializable {
     public String toString() {
         return "Ordinateur{" +
             "id=" + getId() +
+            ", cout=" + getCout() +
             ", processeur='" + getProcesseur() + "'" +
             ", ram=" + getRam() +
             ", quantiteDD=" + getQuantiteDD() +

@@ -16,6 +16,7 @@
             "detail": {
                 "title": "Video Projecteur"
             },
+            "cout": "Cout",
             "module": "Module"
         }
     }

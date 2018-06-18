@@ -13,6 +13,11 @@
                    [(ngModel)]="salle.id" readonly />
         </div>
         <div class="form-group">
+            <label class="form-control-label" jhiTranslate="factoryApp.salle.cout" for="field_cout">Cout</label>
+            <input type="number" class="form-control" name="cout" id="field_cout"
+                [(ngModel)]="salle.cout" />
+        </div>
+        <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.salle.capacite" for="field_capacite">Capacite</label>
             <input type="number" class="form-control" name="capacite" id="field_capacite"
                 [(ngModel)]="salle.capacite" />

@@ -13,12 +13,18 @@ import java.util.Objects;
  * A Salle.
  */
 @Entity
-@DiscriminatorValue("salle")
-public class Salle extends Ressource implements Serializable {
+@Table(name = "salle")
+public class Salle implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-   
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
+    private Long id;
+
+    @Column(name = "cout")
+    private Float cout;
 
     @Column(name = "capacite")
     private Integer capacite;
@@ -27,7 +33,28 @@ public class Salle extends Ressource implements Serializable {
     @JsonIgnore
     private Set<Module> modules = new HashSet<>();
 
-  
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Float getCout() {
+        return cout;
+    }
+
+    public Salle cout(Float cout) {
+        this.cout = cout;
+        return this;
+    }
+
+    public void setCout(Float cout) {
+        this.cout = cout;
+    }
+
     public Integer getCapacite() {
         return capacite;
     }
@@ -91,6 +118,7 @@ public class Salle extends Ressource implements Serializable {
     public String toString() {
         return "Salle{" +
             "id=" + getId() +
+            ", cout=" + getCout() +
             ", capacite=" + getCapacite() +
             "}";
     }

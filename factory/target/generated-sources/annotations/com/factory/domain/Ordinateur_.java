@@ -9,11 +9,13 @@ import javax.persistence.metamodel.StaticMetamodel;
 
 @Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
 @StaticMetamodel(Ordinateur.class)
-public abstract class Ordinateur_ extends com.factory.domain.Ressource_ {
+public abstract class Ordinateur_ {
 
+	public static volatile SingularAttribute<Ordinateur, Float> cout;
 	public static volatile SingularAttribute<Ordinateur, Integer> quantiteDD;
 	public static volatile SingularAttribute<Ordinateur, LocalDate> dateAchat;
 	public static volatile SingularAttribute<Ordinateur, Processeur> processeur;
+	public static volatile SingularAttribute<Ordinateur, Long> id;
 	public static volatile SingularAttribute<Ordinateur, Integer> ram;
 	public static volatile SetAttribute<Ordinateur, Stagiaire> stagiaires;
 

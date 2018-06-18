@@ -10,6 +10,10 @@
     ],
     "fields": [
         {
+            "fieldName": "cout",
+            "fieldType": "Float"
+        },
+        {
             "fieldName": "capacite",
             "fieldType": "Integer"
         }

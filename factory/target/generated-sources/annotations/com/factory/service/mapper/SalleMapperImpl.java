@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-18T14:34:21+0200",
+    date = "2018-06-18T17:50:51+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -24,6 +24,7 @@ public class SalleMapperImpl implements SalleMapper {
         SalleDTO salleDTO = new SalleDTO();
 
         salleDTO.setId( entity.getId() );
+        salleDTO.setCout( entity.getCout() );
         salleDTO.setCapacite( entity.getCapacite() );
 
         return salleDTO;
@@ -66,6 +67,7 @@ public class SalleMapperImpl implements SalleMapper {
         Salle salle = new Salle();
 
         salle.setId( salleDTO.getId() );
+        salle.setCout( salleDTO.getCout() );
         salle.setCapacite( salleDTO.getCapacite() );
 
         return salle;

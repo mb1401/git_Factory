@@ -17,6 +17,7 @@
             <thead>
             <tr>
             <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="factoryApp.ordinateur.cout">Cout</span></th>
             <th><span jhiTranslate="factoryApp.ordinateur.processeur">Processeur</span></th>
             <th><span jhiTranslate="factoryApp.ordinateur.ram">Ram</span></th>
             <th><span jhiTranslate="factoryApp.ordinateur.quantiteDD">Quantite DD</span></th>
@@ -27,6 +28,7 @@
             <tbody>
             <tr *ngFor="let ordinateur of ordinateurs ;trackBy: trackId">
                 <td><a [routerLink]="['../ordinateur-angular-s', ordinateur.id ]">{{ordinateur.id}}</a></td>
+                <td>{{ordinateur.cout}}</td>
                 <td jhiTranslate="{{'factoryApp.Processeur.' + ordinateur.processeur}}">{{ordinateur.processeur}}</td>
                 <td>{{ordinateur.ram}}</td>
                 <td>{{ordinateur.quantiteDD}}</td>

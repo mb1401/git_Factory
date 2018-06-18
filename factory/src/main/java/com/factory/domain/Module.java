@@ -23,8 +23,8 @@ public class Module implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "tire")
-    private String tire;
+    @Column(name = "titre")
+    private String titre;
 
     @Column(name = "contenu")
     private String contenu;
@@ -66,17 +66,17 @@ public class Module implements Serializable {
         this.id = id;
     }
 
-    public String getTire() {
-        return tire;
+    public String getTitre() {
+        return titre;
     }
 
-    public Module tire(String tire) {
-        this.tire = tire;
+    public Module titre(String titre) {
+        this.titre = titre;
         return this;
     }
 
-    public void setTire(String tire) {
-        this.tire = tire;
+    public void setTitre(String titre) {
+        this.titre = titre;
     }
 
     public String getContenu() {
@@ -234,7 +234,7 @@ public class Module implements Serializable {
     public String toString() {
         return "Module{" +
             "id=" + getId() +
-            ", tire='" + getTire() + "'" +
+            ", titre='" + getTitre() + "'" +
             ", contenu='" + getContenu() + "'" +
             ", objectif='" + getObjectif() + "'" +
             ", niveau='" + getNiveau() + "'" +

@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-18T14:34:22+0200",
+    date = "2018-06-18T17:50:50+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -89,7 +89,7 @@ public class ModuleMapperImpl implements ModuleMapper {
             moduleDTO.setFormationId( id4 );
         }
         moduleDTO.setId( module.getId() );
-        moduleDTO.setTire( module.getTire() );
+        moduleDTO.setTitre( module.getTitre() );
         moduleDTO.setContenu( module.getContenu() );
         moduleDTO.setObjectif( module.getObjectif() );
         moduleDTO.setNiveau( module.getNiveau() );
@@ -113,7 +113,7 @@ public class ModuleMapperImpl implements ModuleMapper {
         module.setSalle( salleMapper.fromId( moduleDTO.getSalleId() ) );
         module.setMatiere( matiereMapper.fromId( moduleDTO.getMatiereId() ) );
         module.setId( moduleDTO.getId() );
-        module.setTire( moduleDTO.getTire() );
+        module.setTitre( moduleDTO.getTitre() );
         module.setContenu( moduleDTO.getContenu() );
         module.setObjectif( moduleDTO.getObjectif() );
         module.setNiveau( moduleDTO.getNiveau() );

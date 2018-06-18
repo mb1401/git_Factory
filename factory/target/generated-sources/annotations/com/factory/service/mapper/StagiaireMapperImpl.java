@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-18T14:34:21+0200",
+    date = "2018-06-18T17:50:51+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -68,6 +68,18 @@ public class StagiaireMapperImpl implements StagiaireMapper {
             stagiaireDTO.setFormationId( id1 );
         }
         stagiaireDTO.setId( stagiaire.getId() );
+        stagiaireDTO.setNom( stagiaire.getNom() );
+        stagiaireDTO.setPrenom( stagiaire.getPrenom() );
+        stagiaireDTO.setNumeroRue( stagiaire.getNumeroRue() );
+        stagiaireDTO.setRue( stagiaire.getRue() );
+        stagiaireDTO.setCodePostal( stagiaire.getCodePostal() );
+        stagiaireDTO.setVille( stagiaire.getVille() );
+        stagiaireDTO.setPays( stagiaire.getPays() );
+        stagiaireDTO.setMail( stagiaire.getMail() );
+        stagiaireDTO.setNumeroTel( stagiaire.getNumeroTel() );
+        stagiaireDTO.setUsername( stagiaire.getUsername() );
+        stagiaireDTO.setPassword( stagiaire.getPassword() );
+        stagiaireDTO.setEnable( stagiaire.isEnable() );
 
         return stagiaireDTO;
     }
@@ -83,6 +95,18 @@ public class StagiaireMapperImpl implements StagiaireMapper {
         stagiaire.setOrdinateur( ordinateurMapper.fromId( stagiaireDTO.getOrdinateurId() ) );
         stagiaire.setFormation( formationMapper.fromId( stagiaireDTO.getFormationId() ) );
         stagiaire.setId( stagiaireDTO.getId() );
+        stagiaire.setNom( stagiaireDTO.getNom() );
+        stagiaire.setPrenom( stagiaireDTO.getPrenom() );
+        stagiaire.setNumeroRue( stagiaireDTO.getNumeroRue() );
+        stagiaire.setRue( stagiaireDTO.getRue() );
+        stagiaire.setCodePostal( stagiaireDTO.getCodePostal() );
+        stagiaire.setVille( stagiaireDTO.getVille() );
+        stagiaire.setPays( stagiaireDTO.getPays() );
+        stagiaire.setMail( stagiaireDTO.getMail() );
+        stagiaire.setNumeroTel( stagiaireDTO.getNumeroTel() );
+        stagiaire.setUsername( stagiaireDTO.getUsername() );
+        stagiaire.setPassword( stagiaireDTO.getPassword() );
+        stagiaire.setEnable( stagiaireDTO.isEnable() );
 
         return stagiaire;
     }

@@ -9,7 +9,7 @@ export const enum Niveau {
 export class ModuleAngularS implements BaseEntity {
     constructor(
         public id?: number,
-        public tire?: string,
+        public titre?: string,
         public contenu?: string,
         public objectif?: string,
         public niveau?: Niveau,

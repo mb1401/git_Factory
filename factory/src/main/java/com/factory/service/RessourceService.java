@@ -23,6 +23,7 @@ public interface RessourceService {
      */
     List<RessourceDTO> findAll();
 
+    List<RessourceDTO> findAllSalles();
     /**
      * Get the "id" ressource.
      *

@@ -13,18 +13,44 @@ import java.util.Objects;
  * A VideoProjecteur.
  */
 @Entity
-@DiscriminatorValue("video_projecteur")
-public class VideoProjecteur extends Ressource implements Serializable {
+@Table(name = "video_projecteur")
+public class VideoProjecteur implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-   
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
+    @SequenceGenerator(name = "sequenceGenerator")
+    private Long id;
+
+    @Column(name = "cout")
+    private Float cout;
 
     @OneToMany(mappedBy = "videoProjecteur")
     @JsonIgnore
     private Set<Module> modules = new HashSet<>();
 
-   
+    // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Float getCout() {
+        return cout;
+    }
+
+    public VideoProjecteur cout(Float cout) {
+        this.cout = cout;
+        return this;
+    }
+
+    public void setCout(Float cout) {
+        this.cout = cout;
+    }
 
     public Set<Module> getModules() {
         return modules;
@@ -76,6 +102,7 @@ public class VideoProjecteur extends Ressource implements Serializable {
     public String toString() {
         return "VideoProjecteur{" +
             "id=" + getId() +
+            ", cout=" + getCout() +
             "}";
     }
 }

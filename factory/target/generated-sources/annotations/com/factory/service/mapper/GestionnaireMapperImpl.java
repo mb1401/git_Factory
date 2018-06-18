@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-18T14:34:21+0200",
+    date = "2018-06-18T17:50:50+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -24,6 +24,18 @@ public class GestionnaireMapperImpl implements GestionnaireMapper {
         GestionnaireDTO gestionnaireDTO = new GestionnaireDTO();
 
         gestionnaireDTO.setId( entity.getId() );
+        gestionnaireDTO.setNom( entity.getNom() );
+        gestionnaireDTO.setPrenom( entity.getPrenom() );
+        gestionnaireDTO.setNumeroRue( entity.getNumeroRue() );
+        gestionnaireDTO.setRue( entity.getRue() );
+        gestionnaireDTO.setCodePostal( entity.getCodePostal() );
+        gestionnaireDTO.setVille( entity.getVille() );
+        gestionnaireDTO.setPays( entity.getPays() );
+        gestionnaireDTO.setMail( entity.getMail() );
+        gestionnaireDTO.setNumeroTel( entity.getNumeroTel() );
+        gestionnaireDTO.setUsername( entity.getUsername() );
+        gestionnaireDTO.setPassword( entity.getPassword() );
+        gestionnaireDTO.setEnable( entity.isEnable() );
 
         return gestionnaireDTO;
     }
@@ -65,6 +77,18 @@ public class GestionnaireMapperImpl implements GestionnaireMapper {
         Gestionnaire gestionnaire = new Gestionnaire();
 
         gestionnaire.setId( gestionnaireDTO.getId() );
+        gestionnaire.setNom( gestionnaireDTO.getNom() );
+        gestionnaire.setPrenom( gestionnaireDTO.getPrenom() );
+        gestionnaire.setNumeroRue( gestionnaireDTO.getNumeroRue() );
+        gestionnaire.setRue( gestionnaireDTO.getRue() );
+        gestionnaire.setCodePostal( gestionnaireDTO.getCodePostal() );
+        gestionnaire.setVille( gestionnaireDTO.getVille() );
+        gestionnaire.setPays( gestionnaireDTO.getPays() );
+        gestionnaire.setMail( gestionnaireDTO.getMail() );
+        gestionnaire.setNumeroTel( gestionnaireDTO.getNumeroTel() );
+        gestionnaire.setUsername( gestionnaireDTO.getUsername() );
+        gestionnaire.setPassword( gestionnaireDTO.getPassword() );
+        gestionnaire.setEnable( gestionnaireDTO.isEnable() );
 
         return gestionnaire;
     }

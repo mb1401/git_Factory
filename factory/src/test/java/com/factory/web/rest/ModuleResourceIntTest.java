@@ -44,8 +44,8 @@ import com.factory.domain.enumeration.Niveau;
 @SpringBootTest(classes = FactoryApp.class)
 public class ModuleResourceIntTest {
 
-    private static final String DEFAULT_TIRE = "AAAAAAAAAA";
-    private static final String UPDATED_TIRE = "BBBBBBBBBB";
+    private static final String DEFAULT_TITRE = "AAAAAAAAAA";
+    private static final String UPDATED_TITRE = "BBBBBBBBBB";
 
     private static final String DEFAULT_CONTENU = "AAAAAAAAAA";
     private static final String UPDATED_CONTENU = "BBBBBBBBBB";
@@ -106,7 +106,7 @@ public class ModuleResourceIntTest {
      */
     public static Module createEntity(EntityManager em) {
         Module module = new Module()
-            .tire(DEFAULT_TIRE)
+            .titre(DEFAULT_TITRE)
             .contenu(DEFAULT_CONTENU)
             .objectif(DEFAULT_OBJECTIF)
             .niveau(DEFAULT_NIVEAU)
@@ -136,7 +136,7 @@ public class ModuleResourceIntTest {
         List<Module> moduleList = moduleRepository.findAll();
         assertThat(moduleList).hasSize(databaseSizeBeforeCreate + 1);
         Module testModule = moduleList.get(moduleList.size() - 1);
-        assertThat(testModule.getTire()).isEqualTo(DEFAULT_TIRE);
+        assertThat(testModule.getTitre()).isEqualTo(DEFAULT_TITRE);
         assertThat(testModule.getContenu()).isEqualTo(DEFAULT_CONTENU);
         assertThat(testModule.getObjectif()).isEqualTo(DEFAULT_OBJECTIF);
         assertThat(testModule.getNiveau()).isEqualTo(DEFAULT_NIVEAU);
@@ -175,7 +175,7 @@ public class ModuleResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(module.getId().intValue())))
-            .andExpect(jsonPath("$.[*].tire").value(hasItem(DEFAULT_TIRE.toString())))
+            .andExpect(jsonPath("$.[*].titre").value(hasItem(DEFAULT_TITRE.toString())))
             .andExpect(jsonPath("$.[*].contenu").value(hasItem(DEFAULT_CONTENU.toString())))
             .andExpect(jsonPath("$.[*].objectif").value(hasItem(DEFAULT_OBJECTIF.toString())))
             .andExpect(jsonPath("$.[*].niveau").value(hasItem(DEFAULT_NIVEAU.toString())))
@@ -194,7 +194,7 @@ public class ModuleResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(module.getId().intValue()))
-            .andExpect(jsonPath("$.tire").value(DEFAULT_TIRE.toString()))
+            .andExpect(jsonPath("$.titre").value(DEFAULT_TITRE.toString()))
             .andExpect(jsonPath("$.contenu").value(DEFAULT_CONTENU.toString()))
             .andExpect(jsonPath("$.objectif").value(DEFAULT_OBJECTIF.toString()))
             .andExpect(jsonPath("$.niveau").value(DEFAULT_NIVEAU.toString()))
@@ -222,7 +222,7 @@ public class ModuleResourceIntTest {
         // Disconnect from session so that the updates on updatedModule are not directly saved in db
         em.detach(updatedModule);
         updatedModule
-            .tire(UPDATED_TIRE)
+            .titre(UPDATED_TITRE)
             .contenu(UPDATED_CONTENU)
             .objectif(UPDATED_OBJECTIF)
             .niveau(UPDATED_NIVEAU)
@@ -239,7 +239,7 @@ public class ModuleResourceIntTest {
         List<Module> moduleList = moduleRepository.findAll();
         assertThat(moduleList).hasSize(databaseSizeBeforeUpdate);
         Module testModule = moduleList.get(moduleList.size() - 1);
-        assertThat(testModule.getTire()).isEqualTo(UPDATED_TIRE);
+        assertThat(testModule.getTitre()).isEqualTo(UPDATED_TITRE);
         assertThat(testModule.getContenu()).isEqualTo(UPDATED_CONTENU);
         assertThat(testModule.getObjectif()).isEqualTo(UPDATED_OBJECTIF);
         assertThat(testModule.getNiveau()).isEqualTo(UPDATED_NIVEAU);

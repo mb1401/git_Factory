@@ -16,6 +16,7 @@
             "detail": {
                 "title": "Ordinateur"
             },
+            "cout": "Cout",
             "processeur": "Processeur",
             "ram": "Ram",
             "quantiteDD": "Quantite DD",

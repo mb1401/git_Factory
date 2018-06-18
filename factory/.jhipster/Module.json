@@ -34,7 +34,7 @@
     ],
     "fields": [
         {
-            "fieldName": "tire",
+            "fieldName": "titre",
             "fieldType": "String"
         },
         {

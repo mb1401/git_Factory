@@ -13,6 +13,8 @@ public class SalleDTO implements Serializable {
 
     private Long id;
 
+    private Float cout;
+
     private Integer capacite;
 
     public Long getId() {
@@ -21,6 +23,14 @@ public class SalleDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Float getCout() {
+        return cout;
+    }
+
+    public void setCout(Float cout) {
+        this.cout = cout;
     }
 
     public Integer getCapacite() {
@@ -56,6 +66,7 @@ public class SalleDTO implements Serializable {
     public String toString() {
         return "SalleDTO{" +
             "id=" + getId() +
+            ", cout=" + getCout() +
             ", capacite=" + getCapacite() +
             "}";
     }

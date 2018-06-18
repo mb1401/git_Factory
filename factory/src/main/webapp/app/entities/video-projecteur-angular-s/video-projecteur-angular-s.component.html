@@ -17,12 +17,14 @@
             <thead>
             <tr>
             <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="factoryApp.videoProjecteur.cout">Cout</span></th>
             <th></th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let videoProjecteur of videoProjecteurs ;trackBy: trackId">
                 <td><a [routerLink]="['../video-projecteur-angular-s', videoProjecteur.id ]">{{videoProjecteur.id}}</a></td>
+                <td>{{videoProjecteur.cout}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

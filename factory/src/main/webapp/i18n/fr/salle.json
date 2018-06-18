@@ -16,6 +16,7 @@
             "detail": {
                 "title": "Salle"
             },
+            "cout": "Cout",
             "capacite": "Capacite",
             "module": "Module"
         }

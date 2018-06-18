@@ -15,7 +15,7 @@ public class ModuleDTO implements Serializable {
 
     private Long id;
 
-    private String tire;
+    private String titre;
 
     private String contenu;
 
@@ -45,12 +45,12 @@ public class ModuleDTO implements Serializable {
         this.id = id;
     }
 
-    public String getTire() {
-        return tire;
+    public String getTitre() {
+        return titre;
     }
 
-    public void setTire(String tire) {
-        this.tire = tire;
+    public void setTitre(String titre) {
+        this.titre = titre;
     }
 
     public String getContenu() {
@@ -158,7 +158,7 @@ public class ModuleDTO implements Serializable {
     public String toString() {
         return "ModuleDTO{" +
             "id=" + getId() +
-            ", tire='" + getTire() + "'" +
+            ", titre='" + getTitre() + "'" +
             ", contenu='" + getContenu() + "'" +
             ", objectif='" + getObjectif() + "'" +
             ", niveau='" + getNiveau() + "'" +
