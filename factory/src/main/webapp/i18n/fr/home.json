@@ -1,14 +1,14 @@
 {
     "home": {
-        "title": "Bienvenue, Java Hipster !",
+        "title": "Développeur de compétences!",
         "subtitle": "Ceci est votre page d'accueil",
         "logged": {
             "message": "Vous êtes connecté en tant que \"{{username}}\"."
         },
-        "question": "Si vous avez des questions à propos de JHipster :",
+        "question": "Nos partenaires :",
         "link": {
-            "homepage": "Page d'accueil de JHipster",
-            "stackoverflow": "JHipster sur Stack Overflow",
+            "homepage": "Page d'accueil de Pole emploi",
+            "stackoverflow": "Page d'accueil de Sopra Steria",
             "bugtracker": "JHipster bug tracker",
             "chat": "JHipster public chat room",
             "follow": "Suivez @java_hipster sur Twitter"
