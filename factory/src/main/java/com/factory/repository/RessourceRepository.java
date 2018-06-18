@@ -17,12 +17,5 @@ import com.factory.domain.VideoProjecteur;
 @SuppressWarnings("unused")
 @Repository
 public interface RessourceRepository extends JpaRepository<Ressource, Long> {
-	@Query("select o from Ordinateur o")
-	List<Ordinateur> findAllOrdinateur();
-
-	@Query("select vp from VideoProjecteur vp")
-	List<VideoProjecteur> findAllVideoProjecteur();
-
-	@Query("select s from Salle s")
-	List<Salle> findAllSalle();
+	
 }

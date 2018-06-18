@@ -54,18 +54,7 @@ public class RessourceResource {
             .body(result);
     }
 
-    @PostMapping("/salles")
-    @Timed
-    public ResponseEntity<RessourceDTO> createSalle(@RequestBody RessourceDTO ressourceDTO) throws URISyntaxException {
-        log.debug("REST request to save Ressource : {}", ressourceDTO);
-        if (ressourceDTO.getId() != null) {
-            throw new BadRequestAlertException("A new ressource cannot already have an ID", ENTITY_NAME, "idexists");
-        }
-        RessourceDTO result = ressourceService.save(ressourceDTO);
-        return ResponseEntity.created(new URI("/api/salles/" + result.getId()))
-            .headers(HeaderUtil.createEntityCreationAlert(ENTITY_NAME, result.getId().toString()))
-            .body(result);
-    }
+    
     /**
      * PUT  /ressources : Updates an existing ressource.
      *
@@ -102,12 +91,7 @@ public class RessourceResource {
         return ressourceService.findAll();
         }
     
-    @GetMapping("/salles")
-    @Timed
-    public List<RessourceDTO> getAllSalles() {
-        log.debug("REST request to get all Ressources");
-        return ressourceService.findAllSalles();
-        }
+   
 
     /**
      * GET  /ressources/:id : get the "id" ressource.
