@@ -2,7 +2,14 @@
 Developement Ribbon
 ========================================================================== */
 .ribbon {
-    background-color: seethrough;
+    background-color: seethrought;
+    left: -3.5em;
+
+   
+    overflow: hidden;
+    position: absolute;
+
+    pointer-events: none;
 
 }
 
