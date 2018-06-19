@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class FormationResource {
      */
     @PostMapping("/formations")
     @Timed
-    public ResponseEntity<FormationDTO> createFormation(@RequestBody FormationDTO formationDTO) throws URISyntaxException {
+    public ResponseEntity<FormationDTO> createFormation(@Valid @RequestBody FormationDTO formationDTO) throws URISyntaxException {
         log.debug("REST request to save Formation : {}", formationDTO);
         if (formationDTO.getId() != null) {
             throw new BadRequestAlertException("A new formation cannot already have an ID", ENTITY_NAME, "idexists");
@@ -65,7 +66,7 @@ public class FormationResource {
      */
     @PutMapping("/formations")
     @Timed
-    public ResponseEntity<FormationDTO> updateFormation(@RequestBody FormationDTO formationDTO) throws URISyntaxException {
+    public ResponseEntity<FormationDTO> updateFormation(@Valid @RequestBody FormationDTO formationDTO) throws URISyntaxException {
         log.debug("REST request to update Formation : {}", formationDTO);
         if (formationDTO.getId() == null) {
             return createFormation(formationDTO);

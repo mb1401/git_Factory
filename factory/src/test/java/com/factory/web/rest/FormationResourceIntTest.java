@@ -150,6 +150,44 @@ public class FormationResourceIntTest {
 
     @Test
     @Transactional
+    public void checkDateDebutIsRequired() throws Exception {
+        int databaseSizeBeforeTest = formationRepository.findAll().size();
+        // set the field null
+        formation.setDateDebut(null);
+
+        // Create the Formation, which fails.
+        FormationDTO formationDTO = formationMapper.toDto(formation);
+
+        restFormationMockMvc.perform(post("/api/formations")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(formationDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Formation> formationList = formationRepository.findAll();
+        assertThat(formationList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkDateFinIsRequired() throws Exception {
+        int databaseSizeBeforeTest = formationRepository.findAll().size();
+        // set the field null
+        formation.setDateFin(null);
+
+        // Create the Formation, which fails.
+        FormationDTO formationDTO = formationMapper.toDto(formation);
+
+        restFormationMockMvc.perform(post("/api/formations")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(formationDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Formation> formationList = formationRepository.findAll();
+        assertThat(formationList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllFormations() throws Exception {
         // Initialize the database
         formationRepository.saveAndFlush(formation);

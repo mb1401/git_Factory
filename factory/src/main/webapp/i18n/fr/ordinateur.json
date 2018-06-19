@@ -16,6 +16,7 @@
             "detail": {
                 "title": "Ordinateur"
             },
+            "code": "Code",
             "cout": "Cout",
             "processeur": "Processeur",
             "ram": "Ram",

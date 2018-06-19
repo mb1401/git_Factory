@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class RessourceResource {
      */
     @PostMapping("/ressources")
     @Timed
-    public ResponseEntity<RessourceDTO> createRessource(@RequestBody RessourceDTO ressourceDTO) throws URISyntaxException {
+    public ResponseEntity<RessourceDTO> createRessource(@Valid @RequestBody RessourceDTO ressourceDTO) throws URISyntaxException {
         log.debug("REST request to save Ressource : {}", ressourceDTO);
         if (ressourceDTO.getId() != null) {
             throw new BadRequestAlertException("A new ressource cannot already have an ID", ENTITY_NAME, "idexists");
@@ -54,7 +55,6 @@ public class RessourceResource {
             .body(result);
     }
 
-    
     /**
      * PUT  /ressources : Updates an existing ressource.
      *
@@ -66,7 +66,7 @@ public class RessourceResource {
      */
     @PutMapping("/ressources")
     @Timed
-    public ResponseEntity<RessourceDTO> updateRessource(@RequestBody RessourceDTO ressourceDTO) throws URISyntaxException {
+    public ResponseEntity<RessourceDTO> updateRessource(@Valid @RequestBody RessourceDTO ressourceDTO) throws URISyntaxException {
         log.debug("REST request to update Ressource : {}", ressourceDTO);
         if (ressourceDTO.getId() == null) {
             return createRessource(ressourceDTO);
@@ -76,8 +76,6 @@ public class RessourceResource {
             .headers(HeaderUtil.createEntityUpdateAlert(ENTITY_NAME, ressourceDTO.getId().toString()))
             .body(result);
     }
-    
-    
 
     /**
      * GET  /ressources : get all the ressources.
@@ -90,8 +88,6 @@ public class RessourceResource {
         log.debug("REST request to get all Ressources");
         return ressourceService.findAll();
         }
-    
-   
 
     /**
      * GET  /ressources/:id : get the "id" ressource.

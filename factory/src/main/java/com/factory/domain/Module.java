@@ -2,6 +2,7 @@ package com.factory.domain;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -23,7 +24,9 @@ public class Module implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "titre")
+    @NotNull
+    @Size(min = 3, max = 25)
+    @Column(name = "titre", length = 25, nullable = false)
     private String titre;
 
     @Column(name = "contenu")
@@ -36,10 +39,12 @@ public class Module implements Serializable {
     @Column(name = "niveau")
     private Niveau niveau;
 
-    @Column(name = "date_debut")
+    @NotNull
+    @Column(name = "date_debut", nullable = false)
     private LocalDate dateDebut;
 
-    @Column(name = "date_fin")
+    @NotNull
+    @Column(name = "date_fin", nullable = false)
     private LocalDate dateFin;
 
     @ManyToOne

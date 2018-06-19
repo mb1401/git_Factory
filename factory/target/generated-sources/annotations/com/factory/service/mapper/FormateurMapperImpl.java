@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-19T14:49:43+0200",
+    date = "2018-06-19T15:44:12+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -27,7 +27,6 @@ public class FormateurMapperImpl implements FormateurMapper {
         formateurDTO.setNom( entity.getNom() );
         formateurDTO.setPrenom( entity.getPrenom() );
         formateurDTO.setNumeroRue( entity.getNumeroRue() );
-        formateurDTO.setRue( entity.getRue() );
         formateurDTO.setCodePostal( entity.getCodePostal() );
         formateurDTO.setVille( entity.getVille() );
         formateurDTO.setPays( entity.getPays() );
@@ -80,7 +79,6 @@ public class FormateurMapperImpl implements FormateurMapper {
         formateur.setNom( formateurDTO.getNom() );
         formateur.setPrenom( formateurDTO.getPrenom() );
         formateur.setNumeroRue( formateurDTO.getNumeroRue() );
-        formateur.setRue( formateurDTO.getRue() );
         formateur.setCodePostal( formateurDTO.getCodePostal() );
         formateur.setVille( formateurDTO.getVille() );
         formateur.setPays( formateurDTO.getPays() );

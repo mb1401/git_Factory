@@ -1,6 +1,7 @@
 package com.factory.service.dto;
 
 
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +14,11 @@ public class VideoProjecteurDTO implements Serializable {
 
     private Long id;
 
+    @NotNull
+    @Size(min = 3, max = 25)
+    private String code;
+
+    @NotNull
     private Float cout;
 
     public Long getId() {
@@ -21,6 +27,14 @@ public class VideoProjecteurDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Float getCout() {
@@ -56,6 +70,7 @@ public class VideoProjecteurDTO implements Serializable {
     public String toString() {
         return "VideoProjecteurDTO{" +
             "id=" + getId() +
+            ", code='" + getCode() + "'" +
             ", cout=" + getCout() +
             "}";
     }

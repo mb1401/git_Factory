@@ -19,7 +19,6 @@
             "nom": "Nom",
             "prenom": "Prenom",
             "numeroRue": "Numero Rue",
-            "rue": "Rue",
             "codePostal": "Code Postal",
             "ville": "Ville",
             "pays": "Pays",

@@ -3,6 +3,7 @@ package com.factory.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -26,7 +27,13 @@ public class Ordinateur implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "cout")
+    @NotNull
+    @Size(min = 3, max = 25)
+    @Column(name = "code", length = 25, nullable = false)
+    private String code;
+
+    @NotNull
+    @Column(name = "cout", nullable = false)
     private Float cout;
 
     @Enumerated(EnumType.STRING)
@@ -39,7 +46,8 @@ public class Ordinateur implements Serializable {
     @Column(name = "quantite_dd")
     private Integer quantiteDD;
 
-    @Column(name = "date_achat")
+    @NotNull
+    @Column(name = "date_achat", nullable = false)
     private LocalDate dateAchat;
 
     @OneToMany(mappedBy = "ordinateur")
@@ -53,6 +61,19 @@ public class Ordinateur implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public Ordinateur code(String code) {
+        this.code = code;
+        return this;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Float getCout() {
@@ -170,6 +191,7 @@ public class Ordinateur implements Serializable {
     public String toString() {
         return "Ordinateur{" +
             "id=" + getId() +
+            ", code='" + getCode() + "'" +
             ", cout=" + getCout() +
             ", processeur='" + getProcesseur() + "'" +
             ", ram=" + getRam() +

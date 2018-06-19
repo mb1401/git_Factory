@@ -166,6 +166,63 @@ public class ModuleResourceIntTest {
 
     @Test
     @Transactional
+    public void checkTitreIsRequired() throws Exception {
+        int databaseSizeBeforeTest = moduleRepository.findAll().size();
+        // set the field null
+        module.setTitre(null);
+
+        // Create the Module, which fails.
+        ModuleDTO moduleDTO = moduleMapper.toDto(module);
+
+        restModuleMockMvc.perform(post("/api/modules")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(moduleDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Module> moduleList = moduleRepository.findAll();
+        assertThat(moduleList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkDateDebutIsRequired() throws Exception {
+        int databaseSizeBeforeTest = moduleRepository.findAll().size();
+        // set the field null
+        module.setDateDebut(null);
+
+        // Create the Module, which fails.
+        ModuleDTO moduleDTO = moduleMapper.toDto(module);
+
+        restModuleMockMvc.perform(post("/api/modules")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(moduleDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Module> moduleList = moduleRepository.findAll();
+        assertThat(moduleList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkDateFinIsRequired() throws Exception {
+        int databaseSizeBeforeTest = moduleRepository.findAll().size();
+        // set the field null
+        module.setDateFin(null);
+
+        // Create the Module, which fails.
+        ModuleDTO moduleDTO = moduleMapper.toDto(module);
+
+        restModuleMockMvc.perform(post("/api/modules")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(moduleDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Module> moduleList = moduleRepository.findAll();
+        assertThat(moduleList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllModules() throws Exception {
         // Initialize the database
         moduleRepository.saveAndFlush(module);

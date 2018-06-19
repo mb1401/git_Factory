@@ -12,6 +12,7 @@ public abstract class Salle_ {
 	public static volatile SingularAttribute<Salle, Integer> capacite;
 	public static volatile SingularAttribute<Salle, Float> cout;
 	public static volatile SingularAttribute<Salle, Long> id;
+	public static volatile SingularAttribute<Salle, String> nom;
 	public static volatile SetAttribute<Salle, Module> modules;
 
 }

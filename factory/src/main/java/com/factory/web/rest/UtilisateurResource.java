@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class UtilisateurResource {
      */
     @PostMapping("/utilisateurs")
     @Timed
-    public ResponseEntity<UtilisateurDTO> createUtilisateur(@RequestBody UtilisateurDTO utilisateurDTO) throws URISyntaxException {
+    public ResponseEntity<UtilisateurDTO> createUtilisateur(@Valid @RequestBody UtilisateurDTO utilisateurDTO) throws URISyntaxException {
         log.debug("REST request to save Utilisateur : {}", utilisateurDTO);
         if (utilisateurDTO.getId() != null) {
             throw new BadRequestAlertException("A new utilisateur cannot already have an ID", ENTITY_NAME, "idexists");
@@ -65,7 +66,7 @@ public class UtilisateurResource {
      */
     @PutMapping("/utilisateurs")
     @Timed
-    public ResponseEntity<UtilisateurDTO> updateUtilisateur(@RequestBody UtilisateurDTO utilisateurDTO) throws URISyntaxException {
+    public ResponseEntity<UtilisateurDTO> updateUtilisateur(@Valid @RequestBody UtilisateurDTO utilisateurDTO) throws URISyntaxException {
         log.debug("REST request to update Utilisateur : {}", utilisateurDTO);
         if (utilisateurDTO.getId() == null) {
             return createUtilisateur(utilisateurDTO);

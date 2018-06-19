@@ -11,7 +11,6 @@ public abstract class Formateur_ {
 
 	public static volatile SetAttribute<Formateur, Matiere> matieres;
 	public static volatile SingularAttribute<Formateur, String> ville;
-	public static volatile SingularAttribute<Formateur, String> rue;
 	public static volatile SingularAttribute<Formateur, String> mail;
 	public static volatile SingularAttribute<Formateur, String> numeroRue;
 	public static volatile SingularAttribute<Formateur, String> codePostal;

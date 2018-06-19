@@ -6,7 +6,6 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { FormationAngularS } from './formation-angular-s.model';
 import { FormationAngularSService } from './formation-angular-s.service';
 import { Principal } from '../../shared';
-import {ModuleAngularS, ModuleAngularSService} from '../module-angular-s';
 
 @Component({
     selector: 'jhi-formation-angular-s',
@@ -18,7 +17,6 @@ formations: FormationAngularS[];
     eventSubscriber: Subscription;
 
     constructor(
-        private moduleService: ModuleAngularSService,
         private formationService: FormationAngularSService,
         private jhiAlertService: JhiAlertService,
         private eventManager: JhiEventManager,
@@ -30,15 +28,6 @@ formations: FormationAngularS[];
         this.formationService.query().subscribe(
             (res: HttpResponse<FormationAngularS[]>) => {
                 this.formations = res.body;
-                for (const f of this.formations) {
-                    // this.moduleService.query().subscribe(
-                    this.moduleService.findAllWithFormation(f.id).subscribe(
-                        (resModules: HttpResponse<ModuleAngularS[]>) => {
-                            f.modules = resModules.body;
-                        },
-                        (resModules: HttpErrorResponse) => this.onError(resModules.message)
-                    );
-                }
             },
             (res: HttpErrorResponse) => this.onError(res.message)
         );

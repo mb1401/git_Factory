@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class VideoProjecteurResource {
      */
     @PostMapping("/video-projecteurs")
     @Timed
-    public ResponseEntity<VideoProjecteurDTO> createVideoProjecteur(@RequestBody VideoProjecteurDTO videoProjecteurDTO) throws URISyntaxException {
+    public ResponseEntity<VideoProjecteurDTO> createVideoProjecteur(@Valid @RequestBody VideoProjecteurDTO videoProjecteurDTO) throws URISyntaxException {
         log.debug("REST request to save VideoProjecteur : {}", videoProjecteurDTO);
         if (videoProjecteurDTO.getId() != null) {
             throw new BadRequestAlertException("A new videoProjecteur cannot already have an ID", ENTITY_NAME, "idexists");
@@ -65,7 +66,7 @@ public class VideoProjecteurResource {
      */
     @PutMapping("/video-projecteurs")
     @Timed
-    public ResponseEntity<VideoProjecteurDTO> updateVideoProjecteur(@RequestBody VideoProjecteurDTO videoProjecteurDTO) throws URISyntaxException {
+    public ResponseEntity<VideoProjecteurDTO> updateVideoProjecteur(@Valid @RequestBody VideoProjecteurDTO videoProjecteurDTO) throws URISyntaxException {
         log.debug("REST request to update VideoProjecteur : {}", videoProjecteurDTO);
         if (videoProjecteurDTO.getId() == null) {
             return createVideoProjecteur(videoProjecteurDTO);

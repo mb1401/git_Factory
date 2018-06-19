@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-19T14:49:43+0200",
+    date = "2018-06-19T15:44:12+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -71,7 +71,6 @@ public class StagiaireMapperImpl implements StagiaireMapper {
         stagiaireDTO.setNom( stagiaire.getNom() );
         stagiaireDTO.setPrenom( stagiaire.getPrenom() );
         stagiaireDTO.setNumeroRue( stagiaire.getNumeroRue() );
-        stagiaireDTO.setRue( stagiaire.getRue() );
         stagiaireDTO.setCodePostal( stagiaire.getCodePostal() );
         stagiaireDTO.setVille( stagiaire.getVille() );
         stagiaireDTO.setPays( stagiaire.getPays() );
@@ -98,7 +97,6 @@ public class StagiaireMapperImpl implements StagiaireMapper {
         stagiaire.setNom( stagiaireDTO.getNom() );
         stagiaire.setPrenom( stagiaireDTO.getPrenom() );
         stagiaire.setNumeroRue( stagiaireDTO.getNumeroRue() );
-        stagiaire.setRue( stagiaireDTO.getRue() );
         stagiaire.setCodePostal( stagiaireDTO.getCodePostal() );
         stagiaire.setVille( stagiaireDTO.getVille() );
         stagiaire.setPays( stagiaireDTO.getPays() );

@@ -6,7 +6,6 @@ export class GestionnaireAngularS implements BaseEntity {
         public nom?: string,
         public prenom?: string,
         public numeroRue?: string,
-        public rue?: string,
         public codePostal?: string,
         public ville?: string,
         public pays?: string,

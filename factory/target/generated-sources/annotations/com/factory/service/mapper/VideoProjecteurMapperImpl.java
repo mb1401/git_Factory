@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-19T14:49:43+0200",
+    date = "2018-06-19T15:44:12+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -24,6 +24,7 @@ public class VideoProjecteurMapperImpl implements VideoProjecteurMapper {
         VideoProjecteurDTO videoProjecteurDTO = new VideoProjecteurDTO();
 
         videoProjecteurDTO.setId( entity.getId() );
+        videoProjecteurDTO.setCode( entity.getCode() );
         videoProjecteurDTO.setCout( entity.getCout() );
 
         return videoProjecteurDTO;
@@ -66,6 +67,7 @@ public class VideoProjecteurMapperImpl implements VideoProjecteurMapper {
         VideoProjecteur videoProjecteur = new VideoProjecteur();
 
         videoProjecteur.setId( videoProjecteurDTO.getId() );
+        videoProjecteur.setCode( videoProjecteurDTO.getCode() );
         videoProjecteur.setCout( videoProjecteurDTO.getCout() );
 
         return videoProjecteur;

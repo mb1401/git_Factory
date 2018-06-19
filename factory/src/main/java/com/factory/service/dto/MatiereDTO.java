@@ -1,6 +1,7 @@
 package com.factory.service.dto;
 
 
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +14,8 @@ public class MatiereDTO implements Serializable {
 
     private Long id;
 
+    @NotNull
+    @Size(min = 3, max = 25)
     private String nom;
 
     private Set<FormateurDTO> formateurs = new HashSet<>();

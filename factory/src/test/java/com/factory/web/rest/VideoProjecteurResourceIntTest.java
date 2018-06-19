@@ -41,6 +41,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = FactoryApp.class)
 public class VideoProjecteurResourceIntTest {
 
+    private static final String DEFAULT_CODE = "AAAAAAAAAA";
+    private static final String UPDATED_CODE = "BBBBBBBBBB";
+
     private static final Float DEFAULT_COUT = 1F;
     private static final Float UPDATED_COUT = 2F;
 
@@ -88,6 +91,7 @@ public class VideoProjecteurResourceIntTest {
      */
     public static VideoProjecteur createEntity(EntityManager em) {
         VideoProjecteur videoProjecteur = new VideoProjecteur()
+            .code(DEFAULT_CODE)
             .cout(DEFAULT_COUT);
         return videoProjecteur;
     }
@@ -113,6 +117,7 @@ public class VideoProjecteurResourceIntTest {
         List<VideoProjecteur> videoProjecteurList = videoProjecteurRepository.findAll();
         assertThat(videoProjecteurList).hasSize(databaseSizeBeforeCreate + 1);
         VideoProjecteur testVideoProjecteur = videoProjecteurList.get(videoProjecteurList.size() - 1);
+        assertThat(testVideoProjecteur.getCode()).isEqualTo(DEFAULT_CODE);
         assertThat(testVideoProjecteur.getCout()).isEqualTo(DEFAULT_COUT);
     }
 
@@ -138,6 +143,44 @@ public class VideoProjecteurResourceIntTest {
 
     @Test
     @Transactional
+    public void checkCodeIsRequired() throws Exception {
+        int databaseSizeBeforeTest = videoProjecteurRepository.findAll().size();
+        // set the field null
+        videoProjecteur.setCode(null);
+
+        // Create the VideoProjecteur, which fails.
+        VideoProjecteurDTO videoProjecteurDTO = videoProjecteurMapper.toDto(videoProjecteur);
+
+        restVideoProjecteurMockMvc.perform(post("/api/video-projecteurs")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(videoProjecteurDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<VideoProjecteur> videoProjecteurList = videoProjecteurRepository.findAll();
+        assertThat(videoProjecteurList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkCoutIsRequired() throws Exception {
+        int databaseSizeBeforeTest = videoProjecteurRepository.findAll().size();
+        // set the field null
+        videoProjecteur.setCout(null);
+
+        // Create the VideoProjecteur, which fails.
+        VideoProjecteurDTO videoProjecteurDTO = videoProjecteurMapper.toDto(videoProjecteur);
+
+        restVideoProjecteurMockMvc.perform(post("/api/video-projecteurs")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(videoProjecteurDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<VideoProjecteur> videoProjecteurList = videoProjecteurRepository.findAll();
+        assertThat(videoProjecteurList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllVideoProjecteurs() throws Exception {
         // Initialize the database
         videoProjecteurRepository.saveAndFlush(videoProjecteur);
@@ -147,6 +190,7 @@ public class VideoProjecteurResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(videoProjecteur.getId().intValue())))
+            .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE.toString())))
             .andExpect(jsonPath("$.[*].cout").value(hasItem(DEFAULT_COUT.doubleValue())));
     }
 
@@ -161,6 +205,7 @@ public class VideoProjecteurResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(videoProjecteur.getId().intValue()))
+            .andExpect(jsonPath("$.code").value(DEFAULT_CODE.toString()))
             .andExpect(jsonPath("$.cout").value(DEFAULT_COUT.doubleValue()));
     }
 
@@ -184,6 +229,7 @@ public class VideoProjecteurResourceIntTest {
         // Disconnect from session so that the updates on updatedVideoProjecteur are not directly saved in db
         em.detach(updatedVideoProjecteur);
         updatedVideoProjecteur
+            .code(UPDATED_CODE)
             .cout(UPDATED_COUT);
         VideoProjecteurDTO videoProjecteurDTO = videoProjecteurMapper.toDto(updatedVideoProjecteur);
 
@@ -196,6 +242,7 @@ public class VideoProjecteurResourceIntTest {
         List<VideoProjecteur> videoProjecteurList = videoProjecteurRepository.findAll();
         assertThat(videoProjecteurList).hasSize(databaseSizeBeforeUpdate);
         VideoProjecteur testVideoProjecteur = videoProjecteurList.get(videoProjecteurList.size() - 1);
+        assertThat(testVideoProjecteur.getCode()).isEqualTo(UPDATED_CODE);
         assertThat(testVideoProjecteur.getCout()).isEqualTo(UPDATED_COUT);
     }
 

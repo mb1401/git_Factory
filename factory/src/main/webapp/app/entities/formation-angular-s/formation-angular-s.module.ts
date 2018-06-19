@@ -14,7 +14,6 @@ import {
     formationRoute,
     formationPopupRoute,
 } from './';
-import { FormationAngularSModuleEditComponent } from './formation-angular-s-module-edit.component';
 
 const ENTITY_STATES = [
     ...formationRoute,
@@ -33,7 +32,6 @@ const ENTITY_STATES = [
         FormationAngularSDeleteDialogComponent,
         FormationAngularSPopupComponent,
         FormationAngularSDeletePopupComponent,
-        FormationAngularSModuleEditComponent,
     ],
     entryComponents: [
         FormationAngularSComponent,

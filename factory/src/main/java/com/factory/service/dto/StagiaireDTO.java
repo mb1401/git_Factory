@@ -1,6 +1,7 @@
 package com.factory.service.dto;
 
 
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,26 +14,36 @@ public class StagiaireDTO implements Serializable {
 
     private Long id;
 
+    @NotNull
+    @Size(min = 3, max = 25)
     private String nom;
 
+    @NotNull
+    @Size(min = 3, max = 25)
     private String prenom;
 
+    @Size(max = 25)
     private String numeroRue;
 
-    private String rue;
-
+    @Size(max = 25)
     private String codePostal;
 
+    @Size(max = 25)
     private String ville;
 
+    @Size(max = 25)
     private String pays;
 
+    @Size(max = 25)
     private String mail;
 
+    @Size(max = 25)
     private String numeroTel;
 
+    @Size(max = 25)
     private String username;
 
+    @Size(max = 25)
     private String password;
 
     private Boolean enable;
@@ -71,14 +82,6 @@ public class StagiaireDTO implements Serializable {
 
     public void setNumeroRue(String numeroRue) {
         this.numeroRue = numeroRue;
-    }
-
-    public String getRue() {
-        return rue;
-    }
-
-    public void setRue(String rue) {
-        this.rue = rue;
     }
 
     public String getCodePostal() {
@@ -189,7 +192,6 @@ public class StagiaireDTO implements Serializable {
             ", nom='" + getNom() + "'" +
             ", prenom='" + getPrenom() + "'" +
             ", numeroRue='" + getNumeroRue() + "'" +
-            ", rue='" + getRue() + "'" +
             ", codePostal='" + getCodePostal() + "'" +
             ", ville='" + getVille() + "'" +
             ", pays='" + getPays() + "'" +

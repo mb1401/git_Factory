@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-19T14:49:43+0200",
+    date = "2018-06-19T15:44:12+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -24,6 +24,7 @@ public class RessourceMapperImpl implements RessourceMapper {
         Ressource ressource = new Ressource();
 
         ressource.setId( dto.getId() );
+        ressource.setCode( dto.getCode() );
         ressource.setCout( dto.getCout() );
 
         return ressource;
@@ -38,6 +39,7 @@ public class RessourceMapperImpl implements RessourceMapper {
         RessourceDTO ressourceDTO = new RessourceDTO();
 
         ressourceDTO.setId( entity.getId() );
+        ressourceDTO.setCode( entity.getCode() );
         ressourceDTO.setCout( entity.getCout() );
 
         return ressourceDTO;

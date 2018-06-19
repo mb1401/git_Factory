@@ -10,7 +10,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -85,12 +84,4 @@ public class ModuleServiceImpl implements ModuleService {
         log.debug("Request to delete Module : {}", id);
         moduleRepository.delete(id);
     }
-
-	@Override
-	public List<ModuleDTO> findAllWithFormation(Long id) {
-		log.debug("Request to get Modules in a specific Formation");
-        return moduleRepository.findAllWithFormation(id).stream()
-                .map(moduleMapper::toDto)
-                .collect(Collectors.toCollection(LinkedList::new));
-	}
 }

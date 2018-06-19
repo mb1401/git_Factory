@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class GestionnaireResource {
      */
     @PostMapping("/gestionnaires")
     @Timed
-    public ResponseEntity<GestionnaireDTO> createGestionnaire(@RequestBody GestionnaireDTO gestionnaireDTO) throws URISyntaxException {
+    public ResponseEntity<GestionnaireDTO> createGestionnaire(@Valid @RequestBody GestionnaireDTO gestionnaireDTO) throws URISyntaxException {
         log.debug("REST request to save Gestionnaire : {}", gestionnaireDTO);
         if (gestionnaireDTO.getId() != null) {
             throw new BadRequestAlertException("A new gestionnaire cannot already have an ID", ENTITY_NAME, "idexists");
@@ -65,7 +66,7 @@ public class GestionnaireResource {
      */
     @PutMapping("/gestionnaires")
     @Timed
-    public ResponseEntity<GestionnaireDTO> updateGestionnaire(@RequestBody GestionnaireDTO gestionnaireDTO) throws URISyntaxException {
+    public ResponseEntity<GestionnaireDTO> updateGestionnaire(@Valid @RequestBody GestionnaireDTO gestionnaireDTO) throws URISyntaxException {
         log.debug("REST request to update Gestionnaire : {}", gestionnaireDTO);
         if (gestionnaireDTO.getId() == null) {
             return createGestionnaire(gestionnaireDTO);

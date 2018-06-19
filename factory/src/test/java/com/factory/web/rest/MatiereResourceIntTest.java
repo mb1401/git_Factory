@@ -138,6 +138,25 @@ public class MatiereResourceIntTest {
 
     @Test
     @Transactional
+    public void checkNomIsRequired() throws Exception {
+        int databaseSizeBeforeTest = matiereRepository.findAll().size();
+        // set the field null
+        matiere.setNom(null);
+
+        // Create the Matiere, which fails.
+        MatiereDTO matiereDTO = matiereMapper.toDto(matiere);
+
+        restMatiereMockMvc.perform(post("/api/matieres")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(matiereDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Matiere> matiereList = matiereRepository.findAll();
+        assertThat(matiereList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllMatieres() throws Exception {
         // Initialize the database
         matiereRepository.saveAndFlush(matiere);

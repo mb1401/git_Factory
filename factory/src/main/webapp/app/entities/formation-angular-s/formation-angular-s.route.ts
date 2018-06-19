@@ -5,7 +5,6 @@ import { FormationAngularSComponent } from './formation-angular-s.component';
 import { FormationAngularSDetailComponent } from './formation-angular-s-detail.component';
 import { FormationAngularSPopupComponent } from './formation-angular-s-dialog.component';
 import { FormationAngularSDeletePopupComponent } from './formation-angular-s-delete-dialog.component';
-import {FormationAngularSModuleEditComponent} from './formation-angular-s-module-edit.component';
 
 export const formationRoute: Routes = [
     {
@@ -19,14 +18,6 @@ export const formationRoute: Routes = [
     }, {
         path: 'formation-angular-s/:id',
         component: FormationAngularSDetailComponent,
-        data: {
-            authorities: ['ROLE_USER'],
-            pageTitle: 'factoryApp.formation.home.title'
-        },
-        canActivate: [UserRouteAccessService]
-    }, {
-        path: 'formation-angular-s/:id/module-edit',
-        component: FormationAngularSModuleEditComponent,
         data: {
             authorities: ['ROLE_USER'],
             pageTitle: 'factoryApp.formation.home.title'

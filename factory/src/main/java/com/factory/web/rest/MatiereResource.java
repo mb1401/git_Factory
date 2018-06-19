@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class MatiereResource {
      */
     @PostMapping("/matieres")
     @Timed
-    public ResponseEntity<MatiereDTO> createMatiere(@RequestBody MatiereDTO matiereDTO) throws URISyntaxException {
+    public ResponseEntity<MatiereDTO> createMatiere(@Valid @RequestBody MatiereDTO matiereDTO) throws URISyntaxException {
         log.debug("REST request to save Matiere : {}", matiereDTO);
         if (matiereDTO.getId() != null) {
             throw new BadRequestAlertException("A new matiere cannot already have an ID", ENTITY_NAME, "idexists");
@@ -65,7 +66,7 @@ public class MatiereResource {
      */
     @PutMapping("/matieres")
     @Timed
-    public ResponseEntity<MatiereDTO> updateMatiere(@RequestBody MatiereDTO matiereDTO) throws URISyntaxException {
+    public ResponseEntity<MatiereDTO> updateMatiere(@Valid @RequestBody MatiereDTO matiereDTO) throws URISyntaxException {
         log.debug("REST request to update Matiere : {}", matiereDTO);
         if (matiereDTO.getId() == null) {
             return createMatiere(matiereDTO);

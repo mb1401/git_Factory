@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-19T14:49:43+0200",
+    date = "2018-06-19T15:44:12+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -27,7 +27,6 @@ public class TechnicienMapperImpl implements TechnicienMapper {
         technicien.setNom( dto.getNom() );
         technicien.setPrenom( dto.getPrenom() );
         technicien.setNumeroRue( dto.getNumeroRue() );
-        technicien.setRue( dto.getRue() );
         technicien.setCodePostal( dto.getCodePostal() );
         technicien.setVille( dto.getVille() );
         technicien.setPays( dto.getPays() );
@@ -52,7 +51,6 @@ public class TechnicienMapperImpl implements TechnicienMapper {
         technicienDTO.setNom( entity.getNom() );
         technicienDTO.setPrenom( entity.getPrenom() );
         technicienDTO.setNumeroRue( entity.getNumeroRue() );
-        technicienDTO.setRue( entity.getRue() );
         technicienDTO.setCodePostal( entity.getCodePostal() );
         technicienDTO.setVille( entity.getVille() );
         technicienDTO.setPays( entity.getPays() );

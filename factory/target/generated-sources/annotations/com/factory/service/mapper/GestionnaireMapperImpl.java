@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2018-06-19T14:49:43+0200",
+    date = "2018-06-19T15:44:12+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component
@@ -27,7 +27,6 @@ public class GestionnaireMapperImpl implements GestionnaireMapper {
         gestionnaireDTO.setNom( entity.getNom() );
         gestionnaireDTO.setPrenom( entity.getPrenom() );
         gestionnaireDTO.setNumeroRue( entity.getNumeroRue() );
-        gestionnaireDTO.setRue( entity.getRue() );
         gestionnaireDTO.setCodePostal( entity.getCodePostal() );
         gestionnaireDTO.setVille( entity.getVille() );
         gestionnaireDTO.setPays( entity.getPays() );
@@ -80,7 +79,6 @@ public class GestionnaireMapperImpl implements GestionnaireMapper {
         gestionnaire.setNom( gestionnaireDTO.getNom() );
         gestionnaire.setPrenom( gestionnaireDTO.getPrenom() );
         gestionnaire.setNumeroRue( gestionnaireDTO.getNumeroRue() );
-        gestionnaire.setRue( gestionnaireDTO.getRue() );
         gestionnaire.setCodePostal( gestionnaireDTO.getCodePostal() );
         gestionnaire.setVille( gestionnaireDTO.getVille() );
         gestionnaire.setPays( gestionnaireDTO.getPays() );

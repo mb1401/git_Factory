@@ -17,6 +17,7 @@
             <thead>
             <tr>
             <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="factoryApp.ressource.code">Code</span></th>
             <th><span jhiTranslate="factoryApp.ressource.cout">Cout</span></th>
             <th></th>
             </tr>
@@ -24,6 +25,7 @@
             <tbody>
             <tr *ngFor="let ressource of ressources ;trackBy: trackId">
                 <td><a [routerLink]="['../ressource-angular-s', ressource.id ]">{{ressource.id}}</a></td>
+                <td>{{ressource.code}}</td>
                 <td>{{ressource.cout}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
