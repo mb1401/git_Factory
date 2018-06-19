@@ -101,6 +101,14 @@ public class ModuleResource {
         ModuleDTO moduleDTO = moduleService.findOne(id);
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(moduleDTO));
     }
+    
+    @GetMapping("/modules/withFormation/{formationId}")
+    @Timed
+    public List<ModuleDTO> getModuleByFormation(@PathVariable Long formationId) {
+        log.debug("REST request to get ModuleByFormation : {}", formationId);
+        List<ModuleDTO> modulesDTO = moduleService.findAllWithFormation(formationId);
+        return modulesDTO;
+    }
 
     /**
      * DELETE  /modules/:id : delete the "id" module.
