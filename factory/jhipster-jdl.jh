@@ -16,6 +16,7 @@ entity VideoProjecteur {
 }
 
 entity Salle {
+	nom String
 	cout Float
 	capacite Integer
     
@@ -40,7 +41,6 @@ entity Utilisateur {
 	nom String,
 	prenom String,
 	numeroRue String
-    rue String
     codePostal String
     ville String
     pays String
