@@ -60,7 +60,6 @@
         });
     </script>
 </div>
-    <div class="col-md-9">
         <h1 class="display-4" jhiTranslate="home.title">Skills Development!</h1>
         <p class="lead" jhiTranslate="home.subtitle">Why Join the Factory?</p>
 
@@ -120,7 +119,7 @@
         </div>
 
         <div class="w3-container w3-padding-64 w3-center" id="team">
-            <h2>OUR TEAM</h2>
+            <h1 class="display-4">OUR TEAM</h1>
             <p>Meet the team - our office rats:</p>
 
             <div class="w3-row"><br>
@@ -152,16 +151,22 @@
             </div>
         </div>
 
-
-
-        <div class="w3-container">
-            <h2>Contact</h2>
-            <p>Hope to see you soon!</p>
-            <i class="fa fa-map-marker" style="width:30px"></i> 6 rue Rougemont, 75009, Paris<br>
-            <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
-            <i class="fa fa-envelope" style="width:30px"> </i> Email: BossMail@FactoryMail.com<br>
+        <div class="w3-row-padding" id="about">
+            <div class="w3-col l4 m7">
+                <h1 class="display-4">About us :</h1>
+                <h6>Our Factory is one of a kind. It is truely amazing. Come and see how good we are, look at everything we can do.</h6>
+            </div>
+            <div class="w3-col l8 m5">
+                <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.2960661955985!2d2.3439167157358636!3d48.87163227928871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e15fc083afd%3A0x1a024cc5c4ca78d6!2s6+Rue+Rougemont%2C+75009+Paris!5e0!3m2!1sen!2sfr!4v1529419626477" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+            </div>
         </div>
 
+        <div class="w3-row w3-large w3-center" style="margin:32px 0">
+            <div class="w3-third"><i class="fa fa-map-marker w3-text-red"></i> 6 rue Rougemont, Paris, 75009</div>
+            <div class="w3-third"><i class="fa fa-phone w3-text-red"></i> Phone: +00 151515</div>
+            <div class="w3-third"><i class="fa fa-envelope w3-text-red"></i> BossEmail: BossMail@FactoryMail.com</div>
+        </div>
+        <!-- Add Google Maps -->
 
         <div class="modal-header">
             <h4 class="modal-title" jhiTranslate="login.title">Sign in</h4>
@@ -198,5 +203,5 @@
         <p>
             <span jhiTranslate="home.like">If you like JHipster, don't forget to give us a star on</span> <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener" jhiTranslate="home.github">GitHub</a>!
         </p>
-    </div>
+
 </div>
