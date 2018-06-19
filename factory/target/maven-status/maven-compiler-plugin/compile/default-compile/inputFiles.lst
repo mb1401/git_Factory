@@ -13,6 +13,7 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\con
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\SalleMapper.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\ProfileInfoResource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\UserDTO.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\OrdinateurRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\GestionnaireMapper.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\FormationResource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\UserRepository.java
@@ -21,6 +22,7 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\dom
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\impl\RessourceServiceImpl.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\domain\Stagiaire.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\StagiaireMapper.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\FormateurRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\TechnicienMapper.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\PersistentTokenRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\config\LoggingAspectConfiguration.java
@@ -30,7 +32,11 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\rep
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\errors\ExceptionTranslator.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\errors\LoginAlreadyUsedException.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\VideoProjecteurDTO.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\impl\TechnicienServiceImpl.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\VideoProjecteurRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\LogsResource.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\impl\FormateurServiceImpl.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\GestionnaireRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\RessourceService.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\errors\ErrorConstants.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\vm\ManagedUserVM.java
@@ -49,6 +55,7 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\con
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\SalleDTO.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\package-info.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\errors\EmailNotFoundException.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\VideoProjecteurResource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\OrdinateurService.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\config\JacksonConfiguration.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\domain\Gestionnaire.java
@@ -56,6 +63,8 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\ser
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\config\MetricsConfiguration.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\config\DefaultProfileUtil.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\OrdinateurDTO.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\impl\StagiaireServiceImpl.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\OrdinateurResource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\domain\AbstractAuditingEntity.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\FormateurMapper.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\UtilisateurMapper.java
@@ -79,6 +88,7 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\aop
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\UserResource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\security\DomainUserDetailsService.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\FormateurDTO.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\impl\GestionnaireServiceImpl.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\AuditEventService.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\RessourceMapper.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\domain\Formation.java
@@ -86,7 +96,9 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\ser
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\OrdinateurMapper.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\vm\LoggerVM.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\StagiaireDTO.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\impl\SalleServiceImpl.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\TechnicienDTO.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\SalleRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\security\SpringSecurityAuditorAware.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\domain\package-info.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\domain\VideoProjecteur.java
@@ -100,12 +112,17 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\rep
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\PersistenceAuditEventRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\RessourceResource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\impl\ModuleServiceImpl.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\TechnicienRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\domain\enumeration\Niveau.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\GestionnaireResource.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\SalleResource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\FormateurService.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\GestionnaireService.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\FormateurResource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\RessourceDTO.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\errors\CustomParameterizedException.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\MatiereDTO.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\impl\OrdinateurServiceImpl.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\RessourceRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\dto\ModuleDTO.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\ModuleRepository.java
@@ -113,6 +130,7 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\ser
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\config\audit\package-info.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\domain\Ressource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\UserMapper.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\impl\VideoProjecteurServiceImpl.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\AuthorityRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\domain\Matiere.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\FactoryApp.java
@@ -130,9 +148,12 @@ C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\con
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\config\Constants.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\security\SecurityUtils.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\StagiaireService.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\TechnicienResource.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\ApplicationWebXml.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\config\LocaleConfiguration.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\MatiereMapper.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\service\mapper\FormationMapper.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\CustomAuditEventRepository.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\repository\StagiaireRepository.java
 C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\errors\InvalidPasswordException.java
+C:\Users\ajc\eclipse-workspace\git_Factory\factory\src\main\java\com\factory\web\rest\StagiaireResource.java
