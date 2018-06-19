@@ -1,14 +1,18 @@
 com\factory\config\WebConfigurerTest.class
 com\factory\web\rest\errors\ExceptionTranslatorIntTest.class
+com\factory\web\rest\TechnicienResourceIntTest.class
 com\factory\web\rest\UserResourceIntTest.class
 com\factory\web\rest\errors\ExceptionTranslatorTestController$TestResponseStatusException.class
+com\factory\web\rest\SalleResourceIntTest.class
 com\factory\web\rest\AuditResourceIntTest.class
 com\factory\web\rest\util\PaginationUtilUnitTest.class
 com\factory\config\WebConfigurerTest$MockServletRegistration.class
 com\factory\config\WebConfigurerTest$MockFilterRegistration.class
+com\factory\web\rest\FormateurResourceIntTest.class
 com\factory\web\rest\RessourceResourceIntTest.class
 com\factory\web\rest\ModuleResourceIntTest.class
 com\factory\web\rest\errors\ExceptionTranslatorTestController.class
+com\factory\web\rest\OrdinateurResourceIntTest.class
 com\factory\security\DomainUserDetailsServiceIntTest.class
 com\factory\security\SecurityUtilsUnitTest.class
 com\factory\web\rest\errors\ExceptionTranslatorTestController$TestDTO.class
@@ -17,6 +21,7 @@ com\factory\web\rest\AccountResourceIntTest.class
 com\factory\web\rest\TestUtil$ZonedDateTimeMatcher.class
 com\factory\web\rest\FormationResourceIntTest.class
 com\factory\web\rest\UtilisateurResourceIntTest.class
+com\factory\web\rest\StagiaireResourceIntTest.class
 com\factory\web\rest\ProfileInfoResourceIntTest.class
 com\factory\service\UserServiceIntTest.class
 com\factory\web\rest\LogsResourceIntTest.class
@@ -24,3 +29,5 @@ com\factory\web\rest\MatiereResourceIntTest.class
 com\factory\service\MailServiceIntTest.class
 com\factory\web\rest\TestUtil.class
 com\factory\repository\CustomAuditEventRepositoryIntTest.class
+com\factory\web\rest\VideoProjecteurResourceIntTest.class
+com\factory\web\rest\GestionnaireResourceIntTest.class
