@@ -26,9 +26,9 @@
             <th><span jhiTranslate="factoryApp.formateur.pays">Pays</span></th>
             <th><span jhiTranslate="factoryApp.formateur.mail">Mail</span></th>
             <th><span jhiTranslate="factoryApp.formateur.numeroTel">Numero Tel</span></th>
-            <th><span jhiTranslate="factoryApp.formateur.username">Username</span></th>
-            <th><span jhiTranslate="factoryApp.formateur.password">Password</span></th>
-            <th><span jhiTranslate="factoryApp.formateur.enable">Enable</span></th>
+            <th><span hidden jhiTranslate="factoryApp.formateur.username">Username</span></th>
+            <th><span hidden jhiTranslate="factoryApp.formateur.password">Password</span></th>
+            <th><span hidden jhiTranslate="factoryApp.formateur.enable">Enable</span></th>
             <th></th>
             </tr>
             </thead>
@@ -44,9 +44,9 @@
                 <td>{{formateur.pays}}</td>
                 <td>{{formateur.mail}}</td>
                 <td>{{formateur.numeroTel}}</td>
-                <td>{{formateur.username}}</td>
-                <td>{{formateur.password}}</td>
-                <td>{{formateur.enable}}</td>
+                <td hidden>{{formateur.username}}</td>
+                <td hidden>{{formateur.password}}</td>
+                <td hidden>{{formateur.enable}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"
