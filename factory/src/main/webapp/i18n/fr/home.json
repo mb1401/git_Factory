@@ -1,7 +1,11 @@
 {
     "home": {
         "title": "Développeur de compétences!",
-        "subtitle": "Ceci est votre page d'accueil",
+        "subtitle": "Pourquoi rejoindre la Factory?",
+        "classe":{
+            "title":"Classe en Pointe",
+            "message":"Obtenez une longueur d'avance sur la concurrence, et découvrez les outils, techniques et technologiques les plus récents dans votre domaine."
+        },
         "logged": {
             "message": "Vous êtes connecté en tant que \"{{username}}\"."
         },
