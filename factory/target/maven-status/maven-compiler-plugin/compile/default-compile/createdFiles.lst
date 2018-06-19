@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 com\factory\config\Constants.class
 com\factory\web\rest\VideoProjecteurResource.class
@@ -56,6 +57,8 @@ com\factory\security\UserNotActivatedException.class
 com\factory\service\impl\VideoProjecteurServiceImpl.class
 =======
 =======
+=======
+>>>>>>> Stashed changes
 com\factory\web\rest\VideoProjecteurResource.class
 com\factory\web\rest\OrdinateurResource.class
 com\factory\domain\User_.class
@@ -72,8 +75,11 @@ com\factory\domain\Stagiaire_.class
 com\factory\repository\OrdinateurRepository.class
 com\factory\domain\Formateur_.class
 com\factory\service\impl\VideoProjecteurServiceImpl.class
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 >>>>>>> master
+=======
+>>>>>>> Stashed changes
 com\factory\service\mapper\OrdinateurMapperImpl.class
 com\factory\domain\Salle.class
 com\factory\config\LoggingConfiguration$LogbackLoggerContextListener.class
@@ -96,6 +102,7 @@ com\factory\domain\PersistentToken.class
 com\factory\web\rest\UtilisateurResource.class
 com\factory\domain\VideoProjecteur.class
 com\factory\service\mapper\TechnicienMapperImpl.class
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 com\factory\web\rest\vm\LoggerVM.class
 com\factory\config\ThymeleafConfiguration.class
@@ -119,6 +126,8 @@ com\factory\domain\PersistentToken_.class
 com\factory\service\mapper\StagiaireMapperImpl.class
 com\factory\service\mapper\GestionnaireMapperImpl.class
 =======
+=======
+>>>>>>> Stashed changes
 com\factory\repository\SalleRepository.class
 com\factory\service\impl\TechnicienServiceImpl.class
 >>>>>>> master
@@ -142,8 +151,11 @@ com\factory\repository\VideoProjecteurRepository.class
 =======
 com\factory\service\mapper\GestionnaireMapperImpl.class
 com\factory\repository\VideoProjecteurRepository.class
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 >>>>>>> master
+=======
+>>>>>>> Stashed changes
 com\factory\domain\Ressource_.class
 com\factory\service\dto\SalleDTO.class
 com\factory\repository\ModuleRepository.class
@@ -156,6 +168,7 @@ com\factory\service\dto\FormateurDTO.class
 com\factory\web\rest\util\PaginationUtil.class
 com\factory\service\dto\UtilisateurDTO.class
 com\factory\service\mapper\SalleMapperImpl.class
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 com\factory\repository\UtilisateurRepository.class
 com\factory\config\SecurityConfiguration.class
@@ -230,6 +243,8 @@ com\factory\domain\PersistentAuditEvent_.class
 com\factory\domain\Authority_.class
 com\factory\service\mapper\VideoProjecteurMapperImpl.class
 =======
+=======
+>>>>>>> Stashed changes
 com\factory\service\impl\OrdinateurServiceImpl.class
 com\factory\repository\GestionnaireRepository.class
 com\factory\repository\TechnicienRepository.class
@@ -245,5 +260,8 @@ com\factory\web\rest\SalleResource.class
 com\factory\service\mapper\VideoProjecteurMapperImpl.class
 com\factory\service\impl\SalleServiceImpl.class
 com\factory\repository\FormateurRepository.class
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 >>>>>>> master
+=======
+>>>>>>> Stashed changes

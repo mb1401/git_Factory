@@ -14,6 +14,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     date = "2018-06-19T10:44:20+0200",
 =======
@@ -23,6 +24,9 @@ import org.springframework.stereotype.Component;
     date = "2018-06-19T09:05:03+0200",
 >>>>>>> Stashed changes
 >>>>>>> master
+=======
+    date = "2018-06-19T11:54:27+0200",
+>>>>>>> Stashed changes
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
 )
 @Component

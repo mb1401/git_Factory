@@ -4,6 +4,9 @@
         "browsehappy": "Vous utilisez un <strong>ancien</strong> navigateur. Veuillez <a href=\"http://browsehappy.com/?locale=fr\">mettre à jour votre navigateur</a> pour une meilleure expérience.",
         "menu": {
             "home": "Accueil",
+            "contact": "Contact",
+            "formation": "Formation",
+            "staff": "Staff",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entités",
@@ -20,6 +23,16 @@
                 "formateurAngularS": "Formateur",
                 "matiereAngularS": "Matiere",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
+            },
+            "gestion": {
+                "main": "Gestion",
+                "ressourceAngularS": "Ressources",
+                "salleAngularS": "Salles",
+                "formationAngularS": "Formations",
+                "technicienAngularS": "Techniciens",
+                "gestionnaireAngularS": "Gestionnaires",
+                "formateurAngularS": "Formateurs",
+                "matiereAngularS": "Matieres"
             },
             "account": {
                 "main": "Compte",
