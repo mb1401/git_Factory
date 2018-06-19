@@ -11,7 +11,7 @@ export const salleRoute: Routes = [
         path: 'salle-angular-s',
         component: SalleAngularSComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.salle.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -19,7 +19,7 @@ export const salleRoute: Routes = [
         path: 'salle-angular-s/:id',
         component: SalleAngularSDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.salle.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -31,7 +31,7 @@ export const sallePopupRoute: Routes = [
         path: 'salle-angular-s-new',
         component: SalleAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.salle.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -41,7 +41,7 @@ export const sallePopupRoute: Routes = [
         path: 'salle-angular-s/:id/edit',
         component: SalleAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.salle.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -51,7 +51,7 @@ export const sallePopupRoute: Routes = [
         path: 'salle-angular-s/:id/delete',
         component: SalleAngularSDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.salle.home.title'
         },
         canActivate: [UserRouteAccessService],

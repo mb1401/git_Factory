@@ -11,7 +11,7 @@ export const ressourceRoute: Routes = [
         path: 'ressource-angular-s',
         component: RessourceAngularSComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.ressource.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -19,7 +19,7 @@ export const ressourceRoute: Routes = [
         path: 'ressource-angular-s/:id',
         component: RessourceAngularSDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.ressource.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -31,7 +31,7 @@ export const ressourcePopupRoute: Routes = [
         path: 'ressource-angular-s-new',
         component: RessourceAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.ressource.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -41,7 +41,7 @@ export const ressourcePopupRoute: Routes = [
         path: 'ressource-angular-s/:id/edit',
         component: RessourceAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.ressource.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -51,7 +51,7 @@ export const ressourcePopupRoute: Routes = [
         path: 'ressource-angular-s/:id/delete',
         component: RessourceAngularSDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.ressource.home.title'
         },
         canActivate: [UserRouteAccessService],

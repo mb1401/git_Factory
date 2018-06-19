@@ -11,7 +11,7 @@ export const technicienRoute: Routes = [
         path: 'technicien-angular-s',
         component: TechnicienAngularSComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.technicien.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -19,7 +19,7 @@ export const technicienRoute: Routes = [
         path: 'technicien-angular-s/:id',
         component: TechnicienAngularSDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.technicien.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -31,7 +31,7 @@ export const technicienPopupRoute: Routes = [
         path: 'technicien-angular-s-new',
         component: TechnicienAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.technicien.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -41,7 +41,7 @@ export const technicienPopupRoute: Routes = [
         path: 'technicien-angular-s/:id/edit',
         component: TechnicienAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.technicien.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -51,7 +51,7 @@ export const technicienPopupRoute: Routes = [
         path: 'technicien-angular-s/:id/delete',
         component: TechnicienAngularSDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.technicien.home.title'
         },
         canActivate: [UserRouteAccessService],

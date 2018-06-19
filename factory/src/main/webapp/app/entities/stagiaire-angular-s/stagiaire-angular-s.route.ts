@@ -11,7 +11,7 @@ export const stagiaireRoute: Routes = [
         path: 'stagiaire-angular-s',
         component: StagiaireAngularSComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.stagiaire.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -19,7 +19,7 @@ export const stagiaireRoute: Routes = [
         path: 'stagiaire-angular-s/:id',
         component: StagiaireAngularSDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.stagiaire.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -31,7 +31,7 @@ export const stagiairePopupRoute: Routes = [
         path: 'stagiaire-angular-s-new',
         component: StagiaireAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.stagiaire.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -41,7 +41,7 @@ export const stagiairePopupRoute: Routes = [
         path: 'stagiaire-angular-s/:id/edit',
         component: StagiaireAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.stagiaire.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -51,7 +51,7 @@ export const stagiairePopupRoute: Routes = [
         path: 'stagiaire-angular-s/:id/delete',
         component: StagiaireAngularSDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.stagiaire.home.title'
         },
         canActivate: [UserRouteAccessService],

@@ -11,7 +11,7 @@ export const formateurRoute: Routes = [
         path: 'formateur-angular-s',
         component: FormateurAngularSComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.formateur.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -19,7 +19,7 @@ export const formateurRoute: Routes = [
         path: 'formateur-angular-s/:id',
         component: FormateurAngularSDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.formateur.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -31,7 +31,7 @@ export const formateurPopupRoute: Routes = [
         path: 'formateur-angular-s-new',
         component: FormateurAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.formateur.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -41,7 +41,7 @@ export const formateurPopupRoute: Routes = [
         path: 'formateur-angular-s/:id/edit',
         component: FormateurAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.formateur.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -51,7 +51,7 @@ export const formateurPopupRoute: Routes = [
         path: 'formateur-angular-s/:id/delete',
         component: FormateurAngularSDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.formateur.home.title'
         },
         canActivate: [UserRouteAccessService],

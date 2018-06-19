@@ -11,7 +11,7 @@ export const utilisateurRoute: Routes = [
         path: 'utilisateur-angular-s',
         component: UtilisateurAngularSComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.utilisateur.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -19,7 +19,7 @@ export const utilisateurRoute: Routes = [
         path: 'utilisateur-angular-s/:id',
         component: UtilisateurAngularSDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.utilisateur.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -31,7 +31,7 @@ export const utilisateurPopupRoute: Routes = [
         path: 'utilisateur-angular-s-new',
         component: UtilisateurAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.utilisateur.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -41,7 +41,7 @@ export const utilisateurPopupRoute: Routes = [
         path: 'utilisateur-angular-s/:id/edit',
         component: UtilisateurAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.utilisateur.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -51,7 +51,7 @@ export const utilisateurPopupRoute: Routes = [
         path: 'utilisateur-angular-s/:id/delete',
         component: UtilisateurAngularSDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.utilisateur.home.title'
         },
         canActivate: [UserRouteAccessService],

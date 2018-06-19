@@ -11,7 +11,7 @@ export const matiereRoute: Routes = [
         path: 'matiere-angular-s',
         component: MatiereAngularSComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.matiere.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -19,7 +19,7 @@ export const matiereRoute: Routes = [
         path: 'matiere-angular-s/:id',
         component: MatiereAngularSDetailComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.matiere.home.title'
         },
         canActivate: [UserRouteAccessService]
@@ -31,7 +31,7 @@ export const matierePopupRoute: Routes = [
         path: 'matiere-angular-s-new',
         component: MatiereAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.matiere.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -41,7 +41,7 @@ export const matierePopupRoute: Routes = [
         path: 'matiere-angular-s/:id/edit',
         component: MatiereAngularSPopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.matiere.home.title'
         },
         canActivate: [UserRouteAccessService],
@@ -51,7 +51,7 @@ export const matierePopupRoute: Routes = [
         path: 'matiere-angular-s/:id/delete',
         component: MatiereAngularSDeletePopupComponent,
         data: {
-            authorities: ['ROLE_USER'],
+            authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.matiere.home.title'
         },
         canActivate: [UserRouteAccessService],
