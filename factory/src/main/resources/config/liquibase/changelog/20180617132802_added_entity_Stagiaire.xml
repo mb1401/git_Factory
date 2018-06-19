@@ -21,47 +21,43 @@
             <column name="id" type="bigint" autoIncrement="${autoIncrement}">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="nom" type="varchar(255)">
+            <column name="nom" type="varchar(25)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="prenom" type="varchar(25)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="numero_rue" type="varchar(25)">
                 <constraints nullable="true" />
             </column>
 
-            <column name="prenom" type="varchar(255)">
+            <column name="code_postal" type="varchar(25)">
                 <constraints nullable="true" />
             </column>
 
-            <column name="numero_rue" type="varchar(255)">
+            <column name="ville" type="varchar(25)">
                 <constraints nullable="true" />
             </column>
 
-            <column name="rue" type="varchar(255)">
+            <column name="pays" type="varchar(25)">
                 <constraints nullable="true" />
             </column>
 
-            <column name="code_postal" type="varchar(255)">
+            <column name="mail" type="varchar(25)">
                 <constraints nullable="true" />
             </column>
 
-            <column name="ville" type="varchar(255)">
+            <column name="numero_tel" type="varchar(25)">
                 <constraints nullable="true" />
             </column>
 
-            <column name="pays" type="varchar(255)">
+            <column name="username" type="varchar(25)">
                 <constraints nullable="true" />
             </column>
 
-            <column name="mail" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="numero_tel" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="username" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-
-            <column name="jhi_password" type="varchar(255)">
+            <column name="jhi_password" type="varchar(25)">
                 <constraints nullable="true" />
             </column>
 

@@ -1,6 +1,7 @@
 package com.factory.service.dto;
 
 
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -13,6 +14,10 @@ public class SalleDTO implements Serializable {
 
     private Long id;
 
+    @NotNull
+    @Size(min = 3, max = 25)
+    private String nom;
+
     private Float cout;
 
     private Integer capacite;
@@ -23,6 +28,14 @@ public class SalleDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public Float getCout() {
@@ -66,6 +79,7 @@ public class SalleDTO implements Serializable {
     public String toString() {
         return "SalleDTO{" +
             "id=" + getId() +
+            ", nom='" + getNom() + "'" +
             ", cout=" + getCout() +
             ", capacite=" + getCapacite() +
             "}";

@@ -15,57 +15,128 @@
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.nom" for="field_nom">Nom</label>
             <input type="text" class="form-control" name="nom" id="field_nom"
-                [(ngModel)]="utilisateur.nom" />
+                [(ngModel)]="utilisateur.nom" required minlength="3" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.nom?.dirty && editForm.controls.nom?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.nom?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.nom?.errors?.minlength" jhiTranslate="entity.validation.minlength" translateValues="{ min: 3 }">
+                   This field is required to be at least 3 characters.
+                </small>
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.nom?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.prenom" for="field_prenom">Prenom</label>
             <input type="text" class="form-control" name="prenom" id="field_prenom"
-                [(ngModel)]="utilisateur.prenom" />
+                [(ngModel)]="utilisateur.prenom" required minlength="3" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.prenom?.dirty && editForm.controls.prenom?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.prenom?.errors?.required" jhiTranslate="entity.validation.required">
+                   This field is required.
+                </small>
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.prenom?.errors?.minlength" jhiTranslate="entity.validation.minlength" translateValues="{ min: 3 }">
+                   This field is required to be at least 3 characters.
+                </small>
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.prenom?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.numeroRue" for="field_numeroRue">Numero Rue</label>
             <input type="text" class="form-control" name="numeroRue" id="field_numeroRue"
-                [(ngModel)]="utilisateur.numeroRue" />
-        </div>
-        <div class="form-group">
-            <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.rue" for="field_rue">Rue</label>
-            <input type="text" class="form-control" name="rue" id="field_rue"
-                [(ngModel)]="utilisateur.rue" />
+                [(ngModel)]="utilisateur.numeroRue" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.numeroRue?.dirty && editForm.controls.numeroRue?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.numeroRue?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.codePostal" for="field_codePostal">Code Postal</label>
             <input type="text" class="form-control" name="codePostal" id="field_codePostal"
-                [(ngModel)]="utilisateur.codePostal" />
+                [(ngModel)]="utilisateur.codePostal" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.codePostal?.dirty && editForm.controls.codePostal?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.codePostal?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.ville" for="field_ville">Ville</label>
             <input type="text" class="form-control" name="ville" id="field_ville"
-                [(ngModel)]="utilisateur.ville" />
+                [(ngModel)]="utilisateur.ville" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.ville?.dirty && editForm.controls.ville?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.ville?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.pays" for="field_pays">Pays</label>
             <input type="text" class="form-control" name="pays" id="field_pays"
-                [(ngModel)]="utilisateur.pays" />
+                [(ngModel)]="utilisateur.pays" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.pays?.dirty && editForm.controls.pays?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.pays?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.mail" for="field_mail">Mail</label>
             <input type="text" class="form-control" name="mail" id="field_mail"
-                [(ngModel)]="utilisateur.mail" />
+                [(ngModel)]="utilisateur.mail" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.mail?.dirty && editForm.controls.mail?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.mail?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.numeroTel" for="field_numeroTel">Numero Tel</label>
             <input type="text" class="form-control" name="numeroTel" id="field_numeroTel"
-                [(ngModel)]="utilisateur.numeroTel" />
+                [(ngModel)]="utilisateur.numeroTel" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.numeroTel?.dirty && editForm.controls.numeroTel?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.numeroTel?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.username" for="field_username">Username</label>
             <input type="text" class="form-control" name="username" id="field_username"
-                [(ngModel)]="utilisateur.username" />
+                [(ngModel)]="utilisateur.username" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.username?.dirty && editForm.controls.username?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.username?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.password" for="field_password">Password</label>
             <input type="text" class="form-control" name="password" id="field_password"
-                [(ngModel)]="utilisateur.password" />
+                [(ngModel)]="utilisateur.password" maxlength="25"/>
+            <div [hidden]="!(editForm.controls.password?.dirty && editForm.controls.password?.invalid)">
+                <small class="form-text text-danger"
+                   [hidden]="!editForm.controls.password?.errors?.maxlength" jhiTranslate="entity.validation.maxlength" translateValues="{ max: 25 }">
+                   This field cannot be longer than 25 characters.
+                </small>
+            </div>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.utilisateur.enable" for="field_enable">Enable</label>

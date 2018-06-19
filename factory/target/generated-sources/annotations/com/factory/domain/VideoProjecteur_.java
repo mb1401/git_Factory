@@ -9,6 +9,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(VideoProjecteur.class)
 public abstract class VideoProjecteur_ {
 
+	public static volatile SingularAttribute<VideoProjecteur, String> code;
 	public static volatile SingularAttribute<VideoProjecteur, Float> cout;
 	public static volatile SingularAttribute<VideoProjecteur, Long> id;
 	public static volatile SetAttribute<VideoProjecteur, Module> modules;

@@ -1,15 +1,10 @@
 package com.factory.repository;
 
-import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
+import com.factory.domain.Ressource;
 import org.springframework.stereotype.Repository;
 
-import com.factory.domain.Ordinateur;
-import com.factory.domain.Ressource;
-import com.factory.domain.Salle;
-import com.factory.domain.VideoProjecteur;
+import org.springframework.data.jpa.repository.*;
+
 
 /**
  * Spring Data JPA repository for the Ressource entity.
@@ -17,5 +12,5 @@ import com.factory.domain.VideoProjecteur;
 @SuppressWarnings("unused")
 @Repository
 public interface RessourceRepository extends JpaRepository<Ressource, Long> {
-	
+
 }

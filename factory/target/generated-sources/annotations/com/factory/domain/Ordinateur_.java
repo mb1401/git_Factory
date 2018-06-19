@@ -11,6 +11,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(Ordinateur.class)
 public abstract class Ordinateur_ {
 
+	public static volatile SingularAttribute<Ordinateur, String> code;
 	public static volatile SingularAttribute<Ordinateur, Float> cout;
 	public static volatile SingularAttribute<Ordinateur, Integer> quantiteDD;
 	public static volatile SingularAttribute<Ordinateur, LocalDate> dateAchat;

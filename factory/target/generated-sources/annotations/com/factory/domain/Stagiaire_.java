@@ -9,7 +9,6 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Stagiaire_ {
 
 	public static volatile SingularAttribute<Stagiaire, String> ville;
-	public static volatile SingularAttribute<Stagiaire, String> rue;
 	public static volatile SingularAttribute<Stagiaire, String> mail;
 	public static volatile SingularAttribute<Stagiaire, String> numeroRue;
 	public static volatile SingularAttribute<Stagiaire, String> codePostal;

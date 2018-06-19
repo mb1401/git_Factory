@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class OrdinateurResource {
      */
     @PostMapping("/ordinateurs")
     @Timed
-    public ResponseEntity<OrdinateurDTO> createOrdinateur(@RequestBody OrdinateurDTO ordinateurDTO) throws URISyntaxException {
+    public ResponseEntity<OrdinateurDTO> createOrdinateur(@Valid @RequestBody OrdinateurDTO ordinateurDTO) throws URISyntaxException {
         log.debug("REST request to save Ordinateur : {}", ordinateurDTO);
         if (ordinateurDTO.getId() != null) {
             throw new BadRequestAlertException("A new ordinateur cannot already have an ID", ENTITY_NAME, "idexists");
@@ -65,7 +66,7 @@ public class OrdinateurResource {
      */
     @PutMapping("/ordinateurs")
     @Timed
-    public ResponseEntity<OrdinateurDTO> updateOrdinateur(@RequestBody OrdinateurDTO ordinateurDTO) throws URISyntaxException {
+    public ResponseEntity<OrdinateurDTO> updateOrdinateur(@Valid @RequestBody OrdinateurDTO ordinateurDTO) throws URISyntaxException {
         log.debug("REST request to update Ordinateur : {}", ordinateurDTO);
         if (ordinateurDTO.getId() == null) {
             return createOrdinateur(ordinateurDTO);

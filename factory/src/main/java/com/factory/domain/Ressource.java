@@ -2,6 +2,7 @@ package com.factory.domain;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -11,8 +12,6 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "ressource")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING, length = 20)
 public class Ressource implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -21,6 +20,11 @@ public class Ressource implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
+
+    @NotNull
+    @Size(min = 3, max = 25)
+    @Column(name = "code", length = 25, nullable = false)
+    private String code;
 
     @Column(name = "cout")
     private Float cout;
@@ -32,6 +36,19 @@ public class Ressource implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public Ressource code(String code) {
+        this.code = code;
+        return this;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Float getCout() {
@@ -72,6 +89,7 @@ public class Ressource implements Serializable {
     public String toString() {
         return "Ressource{" +
             "id=" + getId() +
+            ", code='" + getCode() + "'" +
             ", cout=" + getCout() +
             "}";
     }

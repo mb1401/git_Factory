@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class FormateurResource {
      */
     @PostMapping("/formateurs")
     @Timed
-    public ResponseEntity<FormateurDTO> createFormateur(@RequestBody FormateurDTO formateurDTO) throws URISyntaxException {
+    public ResponseEntity<FormateurDTO> createFormateur(@Valid @RequestBody FormateurDTO formateurDTO) throws URISyntaxException {
         log.debug("REST request to save Formateur : {}", formateurDTO);
         if (formateurDTO.getId() != null) {
             throw new BadRequestAlertException("A new formateur cannot already have an ID", ENTITY_NAME, "idexists");
@@ -65,7 +66,7 @@ public class FormateurResource {
      */
     @PutMapping("/formateurs")
     @Timed
-    public ResponseEntity<FormateurDTO> updateFormateur(@RequestBody FormateurDTO formateurDTO) throws URISyntaxException {
+    public ResponseEntity<FormateurDTO> updateFormateur(@Valid @RequestBody FormateurDTO formateurDTO) throws URISyntaxException {
         log.debug("REST request to update Formateur : {}", formateurDTO);
         if (formateurDTO.getId() == null) {
             return createFormateur(formateurDTO);

@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class TechnicienResource {
      */
     @PostMapping("/techniciens")
     @Timed
-    public ResponseEntity<TechnicienDTO> createTechnicien(@RequestBody TechnicienDTO technicienDTO) throws URISyntaxException {
+    public ResponseEntity<TechnicienDTO> createTechnicien(@Valid @RequestBody TechnicienDTO technicienDTO) throws URISyntaxException {
         log.debug("REST request to save Technicien : {}", technicienDTO);
         if (technicienDTO.getId() != null) {
             throw new BadRequestAlertException("A new technicien cannot already have an ID", ENTITY_NAME, "idexists");
@@ -65,7 +66,7 @@ public class TechnicienResource {
      */
     @PutMapping("/techniciens")
     @Timed
-    public ResponseEntity<TechnicienDTO> updateTechnicien(@RequestBody TechnicienDTO technicienDTO) throws URISyntaxException {
+    public ResponseEntity<TechnicienDTO> updateTechnicien(@Valid @RequestBody TechnicienDTO technicienDTO) throws URISyntaxException {
         log.debug("REST request to update Technicien : {}", technicienDTO);
         if (technicienDTO.getId() == null) {
             return createTechnicien(technicienDTO);

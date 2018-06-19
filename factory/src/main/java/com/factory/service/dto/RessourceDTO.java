@@ -1,6 +1,7 @@
 package com.factory.service.dto;
 
 
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -11,6 +12,10 @@ public class RessourceDTO implements Serializable {
 
     private Long id;
 
+    @NotNull
+    @Size(min = 3, max = 25)
+    private String code;
+
     private Float cout;
 
     public Long getId() {
@@ -19,6 +24,14 @@ public class RessourceDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Float getCout() {
@@ -54,6 +67,7 @@ public class RessourceDTO implements Serializable {
     public String toString() {
         return "RessourceDTO{" +
             "id=" + getId() +
+            ", code='" + getCode() + "'" +
             ", cout=" + getCout() +
             "}";
     }

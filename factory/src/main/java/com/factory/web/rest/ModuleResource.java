@@ -11,6 +11,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.net.URISyntaxException;
 
@@ -43,7 +44,7 @@ public class ModuleResource {
      */
     @PostMapping("/modules")
     @Timed
-    public ResponseEntity<ModuleDTO> createModule(@RequestBody ModuleDTO moduleDTO) throws URISyntaxException {
+    public ResponseEntity<ModuleDTO> createModule(@Valid @RequestBody ModuleDTO moduleDTO) throws URISyntaxException {
         log.debug("REST request to save Module : {}", moduleDTO);
         if (moduleDTO.getId() != null) {
             throw new BadRequestAlertException("A new module cannot already have an ID", ENTITY_NAME, "idexists");
@@ -65,7 +66,7 @@ public class ModuleResource {
      */
     @PutMapping("/modules")
     @Timed
-    public ResponseEntity<ModuleDTO> updateModule(@RequestBody ModuleDTO moduleDTO) throws URISyntaxException {
+    public ResponseEntity<ModuleDTO> updateModule(@Valid @RequestBody ModuleDTO moduleDTO) throws URISyntaxException {
         log.debug("REST request to update Module : {}", moduleDTO);
         if (moduleDTO.getId() == null) {
             return createModule(moduleDTO);
@@ -100,14 +101,6 @@ public class ModuleResource {
         log.debug("REST request to get Module : {}", id);
         ModuleDTO moduleDTO = moduleService.findOne(id);
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(moduleDTO));
-    }
-    
-    @GetMapping("/modules/withFormation/{formationId}")
-    @Timed
-    public List<ModuleDTO> getModuleByFormation(@PathVariable Long formationId) {
-        log.debug("REST request to get ModuleByFormation : {}", formationId);
-        List<ModuleDTO> modulesDTO = moduleService.findAllWithFormation(formationId);
-        return modulesDTO;
     }
 
     /**

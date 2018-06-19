@@ -17,6 +17,7 @@
             <thead>
             <tr>
             <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="factoryApp.salle.nom">Nom</span></th>
             <th><span jhiTranslate="factoryApp.salle.cout">Cout</span></th>
             <th><span jhiTranslate="factoryApp.salle.capacite">Capacite</span></th>
             <th></th>
@@ -25,6 +26,7 @@
             <tbody>
             <tr *ngFor="let salle of salles ;trackBy: trackId">
                 <td><a [routerLink]="['../salle-angular-s', salle.id ]">{{salle.id}}</a></td>
+                <td>{{salle.nom}}</td>
                 <td>{{salle.cout}}</td>
                 <td>{{salle.capacite}}</td>
                 <td class="text-right">

@@ -8,6 +8,7 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(Ressource.class)
 public abstract class Ressource_ {
 
+	public static volatile SingularAttribute<Ressource, String> code;
 	public static volatile SingularAttribute<Ressource, Float> cout;
 	public static volatile SingularAttribute<Ressource, Long> id;
 

@@ -10,7 +10,6 @@ import javax.persistence.metamodel.StaticMetamodel;
 public abstract class Gestionnaire_ {
 
 	public static volatile SingularAttribute<Gestionnaire, String> ville;
-	public static volatile SingularAttribute<Gestionnaire, String> rue;
 	public static volatile SingularAttribute<Gestionnaire, String> mail;
 	public static volatile SingularAttribute<Gestionnaire, String> numeroRue;
 	public static volatile SingularAttribute<Gestionnaire, String> codePostal;

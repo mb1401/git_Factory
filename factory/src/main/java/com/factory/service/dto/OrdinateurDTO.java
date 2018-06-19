@@ -2,6 +2,7 @@ package com.factory.service.dto;
 
 
 import java.time.LocalDate;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,6 +16,11 @@ public class OrdinateurDTO implements Serializable {
 
     private Long id;
 
+    @NotNull
+    @Size(min = 3, max = 25)
+    private String code;
+
+    @NotNull
     private Float cout;
 
     private Processeur processeur;
@@ -23,6 +29,7 @@ public class OrdinateurDTO implements Serializable {
 
     private Integer quantiteDD;
 
+    @NotNull
     private LocalDate dateAchat;
 
     public Long getId() {
@@ -31,6 +38,14 @@ public class OrdinateurDTO implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Float getCout() {
@@ -98,6 +113,7 @@ public class OrdinateurDTO implements Serializable {
     public String toString() {
         return "OrdinateurDTO{" +
             "id=" + getId() +
+            ", code='" + getCode() + "'" +
             ", cout=" + getCout() +
             ", processeur='" + getProcesseur() + "'" +
             ", ram=" + getRam() +

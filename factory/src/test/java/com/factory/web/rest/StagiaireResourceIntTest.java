@@ -50,9 +50,6 @@ public class StagiaireResourceIntTest {
     private static final String DEFAULT_NUMERO_RUE = "AAAAAAAAAA";
     private static final String UPDATED_NUMERO_RUE = "BBBBBBBBBB";
 
-    private static final String DEFAULT_RUE = "AAAAAAAAAA";
-    private static final String UPDATED_RUE = "BBBBBBBBBB";
-
     private static final String DEFAULT_CODE_POSTAL = "AAAAAAAAAA";
     private static final String UPDATED_CODE_POSTAL = "BBBBBBBBBB";
 
@@ -124,7 +121,6 @@ public class StagiaireResourceIntTest {
             .nom(DEFAULT_NOM)
             .prenom(DEFAULT_PRENOM)
             .numeroRue(DEFAULT_NUMERO_RUE)
-            .rue(DEFAULT_RUE)
             .codePostal(DEFAULT_CODE_POSTAL)
             .ville(DEFAULT_VILLE)
             .pays(DEFAULT_PAYS)
@@ -160,7 +156,6 @@ public class StagiaireResourceIntTest {
         assertThat(testStagiaire.getNom()).isEqualTo(DEFAULT_NOM);
         assertThat(testStagiaire.getPrenom()).isEqualTo(DEFAULT_PRENOM);
         assertThat(testStagiaire.getNumeroRue()).isEqualTo(DEFAULT_NUMERO_RUE);
-        assertThat(testStagiaire.getRue()).isEqualTo(DEFAULT_RUE);
         assertThat(testStagiaire.getCodePostal()).isEqualTo(DEFAULT_CODE_POSTAL);
         assertThat(testStagiaire.getVille()).isEqualTo(DEFAULT_VILLE);
         assertThat(testStagiaire.getPays()).isEqualTo(DEFAULT_PAYS);
@@ -193,6 +188,44 @@ public class StagiaireResourceIntTest {
 
     @Test
     @Transactional
+    public void checkNomIsRequired() throws Exception {
+        int databaseSizeBeforeTest = stagiaireRepository.findAll().size();
+        // set the field null
+        stagiaire.setNom(null);
+
+        // Create the Stagiaire, which fails.
+        StagiaireDTO stagiaireDTO = stagiaireMapper.toDto(stagiaire);
+
+        restStagiaireMockMvc.perform(post("/api/stagiaires")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(stagiaireDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Stagiaire> stagiaireList = stagiaireRepository.findAll();
+        assertThat(stagiaireList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkPrenomIsRequired() throws Exception {
+        int databaseSizeBeforeTest = stagiaireRepository.findAll().size();
+        // set the field null
+        stagiaire.setPrenom(null);
+
+        // Create the Stagiaire, which fails.
+        StagiaireDTO stagiaireDTO = stagiaireMapper.toDto(stagiaire);
+
+        restStagiaireMockMvc.perform(post("/api/stagiaires")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(stagiaireDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Stagiaire> stagiaireList = stagiaireRepository.findAll();
+        assertThat(stagiaireList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllStagiaires() throws Exception {
         // Initialize the database
         stagiaireRepository.saveAndFlush(stagiaire);
@@ -205,7 +238,6 @@ public class StagiaireResourceIntTest {
             .andExpect(jsonPath("$.[*].nom").value(hasItem(DEFAULT_NOM.toString())))
             .andExpect(jsonPath("$.[*].prenom").value(hasItem(DEFAULT_PRENOM.toString())))
             .andExpect(jsonPath("$.[*].numeroRue").value(hasItem(DEFAULT_NUMERO_RUE.toString())))
-            .andExpect(jsonPath("$.[*].rue").value(hasItem(DEFAULT_RUE.toString())))
             .andExpect(jsonPath("$.[*].codePostal").value(hasItem(DEFAULT_CODE_POSTAL.toString())))
             .andExpect(jsonPath("$.[*].ville").value(hasItem(DEFAULT_VILLE.toString())))
             .andExpect(jsonPath("$.[*].pays").value(hasItem(DEFAULT_PAYS.toString())))
@@ -230,7 +262,6 @@ public class StagiaireResourceIntTest {
             .andExpect(jsonPath("$.nom").value(DEFAULT_NOM.toString()))
             .andExpect(jsonPath("$.prenom").value(DEFAULT_PRENOM.toString()))
             .andExpect(jsonPath("$.numeroRue").value(DEFAULT_NUMERO_RUE.toString()))
-            .andExpect(jsonPath("$.rue").value(DEFAULT_RUE.toString()))
             .andExpect(jsonPath("$.codePostal").value(DEFAULT_CODE_POSTAL.toString()))
             .andExpect(jsonPath("$.ville").value(DEFAULT_VILLE.toString()))
             .andExpect(jsonPath("$.pays").value(DEFAULT_PAYS.toString()))
@@ -264,7 +295,6 @@ public class StagiaireResourceIntTest {
             .nom(UPDATED_NOM)
             .prenom(UPDATED_PRENOM)
             .numeroRue(UPDATED_NUMERO_RUE)
-            .rue(UPDATED_RUE)
             .codePostal(UPDATED_CODE_POSTAL)
             .ville(UPDATED_VILLE)
             .pays(UPDATED_PAYS)
@@ -287,7 +317,6 @@ public class StagiaireResourceIntTest {
         assertThat(testStagiaire.getNom()).isEqualTo(UPDATED_NOM);
         assertThat(testStagiaire.getPrenom()).isEqualTo(UPDATED_PRENOM);
         assertThat(testStagiaire.getNumeroRue()).isEqualTo(UPDATED_NUMERO_RUE);
-        assertThat(testStagiaire.getRue()).isEqualTo(UPDATED_RUE);
         assertThat(testStagiaire.getCodePostal()).isEqualTo(UPDATED_CODE_POSTAL);
         assertThat(testStagiaire.getVille()).isEqualTo(UPDATED_VILLE);
         assertThat(testStagiaire.getPays()).isEqualTo(UPDATED_PAYS);

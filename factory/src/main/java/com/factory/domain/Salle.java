@@ -3,6 +3,7 @@ package com.factory.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -23,6 +24,11 @@ public class Salle implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
+    @NotNull
+    @Size(min = 3, max = 25)
+    @Column(name = "nom", length = 25, nullable = false)
+    private String nom;
+
     @Column(name = "cout")
     private Float cout;
 
@@ -40,6 +46,19 @@ public class Salle implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public Salle nom(String nom) {
+        this.nom = nom;
+        return this;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public Float getCout() {
@@ -118,6 +137,7 @@ public class Salle implements Serializable {
     public String toString() {
         return "Salle{" +
             "id=" + getId() +
+            ", nom='" + getNom() + "'" +
             ", cout=" + getCout() +
             ", capacite=" + getCapacite() +
             "}";

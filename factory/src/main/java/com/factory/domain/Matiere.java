@@ -3,6 +3,7 @@ package com.factory.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -23,7 +24,9 @@ public class Matiere implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "nom")
+    @NotNull
+    @Size(min = 3, max = 25)
+    @Column(name = "nom", length = 25, nullable = false)
     private String nom;
 
     @OneToMany(mappedBy = "matiere")

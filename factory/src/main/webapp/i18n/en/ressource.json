@@ -16,6 +16,7 @@
             "detail": {
                 "title": "Ressource"
             },
+            "code": "Code",
             "cout": "Cout"
         }
     }

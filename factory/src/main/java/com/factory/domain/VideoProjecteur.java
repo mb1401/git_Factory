@@ -3,6 +3,7 @@ package com.factory.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.util.HashSet;
@@ -23,7 +24,13 @@ public class VideoProjecteur implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "cout")
+    @NotNull
+    @Size(min = 3, max = 25)
+    @Column(name = "code", length = 25, nullable = false)
+    private String code;
+
+    @NotNull
+    @Column(name = "cout", nullable = false)
     private Float cout;
 
     @OneToMany(mappedBy = "videoProjecteur")
@@ -37,6 +44,19 @@ public class VideoProjecteur implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public VideoProjecteur code(String code) {
+        this.code = code;
+        return this;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
     }
 
     public Float getCout() {
@@ -102,6 +122,7 @@ public class VideoProjecteur implements Serializable {
     public String toString() {
         return "VideoProjecteur{" +
             "id=" + getId() +
+            ", code='" + getCode() + "'" +
             ", cout=" + getCout() +
             "}";
     }

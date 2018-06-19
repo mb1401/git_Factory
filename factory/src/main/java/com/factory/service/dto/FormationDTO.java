@@ -2,6 +2,7 @@ package com.factory.service.dto;
 
 
 import java.time.LocalDate;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,8 +15,10 @@ public class FormationDTO implements Serializable {
 
     private Long id;
 
+    @NotNull
     private LocalDate dateDebut;
 
+    @NotNull
     private LocalDate dateFin;
 
     private String description;

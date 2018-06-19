@@ -1,10 +1,10 @@
 entity Ressource {
-	code String required minlenght(3) maxlength(25),
+	code String required minlength(3) maxlength(25),
 	cout Float
 }
 
 entity Ordinateur {
-	code String required minlenght(3) maxlength(25),
+	code String required minlength(3) maxlength(25),
 	cout Float required,
 	processeur Processeur,
     ram Integer,
@@ -14,12 +14,12 @@ entity Ordinateur {
 }
 
 entity VideoProjecteur {
-	code String required minlenght(3) maxlength(25),
+	code String required minlength(3) maxlength(25),
 	cout Float required
 }
 
 entity Salle {
-	nom String required minlenght(3) maxlength(25),
+	nom String required minlength(3) maxlength(25),
 	cout Float,
 	capacite Integer
     
@@ -32,7 +32,7 @@ entity Formation {
 }
 
 entity Module {
-	titre String required minlenght(3) maxlength(25),
+	titre String required minlength(3) maxlength(25),
 	contenu String,
 	objectif String,
 	niveau Niveau,
@@ -41,8 +41,8 @@ entity Module {
 }
 
 entity Utilisateur {
-	nom String required minlenght(3) maxlength(25),
-	prenom String required minlenght(3) maxlength(25),
+	nom String required minlength(3) maxlength(25),
+	prenom String required minlength(3) maxlength(25),
 	numeroRue String maxlength(25),
     codePostal String  maxlength(25),
     ville String maxlength(25),
@@ -55,8 +55,8 @@ entity Utilisateur {
 }
 
 entity Technicien {
-	nom String required minlenght(3) maxlength(25),
-	prenom String required minlenght(3) maxlength(25),
+	nom String required minlength(3) maxlength(25),
+	prenom String required minlength(3) maxlength(25),
 	numeroRue String maxlength(25),
     codePostal String  maxlength(25),
     ville String maxlength(25),
@@ -68,8 +68,8 @@ entity Technicien {
     enable Boolean
 }
 entity Gestionnaire {
-	nom String required minlenght(3) maxlength(25),
-	prenom String required minlenght(3) maxlength(25),
+	nom String required minlength(3) maxlength(25),
+	prenom String required minlength(3) maxlength(25),
 	numeroRue String maxlength(25),
     codePostal String  maxlength(25),
     ville String maxlength(25),
@@ -81,8 +81,8 @@ entity Gestionnaire {
     enable Boolean
 }
 entity Stagiaire {
-	nom String required minlenght(3) maxlength(25),
-	prenom String required minlenght(3) maxlength(25),
+	nom String required minlength(3) maxlength(25),
+	prenom String required minlength(3) maxlength(25),
 	numeroRue String maxlength(25),
     codePostal String  maxlength(25),
     ville String maxlength(25),
@@ -94,8 +94,8 @@ entity Stagiaire {
     enable Boolean
 }
 entity Formateur {
-	nom String required minlenght(3) maxlength(25),
-	prenom String required minlenght(3) maxlength(25),
+	nom String required minlength(3) maxlength(25),
+	prenom String required minlength(3) maxlength(25),
 	numeroRue String maxlength(25),
     codePostal String  maxlength(25),
     ville String maxlength(25),
@@ -107,7 +107,7 @@ entity Formateur {
     enable Boolean
 }
 entity Matiere {
-	nom String required minlenght(3) maxlength(25)
+	nom String required minlength(3) maxlength(25)
 }
 enum Processeur {
     P1, P2, P3

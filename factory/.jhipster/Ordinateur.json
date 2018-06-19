@@ -10,8 +10,22 @@
     ],
     "fields": [
         {
+            "fieldName": "code",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": 3,
+            "fieldValidateRulesMaxlength": 25
+        },
+        {
             "fieldName": "cout",
-            "fieldType": "Float"
+            "fieldType": "Float",
+            "fieldValidateRules": [
+                "required"
+            ]
         },
         {
             "fieldName": "processeur",
@@ -28,7 +42,10 @@
         },
         {
             "fieldName": "dateAchat",
-            "fieldType": "LocalDate"
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
         }
     ],
     "changelogDate": "20180617132754",

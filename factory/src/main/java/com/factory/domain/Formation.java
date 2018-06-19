@@ -3,6 +3,7 @@ package com.factory.domain;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.time.LocalDate;
@@ -24,10 +25,12 @@ public class Formation implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "date_debut")
+    @NotNull
+    @Column(name = "date_debut", nullable = false)
     private LocalDate dateDebut;
 
-    @Column(name = "date_fin")
+    @NotNull
+    @Column(name = "date_fin", nullable = false)
     private LocalDate dateFin;
 
     @Column(name = "description")

@@ -50,9 +50,6 @@ public class GestionnaireResourceIntTest {
     private static final String DEFAULT_NUMERO_RUE = "AAAAAAAAAA";
     private static final String UPDATED_NUMERO_RUE = "BBBBBBBBBB";
 
-    private static final String DEFAULT_RUE = "AAAAAAAAAA";
-    private static final String UPDATED_RUE = "BBBBBBBBBB";
-
     private static final String DEFAULT_CODE_POSTAL = "AAAAAAAAAA";
     private static final String UPDATED_CODE_POSTAL = "BBBBBBBBBB";
 
@@ -124,7 +121,6 @@ public class GestionnaireResourceIntTest {
             .nom(DEFAULT_NOM)
             .prenom(DEFAULT_PRENOM)
             .numeroRue(DEFAULT_NUMERO_RUE)
-            .rue(DEFAULT_RUE)
             .codePostal(DEFAULT_CODE_POSTAL)
             .ville(DEFAULT_VILLE)
             .pays(DEFAULT_PAYS)
@@ -160,7 +156,6 @@ public class GestionnaireResourceIntTest {
         assertThat(testGestionnaire.getNom()).isEqualTo(DEFAULT_NOM);
         assertThat(testGestionnaire.getPrenom()).isEqualTo(DEFAULT_PRENOM);
         assertThat(testGestionnaire.getNumeroRue()).isEqualTo(DEFAULT_NUMERO_RUE);
-        assertThat(testGestionnaire.getRue()).isEqualTo(DEFAULT_RUE);
         assertThat(testGestionnaire.getCodePostal()).isEqualTo(DEFAULT_CODE_POSTAL);
         assertThat(testGestionnaire.getVille()).isEqualTo(DEFAULT_VILLE);
         assertThat(testGestionnaire.getPays()).isEqualTo(DEFAULT_PAYS);
@@ -193,6 +188,44 @@ public class GestionnaireResourceIntTest {
 
     @Test
     @Transactional
+    public void checkNomIsRequired() throws Exception {
+        int databaseSizeBeforeTest = gestionnaireRepository.findAll().size();
+        // set the field null
+        gestionnaire.setNom(null);
+
+        // Create the Gestionnaire, which fails.
+        GestionnaireDTO gestionnaireDTO = gestionnaireMapper.toDto(gestionnaire);
+
+        restGestionnaireMockMvc.perform(post("/api/gestionnaires")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(gestionnaireDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Gestionnaire> gestionnaireList = gestionnaireRepository.findAll();
+        assertThat(gestionnaireList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkPrenomIsRequired() throws Exception {
+        int databaseSizeBeforeTest = gestionnaireRepository.findAll().size();
+        // set the field null
+        gestionnaire.setPrenom(null);
+
+        // Create the Gestionnaire, which fails.
+        GestionnaireDTO gestionnaireDTO = gestionnaireMapper.toDto(gestionnaire);
+
+        restGestionnaireMockMvc.perform(post("/api/gestionnaires")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(gestionnaireDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Gestionnaire> gestionnaireList = gestionnaireRepository.findAll();
+        assertThat(gestionnaireList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllGestionnaires() throws Exception {
         // Initialize the database
         gestionnaireRepository.saveAndFlush(gestionnaire);
@@ -205,7 +238,6 @@ public class GestionnaireResourceIntTest {
             .andExpect(jsonPath("$.[*].nom").value(hasItem(DEFAULT_NOM.toString())))
             .andExpect(jsonPath("$.[*].prenom").value(hasItem(DEFAULT_PRENOM.toString())))
             .andExpect(jsonPath("$.[*].numeroRue").value(hasItem(DEFAULT_NUMERO_RUE.toString())))
-            .andExpect(jsonPath("$.[*].rue").value(hasItem(DEFAULT_RUE.toString())))
             .andExpect(jsonPath("$.[*].codePostal").value(hasItem(DEFAULT_CODE_POSTAL.toString())))
             .andExpect(jsonPath("$.[*].ville").value(hasItem(DEFAULT_VILLE.toString())))
             .andExpect(jsonPath("$.[*].pays").value(hasItem(DEFAULT_PAYS.toString())))
@@ -230,7 +262,6 @@ public class GestionnaireResourceIntTest {
             .andExpect(jsonPath("$.nom").value(DEFAULT_NOM.toString()))
             .andExpect(jsonPath("$.prenom").value(DEFAULT_PRENOM.toString()))
             .andExpect(jsonPath("$.numeroRue").value(DEFAULT_NUMERO_RUE.toString()))
-            .andExpect(jsonPath("$.rue").value(DEFAULT_RUE.toString()))
             .andExpect(jsonPath("$.codePostal").value(DEFAULT_CODE_POSTAL.toString()))
             .andExpect(jsonPath("$.ville").value(DEFAULT_VILLE.toString()))
             .andExpect(jsonPath("$.pays").value(DEFAULT_PAYS.toString()))
@@ -264,7 +295,6 @@ public class GestionnaireResourceIntTest {
             .nom(UPDATED_NOM)
             .prenom(UPDATED_PRENOM)
             .numeroRue(UPDATED_NUMERO_RUE)
-            .rue(UPDATED_RUE)
             .codePostal(UPDATED_CODE_POSTAL)
             .ville(UPDATED_VILLE)
             .pays(UPDATED_PAYS)
@@ -287,7 +317,6 @@ public class GestionnaireResourceIntTest {
         assertThat(testGestionnaire.getNom()).isEqualTo(UPDATED_NOM);
         assertThat(testGestionnaire.getPrenom()).isEqualTo(UPDATED_PRENOM);
         assertThat(testGestionnaire.getNumeroRue()).isEqualTo(UPDATED_NUMERO_RUE);
-        assertThat(testGestionnaire.getRue()).isEqualTo(UPDATED_RUE);
         assertThat(testGestionnaire.getCodePostal()).isEqualTo(UPDATED_CODE_POSTAL);
         assertThat(testGestionnaire.getVille()).isEqualTo(UPDATED_VILLE);
         assertThat(testGestionnaire.getPays()).isEqualTo(UPDATED_PAYS);

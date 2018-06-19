@@ -44,6 +44,9 @@ import com.factory.domain.enumeration.Processeur;
 @SpringBootTest(classes = FactoryApp.class)
 public class OrdinateurResourceIntTest {
 
+    private static final String DEFAULT_CODE = "AAAAAAAAAA";
+    private static final String UPDATED_CODE = "BBBBBBBBBB";
+
     private static final Float DEFAULT_COUT = 1F;
     private static final Float UPDATED_COUT = 2F;
 
@@ -103,6 +106,7 @@ public class OrdinateurResourceIntTest {
      */
     public static Ordinateur createEntity(EntityManager em) {
         Ordinateur ordinateur = new Ordinateur()
+            .code(DEFAULT_CODE)
             .cout(DEFAULT_COUT)
             .processeur(DEFAULT_PROCESSEUR)
             .ram(DEFAULT_RAM)
@@ -132,6 +136,7 @@ public class OrdinateurResourceIntTest {
         List<Ordinateur> ordinateurList = ordinateurRepository.findAll();
         assertThat(ordinateurList).hasSize(databaseSizeBeforeCreate + 1);
         Ordinateur testOrdinateur = ordinateurList.get(ordinateurList.size() - 1);
+        assertThat(testOrdinateur.getCode()).isEqualTo(DEFAULT_CODE);
         assertThat(testOrdinateur.getCout()).isEqualTo(DEFAULT_COUT);
         assertThat(testOrdinateur.getProcesseur()).isEqualTo(DEFAULT_PROCESSEUR);
         assertThat(testOrdinateur.getRam()).isEqualTo(DEFAULT_RAM);
@@ -161,6 +166,63 @@ public class OrdinateurResourceIntTest {
 
     @Test
     @Transactional
+    public void checkCodeIsRequired() throws Exception {
+        int databaseSizeBeforeTest = ordinateurRepository.findAll().size();
+        // set the field null
+        ordinateur.setCode(null);
+
+        // Create the Ordinateur, which fails.
+        OrdinateurDTO ordinateurDTO = ordinateurMapper.toDto(ordinateur);
+
+        restOrdinateurMockMvc.perform(post("/api/ordinateurs")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(ordinateurDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Ordinateur> ordinateurList = ordinateurRepository.findAll();
+        assertThat(ordinateurList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkCoutIsRequired() throws Exception {
+        int databaseSizeBeforeTest = ordinateurRepository.findAll().size();
+        // set the field null
+        ordinateur.setCout(null);
+
+        // Create the Ordinateur, which fails.
+        OrdinateurDTO ordinateurDTO = ordinateurMapper.toDto(ordinateur);
+
+        restOrdinateurMockMvc.perform(post("/api/ordinateurs")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(ordinateurDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Ordinateur> ordinateurList = ordinateurRepository.findAll();
+        assertThat(ordinateurList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkDateAchatIsRequired() throws Exception {
+        int databaseSizeBeforeTest = ordinateurRepository.findAll().size();
+        // set the field null
+        ordinateur.setDateAchat(null);
+
+        // Create the Ordinateur, which fails.
+        OrdinateurDTO ordinateurDTO = ordinateurMapper.toDto(ordinateur);
+
+        restOrdinateurMockMvc.perform(post("/api/ordinateurs")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(ordinateurDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Ordinateur> ordinateurList = ordinateurRepository.findAll();
+        assertThat(ordinateurList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllOrdinateurs() throws Exception {
         // Initialize the database
         ordinateurRepository.saveAndFlush(ordinateur);
@@ -170,6 +232,7 @@ public class OrdinateurResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(ordinateur.getId().intValue())))
+            .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE.toString())))
             .andExpect(jsonPath("$.[*].cout").value(hasItem(DEFAULT_COUT.doubleValue())))
             .andExpect(jsonPath("$.[*].processeur").value(hasItem(DEFAULT_PROCESSEUR.toString())))
             .andExpect(jsonPath("$.[*].ram").value(hasItem(DEFAULT_RAM)))
@@ -188,6 +251,7 @@ public class OrdinateurResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(ordinateur.getId().intValue()))
+            .andExpect(jsonPath("$.code").value(DEFAULT_CODE.toString()))
             .andExpect(jsonPath("$.cout").value(DEFAULT_COUT.doubleValue()))
             .andExpect(jsonPath("$.processeur").value(DEFAULT_PROCESSEUR.toString()))
             .andExpect(jsonPath("$.ram").value(DEFAULT_RAM))
@@ -215,6 +279,7 @@ public class OrdinateurResourceIntTest {
         // Disconnect from session so that the updates on updatedOrdinateur are not directly saved in db
         em.detach(updatedOrdinateur);
         updatedOrdinateur
+            .code(UPDATED_CODE)
             .cout(UPDATED_COUT)
             .processeur(UPDATED_PROCESSEUR)
             .ram(UPDATED_RAM)
@@ -231,6 +296,7 @@ public class OrdinateurResourceIntTest {
         List<Ordinateur> ordinateurList = ordinateurRepository.findAll();
         assertThat(ordinateurList).hasSize(databaseSizeBeforeUpdate);
         Ordinateur testOrdinateur = ordinateurList.get(ordinateurList.size() - 1);
+        assertThat(testOrdinateur.getCode()).isEqualTo(UPDATED_CODE);
         assertThat(testOrdinateur.getCout()).isEqualTo(UPDATED_COUT);
         assertThat(testOrdinateur.getProcesseur()).isEqualTo(UPDATED_PROCESSEUR);
         assertThat(testOrdinateur.getRam()).isEqualTo(UPDATED_RAM);

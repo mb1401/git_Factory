@@ -2,6 +2,7 @@ package com.factory.service.dto;
 
 
 import java.time.LocalDate;
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,6 +16,8 @@ public class ModuleDTO implements Serializable {
 
     private Long id;
 
+    @NotNull
+    @Size(min = 3, max = 25)
     private String titre;
 
     private String contenu;
@@ -23,8 +26,10 @@ public class ModuleDTO implements Serializable {
 
     private Niveau niveau;
 
+    @NotNull
     private LocalDate dateDebut;
 
+    @NotNull
     private LocalDate dateFin;
 
     private Long formationId;

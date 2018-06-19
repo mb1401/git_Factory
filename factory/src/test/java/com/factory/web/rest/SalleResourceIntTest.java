@@ -41,6 +41,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = FactoryApp.class)
 public class SalleResourceIntTest {
 
+    private static final String DEFAULT_NOM = "AAAAAAAAAA";
+    private static final String UPDATED_NOM = "BBBBBBBBBB";
+
     private static final Float DEFAULT_COUT = 1F;
     private static final Float UPDATED_COUT = 2F;
 
@@ -91,6 +94,7 @@ public class SalleResourceIntTest {
      */
     public static Salle createEntity(EntityManager em) {
         Salle salle = new Salle()
+            .nom(DEFAULT_NOM)
             .cout(DEFAULT_COUT)
             .capacite(DEFAULT_CAPACITE);
         return salle;
@@ -117,6 +121,7 @@ public class SalleResourceIntTest {
         List<Salle> salleList = salleRepository.findAll();
         assertThat(salleList).hasSize(databaseSizeBeforeCreate + 1);
         Salle testSalle = salleList.get(salleList.size() - 1);
+        assertThat(testSalle.getNom()).isEqualTo(DEFAULT_NOM);
         assertThat(testSalle.getCout()).isEqualTo(DEFAULT_COUT);
         assertThat(testSalle.getCapacite()).isEqualTo(DEFAULT_CAPACITE);
     }
@@ -143,6 +148,25 @@ public class SalleResourceIntTest {
 
     @Test
     @Transactional
+    public void checkNomIsRequired() throws Exception {
+        int databaseSizeBeforeTest = salleRepository.findAll().size();
+        // set the field null
+        salle.setNom(null);
+
+        // Create the Salle, which fails.
+        SalleDTO salleDTO = salleMapper.toDto(salle);
+
+        restSalleMockMvc.perform(post("/api/salles")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(salleDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Salle> salleList = salleRepository.findAll();
+        assertThat(salleList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllSalles() throws Exception {
         // Initialize the database
         salleRepository.saveAndFlush(salle);
@@ -152,6 +176,7 @@ public class SalleResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(salle.getId().intValue())))
+            .andExpect(jsonPath("$.[*].nom").value(hasItem(DEFAULT_NOM.toString())))
             .andExpect(jsonPath("$.[*].cout").value(hasItem(DEFAULT_COUT.doubleValue())))
             .andExpect(jsonPath("$.[*].capacite").value(hasItem(DEFAULT_CAPACITE)));
     }
@@ -167,6 +192,7 @@ public class SalleResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(salle.getId().intValue()))
+            .andExpect(jsonPath("$.nom").value(DEFAULT_NOM.toString()))
             .andExpect(jsonPath("$.cout").value(DEFAULT_COUT.doubleValue()))
             .andExpect(jsonPath("$.capacite").value(DEFAULT_CAPACITE));
     }
@@ -191,6 +217,7 @@ public class SalleResourceIntTest {
         // Disconnect from session so that the updates on updatedSalle are not directly saved in db
         em.detach(updatedSalle);
         updatedSalle
+            .nom(UPDATED_NOM)
             .cout(UPDATED_COUT)
             .capacite(UPDATED_CAPACITE);
         SalleDTO salleDTO = salleMapper.toDto(updatedSalle);
@@ -204,6 +231,7 @@ public class SalleResourceIntTest {
         List<Salle> salleList = salleRepository.findAll();
         assertThat(salleList).hasSize(databaseSizeBeforeUpdate);
         Salle testSalle = salleList.get(salleList.size() - 1);
+        assertThat(testSalle.getNom()).isEqualTo(UPDATED_NOM);
         assertThat(testSalle.getCout()).isEqualTo(UPDATED_COUT);
         assertThat(testSalle.getCapacite()).isEqualTo(UPDATED_CAPACITE);
     }

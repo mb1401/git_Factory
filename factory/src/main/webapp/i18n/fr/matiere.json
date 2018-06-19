@@ -4,7 +4,7 @@
         "matiere" : {
             "home": {
                 "title": "Matieres",
-                "createLabel": "Créer une nouvelle Matiere",
+                "createLabel": "Créer un nouveau Matiere",
                 "createOrEditLabel": "Créer ou éditer un Matiere"
             },
             "created": "Un nouveau Matiere a été créé avec l'identifiant {{ param }}",

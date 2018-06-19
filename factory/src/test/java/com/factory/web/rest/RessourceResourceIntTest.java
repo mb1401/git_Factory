@@ -41,6 +41,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = FactoryApp.class)
 public class RessourceResourceIntTest {
 
+    private static final String DEFAULT_CODE = "AAAAAAAAAA";
+    private static final String UPDATED_CODE = "BBBBBBBBBB";
+
     private static final Float DEFAULT_COUT = 1F;
     private static final Float UPDATED_COUT = 2F;
 
@@ -88,6 +91,7 @@ public class RessourceResourceIntTest {
      */
     public static Ressource createEntity(EntityManager em) {
         Ressource ressource = new Ressource()
+            .code(DEFAULT_CODE)
             .cout(DEFAULT_COUT);
         return ressource;
     }
@@ -113,6 +117,7 @@ public class RessourceResourceIntTest {
         List<Ressource> ressourceList = ressourceRepository.findAll();
         assertThat(ressourceList).hasSize(databaseSizeBeforeCreate + 1);
         Ressource testRessource = ressourceList.get(ressourceList.size() - 1);
+        assertThat(testRessource.getCode()).isEqualTo(DEFAULT_CODE);
         assertThat(testRessource.getCout()).isEqualTo(DEFAULT_COUT);
     }
 
@@ -138,6 +143,25 @@ public class RessourceResourceIntTest {
 
     @Test
     @Transactional
+    public void checkCodeIsRequired() throws Exception {
+        int databaseSizeBeforeTest = ressourceRepository.findAll().size();
+        // set the field null
+        ressource.setCode(null);
+
+        // Create the Ressource, which fails.
+        RessourceDTO ressourceDTO = ressourceMapper.toDto(ressource);
+
+        restRessourceMockMvc.perform(post("/api/ressources")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(ressourceDTO)))
+            .andExpect(status().isBadRequest());
+
+        List<Ressource> ressourceList = ressourceRepository.findAll();
+        assertThat(ressourceList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllRessources() throws Exception {
         // Initialize the database
         ressourceRepository.saveAndFlush(ressource);
@@ -147,6 +171,7 @@ public class RessourceResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(ressource.getId().intValue())))
+            .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE.toString())))
             .andExpect(jsonPath("$.[*].cout").value(hasItem(DEFAULT_COUT.doubleValue())));
     }
 
@@ -161,6 +186,7 @@ public class RessourceResourceIntTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(ressource.getId().intValue()))
+            .andExpect(jsonPath("$.code").value(DEFAULT_CODE.toString()))
             .andExpect(jsonPath("$.cout").value(DEFAULT_COUT.doubleValue()));
     }
 
@@ -184,6 +210,7 @@ public class RessourceResourceIntTest {
         // Disconnect from session so that the updates on updatedRessource are not directly saved in db
         em.detach(updatedRessource);
         updatedRessource
+            .code(UPDATED_CODE)
             .cout(UPDATED_COUT);
         RessourceDTO ressourceDTO = ressourceMapper.toDto(updatedRessource);
 
@@ -196,6 +223,7 @@ public class RessourceResourceIntTest {
         List<Ressource> ressourceList = ressourceRepository.findAll();
         assertThat(ressourceList).hasSize(databaseSizeBeforeUpdate);
         Ressource testRessource = ressourceList.get(ressourceList.size() - 1);
+        assertThat(testRessource.getCode()).isEqualTo(UPDATED_CODE);
         assertThat(testRessource.getCout()).isEqualTo(UPDATED_COUT);
     }
 

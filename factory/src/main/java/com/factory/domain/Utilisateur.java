@@ -2,6 +2,7 @@ package com.factory.domain;
 
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 
 import java.io.Serializable;
 import java.util.Objects;
@@ -11,8 +12,6 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "utilisateur")
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "type", discriminatorType = DiscriminatorType.STRING, length = 20)
 public class Utilisateur implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -22,37 +21,46 @@ public class Utilisateur implements Serializable {
     @SequenceGenerator(name = "sequenceGenerator")
     private Long id;
 
-    @Column(name = "nom")
+    @NotNull
+    @Size(min = 3, max = 25)
+    @Column(name = "nom", length = 25, nullable = false)
     private String nom;
 
-    @Column(name = "prenom")
+    @NotNull
+    @Size(min = 3, max = 25)
+    @Column(name = "prenom", length = 25, nullable = false)
     private String prenom;
 
-    @Column(name = "numero_rue")
+    @Size(max = 25)
+    @Column(name = "numero_rue", length = 25)
     private String numeroRue;
 
-    @Column(name = "rue")
-    private String rue;
-
-    @Column(name = "code_postal")
+    @Size(max = 25)
+    @Column(name = "code_postal", length = 25)
     private String codePostal;
 
-    @Column(name = "ville")
+    @Size(max = 25)
+    @Column(name = "ville", length = 25)
     private String ville;
 
-    @Column(name = "pays")
+    @Size(max = 25)
+    @Column(name = "pays", length = 25)
     private String pays;
 
-    @Column(name = "mail")
+    @Size(max = 25)
+    @Column(name = "mail", length = 25)
     private String mail;
 
-    @Column(name = "numero_tel")
+    @Size(max = 25)
+    @Column(name = "numero_tel", length = 25)
     private String numeroTel;
 
-    @Column(name = "username")
+    @Size(max = 25)
+    @Column(name = "username", length = 25)
     private String username;
 
-    @Column(name = "jhi_password")
+    @Size(max = 25)
+    @Column(name = "jhi_password", length = 25)
     private String password;
 
     @Column(name = "jhi_enable")
@@ -104,19 +112,6 @@ public class Utilisateur implements Serializable {
 
     public void setNumeroRue(String numeroRue) {
         this.numeroRue = numeroRue;
-    }
-
-    public String getRue() {
-        return rue;
-    }
-
-    public Utilisateur rue(String rue) {
-        this.rue = rue;
-        return this;
-    }
-
-    public void setRue(String rue) {
-        this.rue = rue;
     }
 
     public String getCodePostal() {
@@ -251,7 +246,6 @@ public class Utilisateur implements Serializable {
             ", nom='" + getNom() + "'" +
             ", prenom='" + getPrenom() + "'" +
             ", numeroRue='" + getNumeroRue() + "'" +
-            ", rue='" + getRue() + "'" +
             ", codePostal='" + getCodePostal() + "'" +
             ", ville='" + getVille() + "'" +
             ", pays='" + getPays() + "'" +

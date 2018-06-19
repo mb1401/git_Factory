@@ -1,8 +1,6 @@
 package com.factory.service;
 
 import com.factory.service.dto.ModuleDTO;
-
-import java.util.Collection;
 import java.util.List;
 
 /**
@@ -39,6 +37,4 @@ public interface ModuleService {
      * @param id the id of the entity
      */
     void delete(Long id);
-
-	List<ModuleDTO> findAllWithFormation(Long formationId);
 }

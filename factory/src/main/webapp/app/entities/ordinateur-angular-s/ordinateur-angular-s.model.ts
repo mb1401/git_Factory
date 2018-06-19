@@ -9,6 +9,7 @@ export const enum Processeur {
 export class OrdinateurAngularS implements BaseEntity {
     constructor(
         public id?: number,
+        public code?: string,
         public cout?: number,
         public processeur?: Processeur,
         public ram?: number,
