@@ -1,7 +1,11 @@
 {
     "home": {
         "title": "Skills Development!",
-        "subtitle": "This is your homepage",
+        "subtitle": "Why Join the Factory?",
+        "classe":{
+            "title":"Cutting Edge Classes",
+            "message":"Get a leg up on the competition, and learn the newest tools, techniques, and technologies popular in your field."
+        },
         "logged": {
             "message": "You are logged in as user \"{{username}}\"."
         },
