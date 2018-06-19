@@ -1,114 +1,113 @@
 entity Ressource {
+	code String required minlenght(3) maxlength(25),
 	cout Float
 }
 
 entity Ordinateur {
-	cout Float
-	processeur Processeur
-    ram Integer
-    quantiteDD Integer
-    dateAchat LocalDate
+	code String required minlenght(3) maxlength(25),
+	cout Float required,
+	processeur Processeur,
+    ram Integer,
+    quantiteDD Integer,
+    dateAchat LocalDate required
     
 }
 
 entity VideoProjecteur {
-	cout Float
+	code String required minlenght(3) maxlength(25),
+	cout Float required
 }
 
 entity Salle {
-	nom String
-	cout Float
+	nom String required minlenght(3) maxlength(25),
+	cout Float,
 	capacite Integer
     
 }
 
 entity Formation {
-	dateDebut LocalDate
-    dateFin LocalDate
-	description String
+	dateDebut LocalDate required,
+    dateFin LocalDate required,
+	description String 
 }
 
 entity Module {
-	titre String,
+	titre String required minlenght(3) maxlength(25),
 	contenu String,
 	objectif String,
 	niveau Niveau,
-	dateDebut LocalDate,
-    dateFin LocalDate,
+	dateDebut LocalDate required,
+    dateFin LocalDate required
 }
 
 entity Utilisateur {
-	nom String,
-	prenom String,
-	numeroRue String
-    codePostal String
-    ville String
-    pays String
-    mail String
-    numeroTel String
-    username String
-    password String
+	nom String required minlenght(3) maxlength(25),
+	prenom String required minlenght(3) maxlength(25),
+	numeroRue String maxlength(25),
+    codePostal String  maxlength(25),
+    ville String maxlength(25),
+    pays String maxlength(25),
+    mail String maxlength(25),
+    numeroTel String maxlength(25),
+    username String maxlength(25),
+    password String maxlength(25),
     enable Boolean
 }
 
 entity Technicien {
-	nom String,
-	prenom String,
-	numeroRue String
-    rue String
-    codePostal String
-    ville String
-    pays String
-    mail String
-    numeroTel String
-    username String
-    password String
+	nom String required minlenght(3) maxlength(25),
+	prenom String required minlenght(3) maxlength(25),
+	numeroRue String maxlength(25),
+    codePostal String  maxlength(25),
+    ville String maxlength(25),
+    pays String maxlength(25),
+    mail String maxlength(25),
+    numeroTel String maxlength(25),
+    username String maxlength(25),
+    password String maxlength(25),
     enable Boolean
 }
 entity Gestionnaire {
-	nom String,
-	prenom String,
-	numeroRue String
-    rue String
-    codePostal String
-    ville String
-    pays String
-    mail String
-    numeroTel String
-    username String
-    password String
+	nom String required minlenght(3) maxlength(25),
+	prenom String required minlenght(3) maxlength(25),
+	numeroRue String maxlength(25),
+    codePostal String  maxlength(25),
+    ville String maxlength(25),
+    pays String maxlength(25),
+    mail String maxlength(25),
+    numeroTel String maxlength(25),
+    username String maxlength(25),
+    password String maxlength(25),
     enable Boolean
 }
 entity Stagiaire {
-	nom String,
-	prenom String,
-	numeroRue String
-    rue String
-    codePostal String
-    ville String
-    pays String
-    mail String
-    numeroTel String
-    username String
-    password String
+	nom String required minlenght(3) maxlength(25),
+	prenom String required minlenght(3) maxlength(25),
+	numeroRue String maxlength(25),
+    codePostal String  maxlength(25),
+    ville String maxlength(25),
+    pays String maxlength(25),
+    mail String maxlength(25),
+    numeroTel String maxlength(25),
+    username String maxlength(25),
+    password String maxlength(25),
     enable Boolean
 }
 entity Formateur {
-	nom String,
-	prenom String,
-	numeroRue String
-    rue String
-    codePostal String
-    ville String
-    pays String
-    mail String
-    numeroTel String
-    username String
-    password String
+	nom String required minlenght(3) maxlength(25),
+	prenom String required minlenght(3) maxlength(25),
+	numeroRue String maxlength(25),
+    codePostal String  maxlength(25),
+    ville String maxlength(25),
+    pays String maxlength(25),
+    mail String maxlength(25),
+    numeroTel String maxlength(25),
+    username String maxlength(25),
+    password String maxlength(25),
     enable Boolean
 }
 entity Matiere {
-	nom String
+	nom String required minlenght(3) maxlength(25)
 }
 enum Processeur {
     P1, P2, P3
