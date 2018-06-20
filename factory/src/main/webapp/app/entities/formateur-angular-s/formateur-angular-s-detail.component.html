@@ -1,6 +1,6 @@
 
 <div *ngIf="formateur">
-    <h2><span jhiTranslate="factoryApp.formateur.detail.title">Formateur</span> {{formateur.id}}</h2>
+    <h2><span jhiTranslate="factoryApp.formateur.detail.title">Formateur</span> {{formateur.nom + " " + formateur.prenom}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">

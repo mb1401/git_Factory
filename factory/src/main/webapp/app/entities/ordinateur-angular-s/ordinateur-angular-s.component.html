@@ -1,3 +1,4 @@
+
 <div>
     <h2>
         <span jhiTranslate="factoryApp.ordinateur.home.title">Ordinateurs</span>
@@ -16,7 +17,7 @@
         <table class="table table-striped">
             <thead>
             <tr>
-            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <!--<th><span jhiTranslate="global.field.id">ID</span></th>-->
             <th><span jhiTranslate="factoryApp.ordinateur.code">Code</span></th>
             <th><span jhiTranslate="factoryApp.ordinateur.cout">Cout</span></th>
             <th><span jhiTranslate="factoryApp.ordinateur.processeur">Processeur</span></th>
@@ -28,7 +29,7 @@
             </thead>
             <tbody>
             <tr *ngFor="let ordinateur of ordinateurs ;trackBy: trackId">
-                <td><a [routerLink]="['../ordinateur-angular-s', ordinateur.id ]">{{ordinateur.id}}</a></td>
+                <!--<td><a [routerLink]="['../ordinateur-angular-s', ordinateur.id ]">{{ordinateur.id}}</a></td>-->
                 <td>{{ordinateur.code}}</td>
                 <td>{{ordinateur.cout}}</td>
                 <td jhiTranslate="{{'factoryApp.Processeur.' + ordinateur.processeur}}">{{ordinateur.processeur}}</td>
@@ -66,4 +67,4 @@
         </table>
     </div>
 </div>
-<jhi-video-projecteur-angular-s></jhi-video-projecteur-angular-s>
+
