@@ -14,6 +14,8 @@ import {
     ressourceRoute,
     ressourcePopupRoute
 } from './';
+import {OrdinateurAngularSComponent} from '../ordinateur-angular-s';
+import {FactoryOrdinateurAngularSModule} from '../ordinateur-angular-s/ordinateur-angular-s.module';
 const ENTITY_STATES = [
     ...ressourceRoute,
     ...ressourcePopupRoute,
@@ -22,7 +24,8 @@ const ENTITY_STATES = [
 @NgModule({
     imports: [
         FactorySharedModule,
-        RouterModule.forChild(ENTITY_STATES)
+        RouterModule.forChild(ENTITY_STATES),
+        FactoryOrdinateurAngularSModule
     ],
     declarations: [
         RessourceAngularSComponent,

@@ -1,6 +1,111 @@
 <div>
     <h2>
-        <span jhiTranslate="factoryApp.ressource.home.title">Ressources</span>
-        <!--<jhi-ordinateur-angular-s></jhi-ordinateur-angular-s>-->
-        </h2>
+        <span jhiTranslate="factoryApp.ordinateur.home.title">Ordinateurs</span>
+        <button class="btn btn-primary float-right jh-create-entity create-ordinateur-angular-s" [routerLink]="['/', { outlets: { popup: ['ordinateur-angular-s-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="factoryApp.ordinateur.home.createLabel">
+            Create new Ordinateur
+            </span>
+        </button>
+        <span> & </span>
+        <span jhiTranslate="factoryApp.videoProjecteur.home.title">VideoProjecteur</span>
+        <button class="btn btn-primary float-right jh-create-entity create-video-projecteur-angular-s" [routerLink]="['/', { outlets: { popup: ['video-projecteur-angular-s-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="factoryApp.videoProjecteur.home.createLabel">
+            Create new VideoProjecteur
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="'ordinateurs'||'videoProjecteurs'">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <!--<th><span jhiTranslate="global.field.id">ID</span></th>-->
+                <th><span jhiTranslate="factoryApp.ordinateur.code">Code</span></th>
+                <th><span jhiTranslate="factoryApp.ordinateur.cout">Cout</span></th>
+                <th><span jhiTranslate="factoryApp.ordinateur.processeur">Processeur</span></th>
+                <th><span jhiTranslate="factoryApp.ordinateur.ram">Ram</span></th>
+                <th><span jhiTranslate="factoryApp.ordinateur.quantiteDD">Quantite DD</span></th>
+                <th><span jhiTranslate="factoryApp.ordinateur.dateAchat">Date Achat</span></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let ordinateur of ordinateurs ;trackBy: trackIdOrdinateur">
+                <!--<td><a [routerLink]="['../ordinateur-angular-s', ordinateur.id ]">{{ordinateur.id}}</a></td>-->
+                <td>{{ordinateur.code}}</td>
+                <td>{{ordinateur.cout}}</td>
+                <td jhiTranslate="{{'factoryApp.Processeur.' + ordinateur.processeur}}">{{ordinateur.processeur}}</td>
+                <td>{{ordinateur.ram}}</td>
+                <td>{{ordinateur.quantiteDD}}</td>
+                <td>{{ordinateur.dateAchat | date:'mediumDate'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../ordinateur-angular-s', ordinateur.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'ordinateur-angular-s/'+ ordinateur.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'ordinateur-angular-s/'+ ordinateur.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            <tr *ngFor="let videoProjecteur of videoProjecteurs ;trackBy: trackIdVideoProjecteur">
+                <!--<td><a [routerLink]="['../videoProjecteur-angular-s', videoProjecteur.id ]">{{videoProjecteur.id}}</a></td>-->
+                <td>{{videoProjecteur.code}}</td>
+                <td>{{videoProjecteur.cout}}</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>{{videoProjecteur.dateAchat | date:'mediumDate'}}</td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../videoProjecteur', videoProjecteur.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'videoProjecteur-angular-s/'+ videoProjecteur.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'videoProjecteur-angular-s/'+ videoProjecteur.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

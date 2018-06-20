@@ -5,7 +5,7 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 
 import { OrdinateurAngularS } from './ordinateur-angular-s.model';
 import { OrdinateurAngularSService } from './ordinateur-angular-s.service';
-import { Principal } from '../../shared';
+import { Principal } from '../../shared/index';
 
 @Component({
     selector: 'jhi-ordinateur-angular-s',

@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { UserRouteAccessService } from '../../shared';
+import { UserRouteAccessService } from '../../shared/index';
 import { OrdinateurAngularSComponent } from './ordinateur-angular-s.component';
 import { OrdinateurAngularSDetailComponent } from './ordinateur-angular-s-detail.component';
 import { OrdinateurAngularSPopupComponent } from './ordinateur-angular-s-dialog.component';
