@@ -22,7 +22,7 @@
             <th><span jhiTranslate="factoryApp.formation.description">Description</span></th>
             <th><span jhiTranslate="factoryApp.formation.formateur">Formateur</span></th>
             <th><span jhiTranslate="factoryApp.formation.gestionnaire">Gestionnaire</span></th>
-            <th></th>
+            <th><span jhiTranslate="factoryApp.formation.module">Modules</span></th>
             </tr>
             </thead>
             <tbody>
@@ -39,6 +39,11 @@
                 <td>
                     <div *ngIf="formation.gestionnaireId">
                         <a [routerLink]="['../gestionnaire-angular-s', formation.gestionnaireId  ]" >{{formation.gestionnaireId}}</a>
+                    </div>
+                </td>
+                <td>
+                    <div *ngIf="formation.modules">
+                        <a [routerLink]="['../module-angular-s', 'of-formation', formation.id]"> {{formation.modules.length}}</a>
                     </div>
                 </td>
                 <td class="text-right">

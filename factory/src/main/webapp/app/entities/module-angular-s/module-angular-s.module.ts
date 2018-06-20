@@ -14,6 +14,7 @@ import {
     moduleRoute,
     modulePopupRoute,
 } from './';
+import { ModuleAngularSOfFormationComponent } from './module-angular-s-of-formation.component';
 
 const ENTITY_STATES = [
     ...moduleRoute,
@@ -32,6 +33,7 @@ const ENTITY_STATES = [
         ModuleAngularSDeleteDialogComponent,
         ModuleAngularSPopupComponent,
         ModuleAngularSDeletePopupComponent,
+        ModuleAngularSOfFormationComponent,
     ],
     entryComponents: [
         ModuleAngularSComponent,
