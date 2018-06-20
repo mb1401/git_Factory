@@ -1,26 +1,21 @@
 <div>
-    <h2>
-        <span jhiTranslate="factoryApp.ordinateur.home.title">Ordinateurs</span>
+
+        <p><h3><b><span jhiTranslate="factoryApp.ordinateur.home.title">Ordinateurs</span></b></h3> nombre: {{ordinateurs.length}}</p>
+
         <button class="btn btn-primary float-right jh-create-entity create-ordinateur-angular-s" [routerLink]="['/', { outlets: { popup: ['ordinateur-angular-s-new'] } }]">
             <span class="fa fa-plus"></span>
             <span  jhiTranslate="factoryApp.ordinateur.home.createLabel">
             Create new Ordinateur
             </span>
         </button>
-        <span> & </span>
-        <span jhiTranslate="factoryApp.videoProjecteur.home.title">VideoProjecteur</span>
-        <button class="btn btn-primary float-right jh-create-entity create-video-projecteur-angular-s" [routerLink]="['/', { outlets: { popup: ['video-projecteur-angular-s-new'] } }]">
-            <span class="fa fa-plus"></span>
-            <span  jhiTranslate="factoryApp.videoProjecteur.home.createLabel">
-            Create new VideoProjecteur
-            </span>
-        </button>
-    </h2>
+
+
+
     <jhi-alert></jhi-alert>
     <div class="row">
     </div>
     <br/>
-    <div class="table-responsive" *ngIf="'ordinateurs'||'videoProjecteurs'">
+    <div class="table-responsive" *ngIf="'ordinateurs'">
         <table class="table table-striped">
             <thead>
             <tr>
@@ -35,6 +30,7 @@
             </tr>
             </thead>
             <tbody>
+
             <tr *ngFor="let ordinateur of ordinateurs ;trackBy: trackIdOrdinateur">
                 <!--<td><a [routerLink]="['../ordinateur-angular-s', ordinateur.id ]">{{ordinateur.id}}</a></td>-->
                 <td>{{ordinateur.code}}</td>
@@ -70,14 +66,32 @@
                     </div>
                 </td>
             </tr>
+            </tbody>
+        </table>
+    </div>
+            <p><h3><b><span jhiTranslate="factoryApp.videoProjecteur.home.title">VideoProjecteur</span></b></h3> nombre: {{videoProjecteurs.length}}</p>
+            <button class="btn btn-primary float-right jh-create-entity create-video-projecteur-angular-s" [routerLink]="['/', { outlets: { popup: ['video-projecteur-angular-s-new'] } }]">
+                <span class="fa fa-plus"></span>
+                <span  jhiTranslate="factoryApp.videoProjecteur.home.createLabel">
+            Create new VideoProjecteur
+            </span>
+            </button>
+    <div class="table-responsive" *ngIf="'videoProjecteurs'">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <!--<th><span jhiTranslate="global.field.id">ID</span></th>-->
+                <th><span jhiTranslate="factoryApp.videoProjecteur.code">Code</span></th>
+                <th><span jhiTranslate="factoryApp.videoProjecteur.cout">Cout</span></th>
+                                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+
             <tr *ngFor="let videoProjecteur of videoProjecteurs ;trackBy: trackIdVideoProjecteur">
                 <!--<td><a [routerLink]="['../videoProjecteur-angular-s', videoProjecteur.id ]">{{videoProjecteur.id}}</a></td>-->
                 <td>{{videoProjecteur.code}}</td>
                 <td>{{videoProjecteur.cout}}</td>
-                <td>-</td>
-                <td>-</td>
-                <td>-</td>
-                <td>{{videoProjecteur.dateAchat | date:'mediumDate'}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"
