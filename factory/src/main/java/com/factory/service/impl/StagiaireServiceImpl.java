@@ -84,4 +84,12 @@ public class StagiaireServiceImpl implements StagiaireService {
         log.debug("Request to delete Stagiaire : {}", id);
         stagiaireRepository.delete(id);
     }
+
+	@Override
+	public List<StagiaireDTO> findAllWithFormation(Long id) {
+		log.debug("Request to get all Stagiaires");
+        return stagiaireRepository.findAllWithFormation(id).stream()
+            .map(stagiaireMapper::toDto)
+            .collect(Collectors.toCollection(LinkedList::new));
+	}
 }

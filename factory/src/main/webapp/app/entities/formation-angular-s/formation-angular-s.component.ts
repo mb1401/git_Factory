@@ -15,7 +15,6 @@ import {StagiaireAngularS, StagiaireAngularSService} from '../stagiaire-angular-
 })
 export class FormationAngularSComponent implements OnInit, OnDestroy {
     formations: FormationAngularS[];
-    stagiaires: StagiaireAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
 
@@ -42,12 +41,14 @@ export class FormationAngularSComponent implements OnInit, OnDestroy {
     }
 
     loadStagiaire() {
-        this.stagiaireService.query().subscribe(
+    for (const f of this.formations) {
+        this.stagiaireService.findAllwithFormation(f.id).subscribe(
             (res: HttpResponse<StagiaireAngularS[]>) => {
-                this.stagiaires = res.body;
+                f.stagiaires = res.body;
             },
             (res: HttpErrorResponse) => this.onError(res.message)
-        );
+            );
+        }
     }
 
     loadAll() {

@@ -48,8 +48,8 @@
                     </div>
                 </td>
                 <td>
-                    <div *ngIf="stagiaires">
-                        <a [routerLink]="['../stagiaire-angular-s', 'of-formation', formation.id]"> {{stagiaires.length}} </a>
+                    <div *ngIf="formation.stagiaires">
+                        <a [routerLink]="['../stagiaire-angular-s', 'of-formation', formation.id]"> {{formation.stagiaires.length}} </a>
                     </div>
                 </td>
                 <td class="text-right">

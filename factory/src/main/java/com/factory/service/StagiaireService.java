@@ -37,4 +37,6 @@ public interface StagiaireService {
      * @param id the id of the entity
      */
     void delete(Long id);
+
+	List<StagiaireDTO> findAllWithFormation(Long id);
 }

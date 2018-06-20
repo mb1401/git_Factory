@@ -103,6 +103,12 @@ public class ModuleResource {
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(moduleDTO));
     }
     
+    /**
+     * GET  /modules/withFormation/:formationId : get the modules which have "formationId" as formation.
+     *
+     * @param id the id of the formation
+     * @return the ResponseEntity with status 200 (OK) and with body the moduleDTO, or with status 404 (Not Found)
+     */
     @GetMapping("/modules/withFormation/{formationId}")
     @Timed
     public List<ModuleDTO> getModuleByFormation(@PathVariable Long formationId) {

@@ -87,7 +87,19 @@ public class StagiaireResource {
     public List<StagiaireDTO> getAllStagiaires() {
         log.debug("REST request to get all Stagiaires");
         return stagiaireService.findAll();
-        }
+    }
+
+    /**
+     * GET  /stagiaires : get all the stagiaires.
+     *
+     * @return the ResponseEntity with status 200 (OK) and the list of stagiaires in body
+     */
+    @GetMapping("/stagiaires/withFormation/{id}")
+    @Timed
+    public List<StagiaireDTO> getAllStagiairesWithFormation(@PathVariable Long id) {
+        log.debug("REST request to get all Stagiaires");
+        return stagiaireService.findAllWithFormation(id);
+    }
 
     /**
      * GET  /stagiaires/:id : get the "id" stagiaire.
