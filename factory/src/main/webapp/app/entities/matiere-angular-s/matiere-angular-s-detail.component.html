@@ -1,6 +1,6 @@
 
 <div *ngIf="matiere">
-    <h2><span jhiTranslate="factoryApp.matiere.detail.title">Matiere</span> {{matiere.id}}</h2>
+    <h2><span jhiTranslate="factoryApp.matiere.detail.title">Matiere</span> {{matiere.nom}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
@@ -11,7 +11,7 @@
         <dt><span jhiTranslate="factoryApp.matiere.formateur">Formateur</span></dt>
         <dd>
             <span *ngFor="let formateur of matiere.formateurs; let last = last">
-                <a [routerLink]="['/formateur-angular-s', formateur?.id ]">{{formateur.id}}</a>{{last ? '' : ', '}}
+                <a [routerLink]="['/formateur-angular-s', formateur?.id ]">{{formateur.nom + " " + formateur.prenom}}</a>{{last ? '' : ', '}}
             </span>
         </dd>
     </dl>
