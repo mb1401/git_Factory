@@ -51,9 +51,17 @@ export class NavbarComponent implements OnInit {
       this.languageService.changeLanguage(languageKey);
     }
 
+    formationMenu() {
+        this.router.navigate(['/'], {fragment: 'formation'});
+    }
+    staffMenu() {
+        this.router.navigate(['/'], {fragment: 'staff'});
+    }
+    contactMenu() {
+        this.router.navigate(['/'], {fragment: 'contact'});
+    }
     collapseNavbar() {
         this.isNavbarCollapsed = true;
-        // this.router.navigate(['/'], {fragment: 'test'});
     }
 
     isAuthenticated() {
