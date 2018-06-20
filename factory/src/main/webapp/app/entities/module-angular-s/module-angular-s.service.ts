@@ -34,8 +34,8 @@ export class ModuleAngularSService {
             .map((res: EntityResponseType) => this.convertResponse(res));
     }
 
-    findAllWithFormation(formationID: number): Observable<HttpResponse<ModuleAngularS[]>> {
-        return this.http.get<ModuleAngularS[]>(`${this.resourceUrl}/withFormation/${formationID}`, { observe: 'response'})
+    findAllWithFormation(formationId: number): Observable<HttpResponse<ModuleAngularS[]>> {
+        return this.http.get<ModuleAngularS[]>(`${this.resourceUrl}/withFormation/${formationId}`, { observe: 'response'})
             .map((res: HttpResponse<ModuleAngularS[]>) => this.convertArrayResponse(res));
     }
 
