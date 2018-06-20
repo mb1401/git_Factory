@@ -42,6 +42,11 @@ export class StagiaireAngularSService {
         return this.http.delete<any>(`${this.resourceUrl}/${id}`, { observe: 'response'});
     }
 
+    findAllwithFormation(formationId: number): Observable<HttpResponse<StagiaireAngularS[]>> {
+        return this.http.get<StagiaireAngularS[]>( `${this.resourceUrl}/withFormation/${formationId}`, { observe: 'response' })
+            .map((res: HttpResponse<StagiaireAngularS[]>) => this.convertArrayResponse(res));
+    }
+
     private convertResponse(res: EntityResponseType): EntityResponseType {
         const body: StagiaireAngularS = this.convertItemFromServer(res.body);
         return res.clone({body});

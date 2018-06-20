@@ -14,6 +14,7 @@ import {
     stagiaireRoute,
     stagiairePopupRoute,
 } from './';
+import { StagiaireAngularSOfFormationComponent } from './stagiaire-angular-s-of-formation.component';
 
 const ENTITY_STATES = [
     ...stagiaireRoute,
@@ -32,6 +33,7 @@ const ENTITY_STATES = [
         StagiaireAngularSDeleteDialogComponent,
         StagiaireAngularSPopupComponent,
         StagiaireAngularSDeletePopupComponent,
+        StagiaireAngularSOfFormationComponent,
     ],
     entryComponents: [
         StagiaireAngularSComponent,
