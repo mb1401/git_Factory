@@ -2,14 +2,14 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Subscription } from 'rxjs/Subscription';
 import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
-
+import { CapFilterPipe } from './salle-angular-s.pipe';
 import { SalleAngularS } from './salle-angular-s.model';
 import { SalleAngularSService } from './salle-angular-s.service';
 import { Principal } from '../../shared';
 
 @Component({
     selector: 'jhi-salle-angular-s',
-    templateUrl: './salle-angular-s.component.html'
+    templateUrl: './salle-angular-s.component.html',
 })
 export class SalleAngularSComponent implements OnInit, OnDestroy {
 salles: SalleAngularS[];
@@ -17,6 +17,7 @@ salles: SalleAngularS[];
     eventSubscriber: Subscription;
     private filtre: any;
     nom: any;
+    sliderValue = 20;
 
     constructor(
         private salleService: SalleAngularSService,

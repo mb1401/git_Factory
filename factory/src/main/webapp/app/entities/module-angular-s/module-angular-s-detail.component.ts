@@ -6,11 +6,11 @@ import {JhiAlertService, JhiEventManager} from 'ng-jhipster';
 
 import { ModuleAngularS } from './module-angular-s.model';
 import { ModuleAngularSService } from './module-angular-s.service';
-import {MatiereAngularS, MatiereAngularSService} from "../matiere-angular-s";
-import {FormateurAngularS, FormateurAngularSService} from "../formateur-angular-s";
-import {FormationAngularS, FormationAngularSService} from "../formation-angular-s";
-import {VideoProjecteurAngularSService} from "../video-projecteur-angular-s";
-import {SalleAngularSService} from "../salle-angular-s";
+import {MatiereAngularS, MatiereAngularSService} from '../matiere-angular-s';
+import {FormateurAngularS, FormateurAngularSService} from '../formateur-angular-s';
+import {FormationAngularS, FormationAngularSService} from '../formation-angular-s';
+import {VideoProjecteurAngularSService} from '../video-projecteur-angular-s';
+import {SalleAngularSService} from '../salle-angular-s';
 
 @Component({
     selector: 'jhi-module-angular-s-detail',

@@ -6,11 +6,11 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { ModuleAngularS } from './module-angular-s.model';
 import { ModuleAngularSService } from './module-angular-s.service';
 import { Principal } from '../../shared';
-import {FormateurAngularS, FormateurAngularSService} from "../formateur-angular-s";
-import {MatiereAngularS, MatiereAngularSService} from "../matiere-angular-s";
-import {SalleAngularSService} from "../salle-angular-s";
-import {VideoProjecteurAngularSService} from "../video-projecteur-angular-s";
-import {FormationAngularS, FormationAngularSService} from "../formation-angular-s";
+import {FormateurAngularS, FormateurAngularSService} from '../formateur-angular-s';
+import {MatiereAngularS, MatiereAngularSService} from '../matiere-angular-s';
+import {SalleAngularSService} from '../salle-angular-s';
+import {VideoProjecteurAngularSService} from '../video-projecteur-angular-s';
+import {FormationAngularS, FormationAngularSService} from '../formation-angular-s';
 
 @Component({
     selector: 'jhi-module-angular-s',
@@ -86,10 +86,10 @@ modules: ModuleAngularS[];
                 }
             },
             (res: HttpErrorResponse) => this.onError(res.message)
-        )
+        );
     }
 
-    ngOnInit(){
+    ngOnInit() {
         this.loadAll();
         this.principal.identity().then((account) => {
             this.currentAccount = account;

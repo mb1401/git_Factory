@@ -33,7 +33,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let salle of salles | filter : 'nom' || 'capacite' : filtre; let i = index ; trackBy: trackId">
+            <tr *ngFor="let salle of salles | filter : 'nom' : filtre; let i = index ; trackBy: trackId">
                 <td><a [routerLink]="['../salle-angular-s', salle.id ]">{{salle.id}}</a></td>
                 <td>{{salle.nom}}</td>
                 <!--<td>{{salle.cout}}</td>-->
