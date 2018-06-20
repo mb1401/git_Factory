@@ -7,19 +7,22 @@ import { FormationAngularS } from './formation-angular-s.model';
 import { FormationAngularSService } from './formation-angular-s.service';
 import { Principal } from '../../shared';
 import {ModuleAngularS, ModuleAngularSService} from '../module-angular-s';
+import {StagiaireAngularS, StagiaireAngularSService} from '../stagiaire-angular-s';
 
 @Component({
     selector: 'jhi-formation-angular-s',
     templateUrl: './formation-angular-s.component.html'
 })
 export class FormationAngularSComponent implements OnInit, OnDestroy {
-formations: FormationAngularS[];
+    formations: FormationAngularS[];
+    stagiaires: StagiaireAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
 
     constructor(
-        private moduleService: ModuleAngularSService,
         private formationService: FormationAngularSService,
+        private moduleService: ModuleAngularSService,
+        private stagiaireService: StagiaireAngularSService,
         private jhiAlertService: JhiAlertService,
         private eventManager: JhiEventManager,
         private principal: Principal
@@ -38,11 +41,21 @@ formations: FormationAngularS[];
         }
     }
 
+    loadStagiaire() {
+        this.stagiaireService.query().subscribe(
+            (res: HttpResponse<StagiaireAngularS[]>) => {
+                this.stagiaires = res.body;
+            },
+            (res: HttpErrorResponse) => this.onError(res.message)
+        );
+    }
+
     loadAll() {
         this.formationService.query().subscribe(
             (res: HttpResponse<FormationAngularS[]>) => {
                 this.formations = res.body;
                 this.loadModules();
+                this.loadStagiaire();
             },
             (res: HttpErrorResponse) => this.onError(res.message)
         );
