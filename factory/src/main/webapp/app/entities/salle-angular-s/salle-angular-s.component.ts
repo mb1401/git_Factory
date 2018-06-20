@@ -2,7 +2,6 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpResponse, HttpErrorResponse } from '@angular/common/http';
 import { Subscription } from 'rxjs/Subscription';
 import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
-import { CapFilterPipe } from './salle-angular-s.pipe';
 import { SalleAngularS } from './salle-angular-s.model';
 import { SalleAngularSService } from './salle-angular-s.service';
 import { Principal } from '../../shared';
