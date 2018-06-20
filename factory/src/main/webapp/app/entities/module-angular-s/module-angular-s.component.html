@@ -46,8 +46,11 @@
                     </div>
                 </td>
                 <td>
-                    <div *ngIf="module.formateurId">
-                        <a [routerLink]="['../formateur-angular-s', module.formateurId  ]" >{{module.formateurId}}</a>
+                    <!--<div *ngIf="module.formateurId">-->
+                        <!--<a [routerLink]="['../formateur-angular-s', module.formateurId  ]" >{{module.formateurId}}</a>-->
+                    <!--</div>-->
+                    <div *ngIf="module.formateur">
+                        <a [routerLink]="['../formateur-angular-s', module.formateurId  ]" >{{module.formateur.nom}} {{module.formateur.prenom}} </a>
                     </div>
                 </td>
                 <td>

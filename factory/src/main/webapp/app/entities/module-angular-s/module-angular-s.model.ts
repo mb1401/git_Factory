@@ -1,4 +1,5 @@
 import { BaseEntity } from './../../shared';
+import {FormateurAngularS, FormateurAngularSDetailComponent} from "../formateur-angular-s";
 
 export const enum Niveau {
     'FACILE',
@@ -17,6 +18,7 @@ export class ModuleAngularS implements BaseEntity {
         public dateFin?: any,
         public formationId?: number,
         public formateurId?: number,
+        public formateur?: FormateurAngularS,
         public matiereId?: number,
         public salleId?: number,
         public videoProjecteurId?: number,
