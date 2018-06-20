@@ -21,11 +21,11 @@ export class HomeComponent implements OnInit {
         private loginModalService: LoginModalService,
         private eventManager: JhiEventManager, router: Router
     ) {
-        router.events.subscribe(s => {
+        router.events.subscribe((s) => {
             if (s instanceof NavigationEnd) {
                 const tree = router.parseUrl(router.url);
                 if (tree.fragment) {
-                    const element = document.querySelector("#" + tree.fragment);
+                    const element = document.querySelector('#' + tree.fragment);
                     if (element) { element.scrollIntoView(true); }
                 }
             }

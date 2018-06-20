@@ -53,7 +53,7 @@ export class NavbarComponent implements OnInit {
 
     collapseNavbar() {
         this.isNavbarCollapsed = true;
-        this.router.navigate(['/'],{fragment:"test"})
+        // this.router.navigate(['/'], {fragment: 'test'});
     }
 
     isAuthenticated() {

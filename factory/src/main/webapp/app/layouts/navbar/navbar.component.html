@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                <a class="nav-link" [routerLink]="['/' ]" fragment ="test" (click)="collapseNavbar()">
+                <a class="nav-link" [routerLink]="['/' ]" fragment ="formation" (click)="collapseNavbar()">
                     <span>
 
                         <span jhiTranslate="global.menu.formation">Formation</span>
@@ -27,7 +27,7 @@
                 </a>
             </li>
             <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
+                <a class="nav-link" [routerLink]="['/' ]" fragment ="staff" (click)="collapseNavbar()">
                     <span>
 
                         <span jhiTranslate="global.menu.staff">Staff</span>
@@ -35,7 +35,7 @@
                 </a>
             </li>
             <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
+                <a class="nav-link" [routerLink]="['/' ]" fragment ="contact" (click)="collapseNavbar()">
                     <span>
 
                         <span jhiTranslate="global.menu.contact">Contact</span>
