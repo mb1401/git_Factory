@@ -1,7 +1,9 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { FilterPipe } from './salle-angular-s.pipe';
+import { CapFilterPipe } from './salle-angular-s.pipe';
 import { FactorySharedModule } from '../../shared';
+
 import {
     SalleAngularSService,
     SalleAngularSPopupService,
@@ -26,6 +28,8 @@ const ENTITY_STATES = [
         RouterModule.forChild(ENTITY_STATES)
     ],
     declarations: [
+        // CapFilterPipe,
+        FilterPipe,
         SalleAngularSComponent,
         SalleAngularSDetailComponent,
         SalleAngularSDialogComponent,
@@ -43,6 +47,10 @@ const ENTITY_STATES = [
     providers: [
         SalleAngularSService,
         SalleAngularSPopupService,
+    ],
+    exports: [
+        FilterPipe,
+        // CapFilterPipe
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

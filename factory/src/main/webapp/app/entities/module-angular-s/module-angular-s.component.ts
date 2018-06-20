@@ -6,10 +6,11 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { ModuleAngularS } from './module-angular-s.model';
 import { ModuleAngularSService } from './module-angular-s.service';
 import { Principal } from '../../shared';
-import {FormateurAngularS, FormateurAngularSService} from "../formateur-angular-s";
-import {MatiereAngularS, MatiereAngularSService} from "../matiere-angular-s";
-import {SalleAngularSService} from "../salle-angular-s";
-import {VideoProjecteurAngularSService} from "../video-projecteur-angular-s";
+import {FormateurAngularS, FormateurAngularSService} from '../formateur-angular-s';
+import {MatiereAngularS, MatiereAngularSService} from '../matiere-angular-s';
+import {SalleAngularSService} from '../salle-angular-s';
+import {VideoProjecteurAngularSService} from '../video-projecteur-angular-s';
+import {FormationAngularS, FormationAngularSService} from '../formation-angular-s';
 
 @Component({
     selector: 'jhi-module-angular-s',
@@ -28,6 +29,7 @@ modules: ModuleAngularS[];
         private principal: Principal,
         private matiereService: MatiereAngularSService,
         private salleService: SalleAngularSService,
+        private formationService: FormationAngularSService,
         private videoProjecteurService: VideoProjecteurAngularSService
     ) {
     }
@@ -67,6 +69,13 @@ modules: ModuleAngularS[];
                         },
                         (resS: HttpErrorResponse) => this.onError(resS.message)
                     );
+
+                    this.formationService.find(m.formationId).subscribe(
+                        (resF: HttpResponse<FormationAngularS>) => {
+                            m.formation =  resF.body;
+                        },
+                        (resF: HttpErrorResponse) => this.onError(resF.message)
+                    );
                     this.videoProjecteurService.find(m.videoProjecteurId).subscribe(
                         (resV: HttpResponse<MatiereAngularS>) => {
                             m.videoProjecteur =  resV.body;
@@ -77,10 +86,10 @@ modules: ModuleAngularS[];
                 }
             },
             (res: HttpErrorResponse) => this.onError(res.message)
-        )
+        );
     }
 
-    ngOnInit(){
+    ngOnInit() {
         this.loadAll();
         this.principal.identity().then((account) => {
             this.currentAccount = account;

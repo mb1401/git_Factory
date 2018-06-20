@@ -5,6 +5,7 @@ import { StagiaireAngularSComponent } from './stagiaire-angular-s.component';
 import { StagiaireAngularSDetailComponent } from './stagiaire-angular-s-detail.component';
 import { StagiaireAngularSPopupComponent } from './stagiaire-angular-s-dialog.component';
 import { StagiaireAngularSDeletePopupComponent } from './stagiaire-angular-s-delete-dialog.component';
+import {StagiaireAngularSOfFormationComponent} from './stagiaire-angular-s-of-formation.component';
 
 export const stagiaireRoute: Routes = [
     {
@@ -18,6 +19,14 @@ export const stagiaireRoute: Routes = [
     }, {
         path: 'stagiaire-angular-s/:id',
         component: StagiaireAngularSDetailComponent,
+        data: {
+            authorities: ['ROLE_MANAGER'],
+            pageTitle: 'factoryApp.stagiaire.home.title'
+        },
+        canActivate: [UserRouteAccessService]
+    }, {
+        path: 'stagiaire-angular-s/of-formation/:id',
+        component: StagiaireAngularSOfFormationComponent,
         data: {
             authorities: ['ROLE_MANAGER'],
             pageTitle: 'factoryApp.stagiaire.home.title'

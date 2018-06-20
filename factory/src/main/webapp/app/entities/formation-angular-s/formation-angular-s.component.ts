@@ -6,28 +6,57 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { FormationAngularS } from './formation-angular-s.model';
 import { FormationAngularSService } from './formation-angular-s.service';
 import { Principal } from '../../shared';
+import {ModuleAngularS, ModuleAngularSService} from '../module-angular-s';
+import {StagiaireAngularS, StagiaireAngularSService} from '../stagiaire-angular-s';
 
 @Component({
     selector: 'jhi-formation-angular-s',
     templateUrl: './formation-angular-s.component.html'
 })
 export class FormationAngularSComponent implements OnInit, OnDestroy {
-formations: FormationAngularS[];
+    formations: FormationAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
 
     constructor(
         private formationService: FormationAngularSService,
+        private moduleService: ModuleAngularSService,
+        private stagiaireService: StagiaireAngularSService,
         private jhiAlertService: JhiAlertService,
         private eventManager: JhiEventManager,
         private principal: Principal
     ) {
     }
 
+    loadModules() {
+        for (const f of this.formations) {
+            // this.moduleService.query().subscribe(
+            this.moduleService.findAllWithFormation(f.id).subscribe(
+                (resModules: HttpResponse<ModuleAngularS[]>) => {
+                    f.modules = resModules.body;
+                },
+                (resModules: HttpErrorResponse) => this.onError(resModules.message)
+            );
+        }
+    }
+
+    loadStagiaire() {
+    for (const f of this.formations) {
+        this.stagiaireService.findAllwithFormation(f.id).subscribe(
+            (res: HttpResponse<StagiaireAngularS[]>) => {
+                f.stagiaires = res.body;
+            },
+            (res: HttpErrorResponse) => this.onError(res.message)
+            );
+        }
+    }
+
     loadAll() {
         this.formationService.query().subscribe(
             (res: HttpResponse<FormationAngularS[]>) => {
                 this.formations = res.body;
+                this.loadModules();
+                this.loadStagiaire();
             },
             (res: HttpErrorResponse) => this.onError(res.message)
         );

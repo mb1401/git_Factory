@@ -1,6 +1,6 @@
 
 <div *ngIf="module">
-    <h2><span jhiTranslate="factoryApp.module.detail.title">Module</span> {{module.id}}</h2>
+    <h2><span jhiTranslate="factoryApp.module.detail.title">Module</span> {{module.titre}}</h2>
     <hr>
     <jhi-alert-error></jhi-alert-error>
     <dl class="row-md jh-entity-details">
@@ -30,32 +30,32 @@
         </dd>
         <dt><span jhiTranslate="factoryApp.module.formation">Formation</span></dt>
         <dd>
-            <div *ngIf="module.formationId">
-                <a [routerLink]="['/formation-angular-s', module.formationId]">{{module.formationId}}</a>
+            <div *ngIf="module.formation">
+                <a [routerLink]="['/formation-angular-s', module.formationId]">{{module.formation.description}}</a>
             </div>
         </dd>
         <dt><span jhiTranslate="factoryApp.module.formateur">Formateur</span></dt>
         <dd>
-            <div *ngIf="module.formateurId">
-                <a [routerLink]="['/formateur-angular-s', module.formateurId]">{{module.formateurId}}</a>
+            <div *ngIf="module.formateur">
+                <a [routerLink]="['/formateur-angular-s', module.formateurId]">{{module.formateur.nom}} {{module.formateur.prenom}}</a>
             </div>
         </dd>
         <dt><span jhiTranslate="factoryApp.module.matiere">Matiere</span></dt>
         <dd>
-            <div *ngIf="module.matiereId">
-                <a [routerLink]="['/matiere-angular-s', module.matiereId]">{{module.matiereId}}</a>
+            <div *ngIf="module.matiere">
+                <a [routerLink]="['/matiere-angular-s', module.matiereId]">{{module.matiere.nom}}</a>
             </div>
         </dd>
         <dt><span jhiTranslate="factoryApp.module.salle">Salle</span></dt>
         <dd>
-            <div *ngIf="module.salleId">
-                <a [routerLink]="['/salle-angular-s', module.salleId]">{{module.salleId}}</a>
+            <div *ngIf="module.salle">
+                <a [routerLink]="['/salle-angular-s', module.salleId]">{{module.salle.nom}}</a>
             </div>
         </dd>
         <dt><span jhiTranslate="factoryApp.module.videoProjecteur">Video Projecteur</span></dt>
         <dd>
-            <div *ngIf="module.videoProjecteurId">
-                <a [routerLink]="['/video-projecteur-angular-s', module.videoProjecteurId]">{{module.videoProjecteurId}}</a>
+            <div *ngIf="module.videoProjecteur">
+                <a [routerLink]="['/video-projecteur-angular-s', module.videoProjecteurId]">{{module.videoProjecteur.code}}</a>
             </div>
         </dd>
     </dl>

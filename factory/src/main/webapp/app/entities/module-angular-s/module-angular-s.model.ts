@@ -1,8 +1,9 @@
 import { BaseEntity } from './../../shared';
-import {FormateurAngularS, FormateurAngularSDetailComponent} from "../formateur-angular-s";
-import {MatiereAngularS} from "../matiere-angular-s";
-import {SalleAngularS} from "../salle-angular-s";
-import {VideoProjecteurAngularS} from "../video-projecteur-angular-s";
+import {FormateurAngularS, FormateurAngularSDetailComponent} from '../formateur-angular-s';
+import {MatiereAngularS} from '../matiere-angular-s';
+import {SalleAngularS} from '../salle-angular-s';
+import {VideoProjecteurAngularS} from '../video-projecteur-angular-s';
+import {FormationAngularS} from '../formation-angular-s';
 
 export const enum Niveau {
     'FACILE',
@@ -26,6 +27,7 @@ export class ModuleAngularS implements BaseEntity {
         public matiere?: MatiereAngularS,
         public salleId?: number,
         public salle?: SalleAngularS,
+        public formation?: FormationAngularS,
         public videoProjecteurId?: number,
         public videoProjecteur?: VideoProjecteurAngularS
 

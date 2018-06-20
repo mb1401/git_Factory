@@ -5,7 +5,7 @@
             "home": {
                 "title": "Formations",
                 "createLabel": "Créer une nouvelle Formation",
-                "createOrEditLabel": "Créer ou éditer un Formation"
+                "createOrEditLabel": "Créer ou éditer une Formation"
             },
             "created": "Un nouveau Formation a été créé avec l'identifiant {{ param }}",
             "updated": "Le Formation avec l'identifiant {{ param }} a été mis à jour",

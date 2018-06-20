@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cbdd5c92-5d9d-4969-902e-d1f55f56fb3b" name="Default" comment="" />
+    <list default="true" id="cbdd5c92-5d9d-4969-902e-d1f55f56fb3b" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.service.ts" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -13,26 +19,161 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
+    <splitter split-orientation="horizontal" split-proportion="0.634375">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="module-angular-s.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+                  <folding>
+                    <element signature="e#0#61#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="formation-angular-s.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="9" column="82" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="formation-angular-s.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret line="57" column="88" selection-start-line="57" selection-start-column="88" selection-end-line="57" selection-end-column="88" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="stagiaire-angular-s.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret selection-end-line="57" />
+                  <folding>
+                    <element signature="e#0#61#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="stagiaire-angular-s-of-formation.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-289">
+                  <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
+                  <folding>
+                    <element signature="e#0#61#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="stagiaire-angular-s.service.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.service.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="45" column="99" selection-start-line="45" selection-start-column="88" selection-end-line="45" selection-end-column="99" />
+                  <folding>
+                    <element signature="e#0#43#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ModuleService.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/java/com/factory/service/ModuleService.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-237" />
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="stagiaire-angular-s.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="15" column="41" selection-end-line="90" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="stagiaire-angular-s.route.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.route.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="119">
+                  <caret line="7" column="98" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="98" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="stagiaire-angular-s-of-formation.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1530">
+                  <caret line="90" selection-start-line="90" selection-end-line="90" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="module-angular-s.service.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.service.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="443">
+                  <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+                  <folding>
+                    <element signature="e#0#43#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="module-angular-s-of-formation.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-of-formation.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="165">
+                  <caret line="47" column="5" selection-start-line="41" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
+                  <folding>
+                    <element signature="e#0#50#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="module-angular-s-of-formation.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-of-formation.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="196">
+                  <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+                  <folding>
+                    <element signature="e#150#156#1" expanded="true" />
+                    <element signature="e#368#372#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="module-angular-s.component.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.html">
+      <file leaf-file-name="module-angular-s-detail.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-detail.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="467">
-              <caret line="77" column="60" lean-forward="true" selection-start-line="77" selection-start-column="60" selection-end-line="77" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="video-projecteur-angular-s.model.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/video-projecteur-angular-s/video-projecteur-angular-s.model.ts">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="module-angular-s.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="76" column="17" lean-forward="true" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+            <state relative-caret-position="589">
+              <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
               <folding>
                 <element signature="e#0#61#0" expanded="true" />
               </folding>
@@ -43,8 +184,8 @@
       <file leaf-file-name="module-angular-s.model.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.model.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+            <state relative-caret-position="401">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
               </folding>
@@ -52,7 +193,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="module-angular-s.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="26" column="49" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
+>>>>>>> master
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -63,18 +217,48 @@
         <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ordinateur.json" />
         <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/matiere-angular-s/matiere-angular-s.component.html" />
         <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/matiere-angular-s/matiere-angular-s-dialog.component.html" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/formation.json" />
         <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/matiere.json" />
         <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ressource.json" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ordinateur.json" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.route.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.module.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.module.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.route.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s-detail.component.html" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-of-formation.component.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-of-formation.component.html" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.component.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.route.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.component.html" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.html" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.service.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.service.ts" />
+=======
         <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/salle.json" />
+=======
+>>>>>>> master
         <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.component.html" />
         <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/formateur-angular-s/formateur-angular-s.component.html" />
         <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/formateur-angular-s/formateur-angular-s-detail.component.html" />
         <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/matiere-angular-s/matiere-angular-s-detail.component.html" />
-        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-dialog.component.html" />
-        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.ts" />
         <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.model.ts" />
         <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.html" />
+<<<<<<< HEAD
+>>>>>>> master
+=======
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-dialog.component.html" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-detail.component.html" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/matiere.json" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/formation.json" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ressource.json" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/salle.json" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.ts" />
+        <option value="$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-detail.component.ts" />
+>>>>>>> master
       </list>
     </option>
   </component>
@@ -136,6 +320,7 @@
               <item name="factory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -166,6 +351,9 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="factory" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -182,7 +370,10 @@
               <item name="factory" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+=======
+>>>>>>> master
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
             <path>
               <item name="git_Factory" type="b2602c69:ProjectViewProjectNode" />
@@ -212,7 +403,7 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
-              <item name="matiere-angular-s" type="462c0819:PsiDirectoryNode" />
+              <item name="formateur-angular-s" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="git_Factory" type="b2602c69:ProjectViewProjectNode" />
@@ -223,7 +414,11 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="formation-angular-s" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="module-angular-s" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
             <path>
               <item name="git_Factory" type="b2602c69:ProjectViewProjectNode" />
@@ -232,9 +427,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="module-angular-s" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="salle-angular-s" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
             <path>
               <item name="git_Factory" type="b2602c69:ProjectViewProjectNode" />
@@ -245,7 +445,14 @@
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="entities" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
+              <item name="stagiaire-angular-s" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="video-projecteur-angular-s" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
+=======
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+>>>>>>> master
             </path>
           </expand>
           <select />
@@ -289,20 +496,44 @@
       <updated>1529397079763</updated>
       <workItem from="1529397083977" duration="1431000" />
       <workItem from="1529399197445" duration="2753000" />
+<<<<<<< HEAD
+      <workItem from="1529482316405" duration="11544000" />
+=======
       <workItem from="1529418574391" duration="2501000" />
       <workItem from="1529482204803" duration="7620000" />
+>>>>>>> master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="15728000" />
+=======
     <option name="totallyTimeSpent" value="14305000" />
+>>>>>>> master
+=======
+    <option name="totallyTimeSpent" value="22514000" />
+>>>>>>> master
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="TypeScript" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26614583" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32912722" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32912722" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+=======
       <window_info anchor="bottom" id="TypeScript" order="11" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.310625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29875" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
@@ -310,16 +541,51 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="9" />
+>>>>>>> master
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.310625" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TypeScript" order="11" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+<<<<<<< HEAD
+=======
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+>>>>>>> master
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32912722" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24791667" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TypeScript" order="8" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32912722" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -356,22 +622,61 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/stagiaire.json">
+=======
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/utilisateur.json">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/technicien.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/utilisateur.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ressource.json">
+=======
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/stagiaire.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/salle.json">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ordinateur.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/matiere-angular-s/matiere-angular-s.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/matiere-angular-s/matiere-angular-s.model.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/matiere-angular-s/matiere-angular-s.route.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/matiere-angular-s/matiere-angular-s.service.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/matiere-angular-s/matiere-angular-s.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+=======
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/technicien-angular-s/technicien-angular-s.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -386,12 +691,15 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formateur-angular-s/formateur-angular-s.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="45" column="50" selection-start-line="45" selection-start-column="50" selection-end-line="45" selection-end-column="50" />
         </state>
       </provider>
+>>>>>>> master
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/matiere-angular-s/matiere-angular-s.module.ts">
       <provider selected="true" editor-type-id="text-editor">
@@ -426,6 +734,9 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/formateur.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -439,6 +750,7 @@
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/gestionnaire.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/matiere.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -446,48 +758,13 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/home.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/module.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/niveau.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ordinateur.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ressource.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/salle.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/stagiaire.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/technicien.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/utilisateur.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.component.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -543,13 +820,6 @@
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-delete-dialog.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-dialog.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="80" column="24" lean-forward="true" selection-start-line="80" selection-start-column="24" selection-end-line="80" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/java/com/factory/service/ModuleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-42" />
@@ -582,11 +852,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-245">
-          <folding>
-            <element signature="e#0#65#0" expanded="true" />
-          </folding>
-        </state>
+        <state relative-caret-position="-245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/salle-angular-s/salle-angular-s.model.ts">
@@ -599,19 +865,116 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="35" column="23" lean-forward="true" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#61#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/video-projecteur-angular-s/video-projecteur-angular-s.model.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/matiere.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="66" lean-forward="true" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/formateur.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/formation.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/videoProjecteur.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/utilisateur.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/technicien.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/stagiaire.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/salle.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ressource.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="57" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/processeur.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/gestionnaire.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/niveau.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/i18n/fr/ordinateur.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-dialog.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1045">
+          <caret line="88" column="156" selection-start-line="88" selection-start-column="156" selection-end-line="88" selection-end-column="156" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="37" column="12" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-dialog.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-487">
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="1" lean-forward="true" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+        <state relative-caret-position="401">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
@@ -620,8 +983,235 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="76" column="17" lean-forward="true" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+        <state relative-caret-position="265">
+          <caret line="26" column="49" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-detail.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="82" column="31" selection-start-line="82" selection-start-column="31" selection-end-line="82" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formateur-angular-s/formateur-angular-s.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s-module-edit.component.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.route.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="102" selection-start-line="6" selection-start-column="102" selection-end-line="6" selection-end-column="102" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="46" selection-start-line="33" selection-start-column="46" selection-end-line="33" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/target/www/app/main.bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="873" column="943" selection-start-line="873" selection-start-column="943" selection-end-line="873" selection-end-column="943" />
+          <folding>
+            <element signature="e#398#405#1" expanded="true" />
+            <element signature="e#247#254#1" expanded="true" />
+            <element signature="e#383#389#0" expanded="true" />
+            <element signature="e#471#477#0" expanded="true" />
+            <element signature="e#587#593#0" expanded="true" />
+            <element signature="e#680#686#0" expanded="true" />
+            <element signature="e#791#797#0" expanded="true" />
+            <element signature="e#883#889#0" expanded="true" />
+            <element signature="e#1009#1015#0" expanded="true" />
+            <element signature="e#1106#1112#0" expanded="true" />
+            <element signature="e#1219#1225#0" expanded="true" />
+            <element signature="e#1311#1317#0" expanded="true" />
+            <element signature="e#1342#1348#1" expanded="true" />
+            <element signature="e#1685#1691#0" expanded="true" />
+            <element signature="e#353#360#1" expanded="true" />
+            <element signature="e#785#791#1" expanded="true" />
+            <element signature="e#961#967#1" expanded="true" />
+            <element signature="e#1791#1797#1" expanded="true" />
+            <element signature="e#425#432#1" expanded="true" />
+            <element signature="e#5418#5424#1" expanded="true" />
+            <element signature="e#5650#5656#1" expanded="true" />
+            <element signature="e#355#362#1" expanded="true" />
+            <element signature="e#797#803#1" expanded="true" />
+            <element signature="e#973#979#1" expanded="true" />
+            <element signature="e#1751#1757#1" expanded="true" />
+            <element signature="e#2081#2087#1" expanded="true" />
+            <element signature="e#440#447#1" expanded="true" />
+            <element signature="e#9021#9027#1" expanded="true" />
+            <element signature="e#9249#9255#1" expanded="true" />
+            <element signature="e#355#362#1" expanded="true" />
+            <element signature="e#797#803#1" expanded="true" />
+            <element signature="e#973#979#1" expanded="true" />
+            <element signature="e#1325#1331#1" expanded="true" />
+            <element signature="e#1655#1661#1" expanded="true" />
+            <element signature="e#440#447#1" expanded="true" />
+            <element signature="e#4177#4183#1" expanded="true" />
+            <element signature="e#4405#4411#1" expanded="true" />
+            <element signature="e#356#363#1" expanded="true" />
+            <element signature="e#801#807#1" expanded="true" />
+            <element signature="e#977#983#1" expanded="true" />
+            <element signature="e#1239#1245#1" expanded="true" />
+            <element signature="e#1571#1577#1" expanded="true" />
+            <element signature="e#443#450#1" expanded="true" />
+            <element signature="e#4976#4982#1" expanded="true" />
+            <element signature="e#5204#5210#1" expanded="true" />
+            <element signature="e#355#362#1" expanded="true" />
+            <element signature="e#797#803#1" expanded="true" />
+            <element signature="e#973#979#1" expanded="true" />
+            <element signature="e#611#617#1" expanded="true" />
+            <element signature="e#941#947#1" expanded="true" />
+            <element signature="e#440#447#1" expanded="true" />
+            <element signature="e#2411#2417#1" expanded="true" />
+            <element signature="e#2639#2645#1" expanded="true" />
+            <element signature="e#351#358#1" expanded="true" />
+            <element signature="e#781#787#1" expanded="true" />
+            <element signature="e#957#963#1" expanded="true" />
+            <element signature="e#697#703#1" expanded="true" />
+            <element signature="e#1019#1025#1" expanded="true" />
+            <element signature="e#428#435#1" expanded="true" />
+            <element signature="e#2672#2678#1" expanded="true" />
+            <element signature="e#2900#2906#1" expanded="true" />
+            <element signature="e#355#362#1" expanded="true" />
+            <element signature="e#797#803#1" expanded="true" />
+            <element signature="e#973#979#1" expanded="true" />
+            <element signature="e#2249#2255#1" expanded="true" />
+            <element signature="e#2579#2585#1" expanded="true" />
+            <element signature="e#440#447#1" expanded="true" />
+            <element signature="e#10052#10058#1" expanded="true" />
+            <element signature="e#10280#10286#1" expanded="true" />
+            <element signature="e#356#363#1" expanded="true" />
+            <element signature="e#801#807#1" expanded="true" />
+            <element signature="e#977#983#1" expanded="true" />
+            <element signature="e#1777#1783#1" expanded="true" />
+            <element signature="e#2109#2115#1" expanded="true" />
+            <element signature="e#443#450#1" expanded="true" />
+            <element signature="e#9048#9054#1" expanded="true" />
+            <element signature="e#9276#9282#1" expanded="true" />
+            <element signature="e#357#364#1" expanded="true" />
+            <element signature="e#805#811#1" expanded="true" />
+            <element signature="e#981#987#1" expanded="true" />
+            <element signature="e#1803#1809#1" expanded="true" />
+            <element signature="e#2137#2143#1" expanded="true" />
+            <element signature="e#446#453#1" expanded="true" />
+            <element signature="e#9075#9081#1" expanded="true" />
+            <element signature="e#9303#9309#1" expanded="true" />
+            <element signature="e#361#368#1" expanded="true" />
+            <element signature="e#822#828#1" expanded="true" />
+            <element signature="e#998#1004#1" expanded="true" />
+            <element signature="e#660#666#1" expanded="true" />
+            <element signature="e#1003#1009#1" expanded="true" />
+            <element signature="e#459#466#1" expanded="true" />
+            <element signature="e#2944#2950#1" expanded="true" />
+            <element signature="e#3172#3178#1" expanded="true" />
+            <element signature="e#6643#6665#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s-module-edit.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formateur-angular-s/formateur-angular-s.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="852">
+          <caret line="51" column="60" selection-start-line="51" selection-start-column="60" selection-end-line="51" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-of-formation.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.model.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.route.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-popup.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s-detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="e#1503#1509#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-of-formation.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="41" column="19" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding>
+            <element signature="e#150#156#1" expanded="true" />
+            <element signature="e#368#372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s-detail.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
           </folding>
@@ -630,9 +1220,109 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="77" column="60" lean-forward="true" selection-start-line="77" selection-start-column="60" selection-end-line="77" selection-end-column="60" />
+        <state>
+          <caret selection-end-line="98" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.route.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="98" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="57" column="88" selection-start-line="57" selection-start-column="88" selection-end-line="57" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="57" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="41" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="90" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s-of-formation.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="47" column="5" selection-start-line="41" selection-start-column="4" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/formation-angular-s/formation-angular-s.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="82" selection-start-line="9" selection-start-column="82" selection-end-line="9" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s-of-formation.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-289">
+          <caret line="16" column="81" selection-start-line="16" selection-start-column="81" selection-end-line="16" selection-end-column="81" />
+          <folding>
+            <element signature="e#0#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/module-angular-s/module-angular-s.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="42" column="49" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/webapp/app/entities/stagiaire-angular-s/stagiaire-angular-s.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="45" column="99" selection-start-line="45" selection-start-column="88" selection-end-line="45" selection-end-column="99" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/factory/src/main/java/com/factory/service/ModuleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-237" />
       </provider>
     </entry>
   </component>
