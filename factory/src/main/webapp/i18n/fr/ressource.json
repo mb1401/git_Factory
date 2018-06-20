@@ -4,7 +4,7 @@
         "ressource" : {
             "home": {
                 "title": "Ressources",
-                "createLabel": "Créer un nouveau Ressource",
+                "createLabel": "Créer une nouvelle Ressource",
                 "createOrEditLabel": "Créer ou éditer un Ressource"
             },
             "created": "Un nouveau Ressource a été créé avec l'identifiant {{ param }}",

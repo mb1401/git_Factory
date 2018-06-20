@@ -6,6 +6,10 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { ModuleAngularS } from './module-angular-s.model';
 import { ModuleAngularSService } from './module-angular-s.service';
 import { Principal } from '../../shared';
+import {FormateurAngularS, FormateurAngularSService} from '../formateur-angular-s';
+import {MatiereAngularS, MatiereAngularSService} from '../matiere-angular-s';
+import {SalleAngularSService} from '../salle-angular-s';
+import {VideoProjecteurAngularSService} from '../video-projecteur-angular-s';
 
 @Component({
     selector: 'jhi-module-angular-s',
@@ -18,20 +22,64 @@ modules: ModuleAngularS[];
 
     constructor(
         private moduleService: ModuleAngularSService,
+        private formateurService: FormateurAngularSService,
         private jhiAlertService: JhiAlertService,
         private eventManager: JhiEventManager,
-        private principal: Principal
+        private principal: Principal,
+        private matiereService: MatiereAngularSService,
+        private salleService: SalleAngularSService,
+        private videoProjecteurService: VideoProjecteurAngularSService
     ) {
     }
+    //
+    // loadFormateur (idModule): FormateurAngularS {
+    //     this.formateurService.find(idModule).subscribe(
+    //         (res: HttpResponse<FormateurAngularS>) => {
+    //             return  res.body;
+    //         },
+    //         (res: HttpErrorResponse) => this.onError(res.message)
+    //             return null;
+    //     );
+    // }
 
     loadAll() {
         this.moduleService.query().subscribe(
             (res: HttpResponse<ModuleAngularS[]>) => {
                 this.modules = res.body;
+                for (const m of this.modules) {
+                    this.formateurService.find(m.formateurId).subscribe(
+                        (resF: HttpResponse<FormateurAngularS>) => {
+                            m.formateur =  resF.body;
+                        },
+                        (resF: HttpErrorResponse) => this.onError(resF.message)
+                    );
+
+                    this.matiereService.find(m.matiereId).subscribe(
+                        (resM: HttpResponse<MatiereAngularS>) => {
+                            m.matiere =  resM.body;
+                        },
+                        (resM: HttpErrorResponse) => this.onError(resM.message)
+                    );
+
+                    this.salleService.find(m.salleId).subscribe(
+                        (resS: HttpResponse<MatiereAngularS>) => {
+                            m.salle =  resS.body;
+                        },
+                        (resS: HttpErrorResponse) => this.onError(resS.message)
+                    );
+                    this.videoProjecteurService.find(m.videoProjecteurId).subscribe(
+                        (resV: HttpResponse<MatiereAngularS>) => {
+                            m.videoProjecteur =  resV.body;
+                        },
+                        (resV: HttpErrorResponse) => this.onError(resV.message)
+                    );
+
+                }
             },
             (res: HttpErrorResponse) => this.onError(res.message)
         );
     }
+
     ngOnInit() {
         this.loadAll();
         this.principal.identity().then((account) => {
