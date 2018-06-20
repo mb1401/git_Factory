@@ -16,7 +16,7 @@
                 "salleAngularS": "Salle",
                 "formationAngularS": "Formation",
                 "moduleAngularS": "Module",
-                "utilisateurAngularS": "Utilisateur",
+
                 "technicienAngularS": "Technicien",
                 "gestionnaireAngularS": "Gestionnaire",
                 "stagiaireAngularS": "Stagiaire",
@@ -26,13 +26,13 @@
             },
             "gestion": {
                 "main": "Gestion",
-                "ressourceAngularS": "Ressources",
+                "ressourceAngularS": "Matériel",
                 "salleAngularS": "Salles",
                 "formationAngularS": "Formations",
-                "technicienAngularS": "Techniciens",
-                "gestionnaireAngularS": "Gestionnaires",
                 "formateurAngularS": "Formateurs",
-                "matiereAngularS": "Matieres"
+                "matiereAngularS": "Matieres",
+                "stagiaireAngularS": "Stagiaires",
+                "utilisateurAngularS": "Ressources humaines"
             },
             "account": {
                 "main": "Compte",

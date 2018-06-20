@@ -6,7 +6,6 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { RessourceAngularS } from './ressource-angular-s.model';
 import { RessourceAngularSService } from './ressource-angular-s.service';
 import { Principal } from '../../shared';
-
 @Component({
     selector: 'jhi-ressource-angular-s',
     templateUrl: './ressource-angular-s.component.html'

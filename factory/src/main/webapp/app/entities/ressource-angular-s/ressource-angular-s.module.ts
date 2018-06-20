@@ -12,9 +12,8 @@ import {
     RessourceAngularSDeletePopupComponent,
     RessourceAngularSDeleteDialogComponent,
     ressourceRoute,
-    ressourcePopupRoute,
+    ressourcePopupRoute
 } from './';
-
 const ENTITY_STATES = [
     ...ressourceRoute,
     ...ressourcePopupRoute,
@@ -31,7 +30,7 @@ const ENTITY_STATES = [
         RessourceAngularSDialogComponent,
         RessourceAngularSDeleteDialogComponent,
         RessourceAngularSPopupComponent,
-        RessourceAngularSDeletePopupComponent,
+        RessourceAngularSDeletePopupComponent
     ],
     entryComponents: [
         RessourceAngularSComponent,

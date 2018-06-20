@@ -12,9 +12,8 @@ import {
     OrdinateurAngularSDeletePopupComponent,
     OrdinateurAngularSDeleteDialogComponent,
     ordinateurRoute,
-    ordinateurPopupRoute,
+    ordinateurPopupRoute
 } from './';
-
 const ENTITY_STATES = [
     ...ordinateurRoute,
     ...ordinateurPopupRoute,
@@ -38,7 +37,7 @@ const ENTITY_STATES = [
         OrdinateurAngularSDialogComponent,
         OrdinateurAngularSPopupComponent,
         OrdinateurAngularSDeleteDialogComponent,
-        OrdinateurAngularSDeletePopupComponent,
+        OrdinateurAngularSDeletePopupComponent
     ],
     providers: [
         OrdinateurAngularSService,
