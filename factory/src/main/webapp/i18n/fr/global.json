@@ -32,7 +32,8 @@
                 "formateurAngularS": "Formateurs",
                 "matiereAngularS": "Matieres",
                 "stagiaireAngularS": "Stagiaires",
-                "utilisateurAngularS": "Ressources humaines"
+                "utilisateurAngularS": "Ressources humaines",
+                "calendrierAngularS": "Calendrier"
             },
             "account": {
                 "main": "Compte",
