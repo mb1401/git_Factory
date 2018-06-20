@@ -6,7 +6,7 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { ModuleAngularS } from './module-angular-s.model';
 import { ModuleAngularSService } from './module-angular-s.service';
 import { Principal } from '../../shared';
-import {FormateurAngularS, FormateurAngularSService} from "../formateur-angular-s";
+import {FormateurAngularS, FormateurAngularSService} from '../formateur-angular-s';
 
 @Component({
     selector: 'jhi-module-angular-s',
