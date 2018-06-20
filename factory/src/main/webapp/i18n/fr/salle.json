@@ -5,7 +5,7 @@
             "home": {
                 "title": "Salles",
                 "createLabel": "Créer une nouvelle Salle",
-                "createOrEditLabel": "Créer ou éditer un Salle"
+                "createOrEditLabel": "Créer ou éditer une Salle"
             },
             "created": "Un nouveau Salle a été créé avec l'identifiant {{ param }}",
             "updated": "Le Salle avec l'identifiant {{ param }} a été mis à jour",
