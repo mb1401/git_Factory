@@ -54,18 +54,21 @@
                     </div>
                 </td>
                 <td>
-                    <div *ngIf="module.matiereId">
-                        <a [routerLink]="['../matiere-angular-s', module.matiereId  ]" >{{module.matiereId}}</a>
+                    <div *ngIf="module.matiere">
+                        <a [routerLink]="['../matiere-angular-s', module.matiereId  ]" >{{module.matiere.nom}}</a>
+                    </div>
+                    <!--<div *ngIf="module.matiereId">-->
+                        <!--<a [routerLink]="['../matiere-angular-s', module.matiereId  ]" >{{module.matiereId}}</a>-->
+                    <!--</div>-->
+                </td>
+                <td>
+                    <div *ngIf="module.salle">
+                        <a [routerLink]="['../salle-angular-s', module.salleId  ]" >{{module.salle.nom}}</a>
                     </div>
                 </td>
                 <td>
-                    <div *ngIf="module.salleId">
-                        <a [routerLink]="['../salle-angular-s', module.salleId  ]" >{{module.salleId}}</a>
-                    </div>
-                </td>
-                <td>
-                    <div *ngIf="module.videoProjecteurId">
-                        <a [routerLink]="['../video-projecteur-angular-s', module.videoProjecteurId  ]" >{{module.videoProjecteurId}}</a>
+                    <div *ngIf="module.videoProjecteur">
+                        <a [routerLink]="['../video-projecteur-angular-s', module.videoProjecteurId  ]" >{{module.videoProjecteur.code}}</a>
                     </div>
                 </td>
                 <td class="text-right">

@@ -12,9 +12,10 @@ import { Principal } from '../../shared';
     templateUrl: './technicien-angular-s.component.html'
 })
 export class TechnicienAngularSComponent implements OnInit, OnDestroy {
-techniciens: TechnicienAngularS[];
+    techniciens: TechnicienAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
+    private filtre= '';
 
     constructor(
         private technicienService: TechnicienAngularSService,
@@ -23,6 +24,14 @@ techniciens: TechnicienAngularS[];
         private principal: Principal
     ) {
     }
+    // filter
+    public filtrer() {
+        return this.techniciens.filter((c) =>
+            c.nom.toLowerCase().indexOf(this.filtre.toLowerCase()) !== -1 ||
+            c.prenom.toLowerCase().indexOf(this.filtre.toLowerCase()) !== -1
+        );
+    }
+    // filter
 
     loadAll() {
         this.technicienService.query().subscribe(
