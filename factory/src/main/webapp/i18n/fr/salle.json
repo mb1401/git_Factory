@@ -4,7 +4,7 @@
         "salle" : {
             "home": {
                 "title": "Salles",
-                "createLabel": "Créer un nouveau Salle",
+                "createLabel": "Créer une nouvelle Salle",
                 "createOrEditLabel": "Créer ou éditer un Salle"
             },
             "created": "Un nouveau Salle a été créé avec l'identifiant {{ param }}",

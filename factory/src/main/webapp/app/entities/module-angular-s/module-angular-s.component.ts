@@ -6,6 +6,7 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { ModuleAngularS } from './module-angular-s.model';
 import { ModuleAngularSService } from './module-angular-s.service';
 import { Principal } from '../../shared';
+import {FormateurAngularS, FormateurAngularSService} from "../formateur-angular-s";
 
 @Component({
     selector: 'jhi-module-angular-s',
@@ -18,16 +19,36 @@ modules: ModuleAngularS[];
 
     constructor(
         private moduleService: ModuleAngularSService,
+        private formateurService: FormateurAngularSService,
         private jhiAlertService: JhiAlertService,
         private eventManager: JhiEventManager,
         private principal: Principal
     ) {
     }
+    //
+    // loadFormateur (idModule): FormateurAngularS {
+    //     this.formateurService.find(idModule).subscribe(
+    //         (res: HttpResponse<FormateurAngularS>) => {
+    //             return  res.body;
+    //         },
+    //         (res: HttpErrorResponse) => this.onError(res.message)
+    //             return null;
+    //     );
+    // }
 
     loadAll() {
         this.moduleService.query().subscribe(
             (res: HttpResponse<ModuleAngularS[]>) => {
                 this.modules = res.body;
+                for (const m of this.modules) {
+                    this.formateurService.find(m.formateurId).subscribe(
+                        (resF: HttpResponse<FormateurAngularS>) => {
+                            m.formateur =  resF.body;
+                        },
+                        (resF: HttpErrorResponse) => this.onError(resF.message)
+                    );
+
+                }
             },
             (res: HttpErrorResponse) => this.onError(res.message)
         );
