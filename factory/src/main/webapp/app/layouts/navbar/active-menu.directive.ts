@@ -1,19 +1,20 @@
 import { Directive, OnInit, ElementRef, Renderer, Input} from '@angular/core';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
-
+import {ActivatedRoute} from '@angular/router';
 @Directive({
     selector: '[jhiActiveMenu]'
 })
 export class ActiveMenuDirective implements OnInit {
     @Input() jhiActiveMenu: string;
-
-    constructor(private el: ElementRef, private renderer: Renderer, private translateService: TranslateService) {}
+    private fragment: string;
+    constructor(private el: ElementRef, private renderer: Renderer, private translateService: TranslateService,private route: ActivatedRoute) {}
 
     ngOnInit() {
       this.translateService.onLangChange.subscribe((event: LangChangeEvent) => {
          this.updateActiveFlag(event.lang);
       });
       this.updateActiveFlag(this.translateService.currentLang);
+        this.route.fragment.subscribe(fragment => { this.fragment = fragment; });
     }
 
     updateActiveFlag(selectedLanguage) {
@@ -23,4 +24,13 @@ export class ActiveMenuDirective implements OnInit {
           this.renderer.setElementClass(this.el.nativeElement, 'active', false);
       }
     }
+    ngAfterViewInit(): void {
+        try {
+            document.querySelector('#' + this.fragment).scrollIntoView();
+        } catch (e) { }
+    }
 }
+
+
+
+

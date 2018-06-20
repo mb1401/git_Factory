@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
 import { Account, LoginModalService, Principal } from '../shared';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
     selector: 'jhi-home',
@@ -18,8 +19,17 @@ export class HomeComponent implements OnInit {
     constructor(
         private principal: Principal,
         private loginModalService: LoginModalService,
-        private eventManager: JhiEventManager
+        private eventManager: JhiEventManager, router: Router
     ) {
+        router.events.subscribe(s => {
+            if (s instanceof NavigationEnd) {
+                const tree = router.parseUrl(router.url);
+                if (tree.fragment) {
+                    const element = document.querySelector("#" + tree.fragment);
+                    if (element) { element.scrollIntoView(true); }
+                }
+            }
+        });
     }
 
     ngOnInit() {
