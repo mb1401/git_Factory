@@ -41,8 +41,10 @@
                 <td>{{module.dateDebut | date:'mediumDate'}}</td>
                 <td>{{module.dateFin | date:'mediumDate'}}</td>
                 <td>
-                    <div *ngIf="module.formationId">
-                        <a [routerLink]="['../formation-angular-s', module.formationId  ]" >{{module.formationId}}</a>
+                    <div *ngIf="module.formation">
+                        <!--<a [routerLink]="['../formation-angular-s', module.formationId  ]" >{{module.formationId}}</a>-->
+                    <!--</div> <div *ngIf="module.formation">-->
+                        <a [routerLink]="['../formation-angular-s', module.formationId  ]" >{{module.formation.description}}</a>
                     </div>
                 </td>
                 <td>

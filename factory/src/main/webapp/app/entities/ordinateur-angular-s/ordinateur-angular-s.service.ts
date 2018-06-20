@@ -6,7 +6,7 @@ import { SERVER_API_URL } from '../../app.constants';
 import { JhiDateUtils } from 'ng-jhipster';
 
 import { OrdinateurAngularS } from './ordinateur-angular-s.model';
-import { createRequestOption } from '../../shared';
+import { createRequestOption } from '../../shared/index';
 
 export type EntityResponseType = HttpResponse<OrdinateurAngularS>;
 

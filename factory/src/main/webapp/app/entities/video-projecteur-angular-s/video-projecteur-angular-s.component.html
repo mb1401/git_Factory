@@ -16,7 +16,7 @@
         <table class="table table-striped">
             <thead>
             <tr>
-            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <!--<th><span jhiTranslate="global.field.id">ID</span></th>-->
             <th><span jhiTranslate="factoryApp.videoProjecteur.code">Code</span></th>
             <th><span jhiTranslate="factoryApp.videoProjecteur.cout">Cout</span></th>
             <th></th>
@@ -24,7 +24,7 @@
             </thead>
             <tbody>
             <tr *ngFor="let videoProjecteur of videoProjecteurs ;trackBy: trackId">
-                <td><a [routerLink]="['../video-projecteur-angular-s', videoProjecteur.id ]">{{videoProjecteur.id}}</a></td>
+                <!--<td><a [routerLink]="['../video-projecteur-angular-s', videoProjecteur.id ]">{{videoProjecteur.id}}</a></td>-->
                 <td>{{videoProjecteur.code}}</td>
                 <td>{{videoProjecteur.cout}}</td>
                 <td class="text-right">

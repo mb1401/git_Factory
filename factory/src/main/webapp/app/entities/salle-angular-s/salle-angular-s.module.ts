@@ -1,5 +1,9 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './salle-angular-s.pipe';
+import { HttpModule } from '@angular/http';
 
 import { FactorySharedModule } from '../../shared';
 import {
@@ -22,10 +26,14 @@ const ENTITY_STATES = [
 
 @NgModule({
     imports: [
+        // BrowserModule,
+        // FormsModule,
+        // HttpModule,
         FactorySharedModule,
         RouterModule.forChild(ENTITY_STATES)
     ],
     declarations: [
+        FilterPipe,
         SalleAngularSComponent,
         SalleAngularSDetailComponent,
         SalleAngularSDialogComponent,
@@ -43,6 +51,9 @@ const ENTITY_STATES = [
     providers: [
         SalleAngularSService,
         SalleAngularSPopupService,
+    ],
+    exports: [
+        FilterPipe
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

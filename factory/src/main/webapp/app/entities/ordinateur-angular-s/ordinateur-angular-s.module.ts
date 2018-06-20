@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { FactorySharedModule } from '../../shared';
+import { FactorySharedModule } from '../../shared/index';
 import {
     OrdinateurAngularSService,
     OrdinateurAngularSPopupService,
@@ -13,7 +13,7 @@ import {
     OrdinateurAngularSDeleteDialogComponent,
     ordinateurRoute,
     ordinateurPopupRoute
-} from './';
+} from './index';
 const ENTITY_STATES = [
     ...ordinateurRoute,
     ...ordinateurPopupRoute,
@@ -43,6 +43,7 @@ const ENTITY_STATES = [
         OrdinateurAngularSService,
         OrdinateurAngularSPopupService,
     ],
-    schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    exports: [OrdinateurAngularSComponent]
 })
 export class FactoryOrdinateurAngularSModule {}

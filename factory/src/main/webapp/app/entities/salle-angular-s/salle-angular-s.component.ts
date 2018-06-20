@@ -15,6 +15,8 @@ export class SalleAngularSComponent implements OnInit, OnDestroy {
 salles: SalleAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
+    private filtre: any;
+    nom: any;
 
     constructor(
         private salleService: SalleAngularSService,
@@ -23,7 +25,6 @@ salles: SalleAngularS[];
         private principal: Principal
     ) {
     }
-
     loadAll() {
         this.salleService.query().subscribe(
             (res: HttpResponse<SalleAngularS[]>) => {
