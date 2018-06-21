@@ -43,91 +43,90 @@
                 </a>
             </li>
             <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
-            <li *jhiHasAnyAuthority="'ROLE_ADMIN'" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-                <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">
-                    <span>
-                        <i class="fa fa-th-list" aria-hidden="true"></i>
-                        <span jhiTranslate="global.menu.entities.main">
-                            Entities
-                        </span>
-                    </span>
-                </a>
-                <ul class="dropdown-menu" ngbDropdownMenu>
-                    <li>
-                        <a class="dropdown-item" routerLink="ressource-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.ressourceAngularS">Ressource Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="ordinateur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.ordinateurAngularS">Ordinateur Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="video-projecteur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.videoProjecteurAngularS">Video Projecteur Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="salle-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.salleAngularS">Salle Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="formation-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.formationAngularS">Formation Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="module-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.moduleAngularS">Module Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="utilisateur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.utilisateurAngularS">Utilisateur Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="technicien-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.technicienAngularS">Technicien Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="gestionnaire-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.gestionnaireAngularS">Gestionnaire Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="stagiaire-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.stagiaireAngularS">Stagiaire Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="formateur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.formateurAngularS">Formateur Angular S</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-item" routerLink="matiere-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-                            <i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>
-                            <span jhiTranslate="global.menu.entities.matiereAngularS">Matiere Angular S</span>
-                        </a>
-                    </li>
+            <!--<li *jhiHasAnyAuthority="'ROLE_ADMIN'" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">-->
+                <!--<a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="entity-menu">-->
+                    <!--<span>-->
+                        <!--<i class="fa fa-th-list" aria-hidden="true"></i>-->
+                        <!--<span jhiTranslate="global.menu.entities.main">-->
+                            <!--Entities-->
+                        <!--</span>-->
+                    <!--</span>-->
+                <!--</a>-->
+                <!--<ul class="dropdown-menu" ngbDropdownMenu>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="ressource-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.ressourceAngularS">Ressource Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="ordinateur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.ordinateurAngularS">Ordinateur Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="video-projecteur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.videoProjecteurAngularS">Video Projecteur Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="salle-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.salleAngularS">Salle Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="formation-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.formationAngularS">Formation Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="module-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.moduleAngularS">Module Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="utilisateur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.utilisateurAngularS">Utilisateur Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="technicien-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.technicienAngularS">Technicien Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="gestionnaire-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.gestionnaireAngularS">Gestionnaire Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="stagiaire-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.stagiaireAngularS">Stagiaire Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="formateur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.formateurAngularS">Formateur Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="dropdown-item" routerLink="matiere-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">-->
+                            <!--<i class="fa fa-fw fa-asterisk" aria-hidden="true"></i>-->
+                            <!--<span jhiTranslate="global.menu.entities.matiereAngularS">Matiere Angular S</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
                     <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
-                </ul>
-            </li>
+
 
             <!--menu pour gestion-->
             <li *jhiHasAnyAuthority="'ROLE_MANAGER'" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
@@ -161,13 +160,6 @@
                     </li>
 
                     <li>
-                        <a class="dropdown-item" routerLink="utilisateur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
-
-                            <span jhiTranslate="global.menu.gestion.utilisateurAngularS">Utilisateur Angular S</span>
-                        </a>
-                    </li>
-
-                    <li>
                         <a class="dropdown-item" routerLink="matiere-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
 
                             <span jhiTranslate="global.menu.gestion.matiereAngularS">Matiere Angular S</span>
@@ -185,10 +177,50 @@
                             <span jhiTranslate="global.menu.gestion.calendrierAngularS">Calendrier Angular S</span>
                         </a>
                     </li>
-
-                    <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                 </ul>
             </li>
+
+                    <li *jhiHasAnyAuthority="'ROLE_MANAGER'" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                        <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="ressources-humaines-menu">
+
+<span>
+
+
+
+                        <span jhiTranslate="global.menu.ressources-humaines.main">
+                            <i class="glyphicons-group" aria-hidden="true"></i>
+                            Ressources humaines
+                        </span>
+                    </span>
+                        </a>
+                        <ul class="dropdown-menu" ngbDropdownMenu>
+                           <li>
+                            <a class="dropdown-item" routerLink="technicien-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+
+                            <span jhiTranslate="global.menu.ressources-humaines.technicienAngularS">Technicien Angular S</span>
+                            </a>
+                            </li>
+                            <li>
+                            <a class="dropdown-item" routerLink="gestionnaire-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+
+                            <span jhiTranslate="global.menu.ressources-humaines.gestionnaireAngularS">Gestionnaire Angular S</span>
+                            </a>
+                            </li>
+
+                            <li>
+                            <a class="dropdown-item" routerLink="formateur-angular-s" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="collapseNavbar()">
+
+                            <span jhiTranslate="global.menu.ressources-humaines.formateurAngularS">Formateur Angular S</span>
+                            </a>
+                            </li>
+                        </ul>
+                    </li>
+
+
+
+                    <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
+
+
             <li *jhiHasAnyAuthority="'ROLE_ADMIN'" ngbDropdown class="nav-item dropdown pointer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
                 <a class="nav-link dropdown-toggle" ngbDropdownToggle href="javascript:void(0);" id="admin-menu">
                     <span>
