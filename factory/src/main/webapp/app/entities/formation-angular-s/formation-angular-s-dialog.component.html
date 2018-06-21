@@ -54,14 +54,14 @@
             <label class="form-control-label" jhiTranslate="factoryApp.formation.formateur" for="field_formateur">Formateur</label>
             <select class="form-control" id="field_formateur" name="formateur" [(ngModel)]="formation.formateurId" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="formateurOption.id" *ngFor="let formateurOption of formateurs; trackBy: trackFormateurById">{{formateurOption.id}}</option>
+                <option [ngValue]="formateurOption.id" *ngFor="let formateurOption of formateurs; trackBy: trackFormateurById">{{formateurOption.nom + " " + formateurOption.prenom }}</option>
             </select>
         </div>
         <div class="form-group">
             <label class="form-control-label" jhiTranslate="factoryApp.formation.gestionnaire" for="field_gestionnaire">Gestionnaire</label>
             <select class="form-control" id="field_gestionnaire" name="gestionnaire" [(ngModel)]="formation.gestionnaireId" >
                 <option [ngValue]="null"></option>
-                <option [ngValue]="gestionnaireOption.id" *ngFor="let gestionnaireOption of gestionnaires; trackBy: trackGestionnaireById">{{gestionnaireOption.id}}</option>
+                <option [ngValue]="gestionnaireOption.id" *ngFor="let gestionnaireOption of gestionnaires; trackBy: trackGestionnaireById">{{gestionnaireOption.nom + " " + gestionnaireOption.prenom}}</option>
             </select>
         </div>
     </div>

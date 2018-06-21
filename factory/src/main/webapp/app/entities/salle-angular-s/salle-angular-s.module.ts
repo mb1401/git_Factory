@@ -1,7 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { FilterPipe } from './salle-angular-s.pipe';
-import { CapFilterPipe } from './salle-angular-s.pipe';
 import { FactorySharedModule } from '../../shared';
 
 import {

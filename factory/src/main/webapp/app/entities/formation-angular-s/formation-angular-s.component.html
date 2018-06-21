@@ -41,13 +41,13 @@
                 <td>{{formation.dateFin | date:'mediumDate'}}</td>
                 <td>{{formation.description}}</td>
                 <td>
-                    <div *ngIf="formation.formateurId">
-                        <a [routerLink]="['../formateur-angular-s', formation.formateurId  ]" >{{formation.formateurId}}</a>
+                    <div *ngIf="formation.formateur">
+                        <a [routerLink]="['../formateur-angular-s', formation.formateurId  ]" >{{formation.formateur.nom + " " + formation.formateur.prenom}}</a>
                     </div>
                 </td>
                 <td>
-                    <div *ngIf="formation.gestionnaireId">
-                        <a [routerLink]="['../gestionnaire-angular-s', formation.gestionnaireId  ]" >{{formation.gestionnaireId}}</a>
+                    <div *ngIf="formation.gestionnaire">
+                        <a [routerLink]="['../gestionnaire-angular-s', formation.gestionnaireId  ]" >{{formation.gestionnaire.nom + " " + formation.gestionnaire.prenom}}</a>
                     </div>
                 </td>
                 <td>

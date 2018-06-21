@@ -17,7 +17,7 @@ import {FormationAngularS, FormationAngularSService} from '../formation-angular-
     templateUrl: './module-angular-s.component.html'
 })
 export class ModuleAngularSComponent implements OnInit, OnDestroy {
-modules: ModuleAngularS[];
+    modules: ModuleAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
 

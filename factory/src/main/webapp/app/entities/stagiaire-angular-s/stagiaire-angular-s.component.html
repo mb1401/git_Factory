@@ -27,17 +27,18 @@
             <th><span jhiTranslate="global.field.id">ID</span></th>
             <th><span jhiTranslate="factoryApp.stagiaire.nom">Nom</span></th>
             <th><span jhiTranslate="factoryApp.stagiaire.prenom">Prenom</span></th>
-            <th><span jhiTranslate="factoryApp.stagiaire.numeroRue">Numero Rue</span></th>
-            <th><span jhiTranslate="factoryApp.stagiaire.codePostal">Code Postal</span></th>
-            <th><span jhiTranslate="factoryApp.stagiaire.ville">Ville</span></th>
-            <th><span jhiTranslate="factoryApp.stagiaire.pays">Pays</span></th>
             <th><span jhiTranslate="factoryApp.stagiaire.mail">Mail</span></th>
             <th><span jhiTranslate="factoryApp.stagiaire.numeroTel">Numero Tel</span></th>
-            <th><span jhiTranslate="factoryApp.stagiaire.username">Username</span></th>
-            <th><span jhiTranslate="factoryApp.stagiaire.password">Password</span></th>
-            <th><span jhiTranslate="factoryApp.stagiaire.enable">Enable</span></th>
-            <th><span jhiTranslate="factoryApp.stagiaire.formation">Formation</span></th>
-            <th><span jhiTranslate="factoryApp.stagiaire.ordinateur">Ordinateur</span></th>
+                <th><span jhiTranslate="factoryApp.stagiaire.formation">Formation</span></th>
+                <th><span jhiTranslate="factoryApp.stagiaire.ordinateur">Ordinateur</span></th>
+            <th hidden><span jhiTranslate="factoryApp.stagiaire.username">Username</span></th>
+            <th hidden><span jhiTranslate="factoryApp.stagiaire.password">Password</span></th>
+            <th hidden><span jhiTranslate="factoryApp.stagiaire.enable">Enable</span></th>
+                <th><span hidden jhiTranslate="factoryApp.stagiaire.numeroRue">Numero Rue</span></th>
+                <th><span hidden jhiTranslate="factoryApp.stagiaire.codePostal">Code Postal</span></th>
+                <th><span hidden jhiTranslate="factoryApp.stagiaire.ville">Ville</span></th>
+                <th><span hidden jhiTranslate="factoryApp.stagiaire.pays">Pays</span></th>
+
             <th></th>
             </tr>
             </thead>
@@ -46,25 +47,26 @@
                 <td><a [routerLink]="['../stagiaire-angular-s', stagiaire.id ]">{{stagiaire.id}}</a></td>
                 <td>{{stagiaire.nom}}</td>
                 <td>{{stagiaire.prenom}}</td>
-                <td>{{stagiaire.numeroRue}}</td>
-                <td>{{stagiaire.codePostal}}</td>
-                <td>{{stagiaire.ville}}</td>
-                <td>{{stagiaire.pays}}</td>
                 <td>{{stagiaire.mail}}</td>
                 <td>{{stagiaire.numeroTel}}</td>
-                <td>{{stagiaire.username}}</td>
-                <td>{{stagiaire.password}}</td>
-                <td>{{stagiaire.enable}}</td>
                 <td>
-                    <div *ngIf="stagiaire.formationId">
-                        <a [routerLink]="['../formation-angular-s', stagiaire.formationId  ]" >{{stagiaire.formationId}}</a>
+                    <div *ngIf="stagiaire.formation">
+                        <a [routerLink]="['../formation-angular-s', stagiaire.formationId  ]" >{{stagiaire.formation.description}}</a>
                     </div>
                 </td>
                 <td>
-                    <div *ngIf="stagiaire.ordinateurId">
-                        <a [routerLink]="['../ordinateur-angular-s', stagiaire.ordinateurId  ]" >{{stagiaire.ordinateurId}}</a>
+                    <div *ngIf="stagiaire.ordinateur">
+                        <a [routerLink]="['../ordinateur-angular-s', stagiaire.ordinateurId  ]" >{{stagiaire.ordinateur.code}}</a>
                     </div>
                 </td>
+                <td hidden>{{stagiaire.numeroRue}}</td>
+                <td hidden>{{stagiaire.codePostal}}</td>
+                <td hidden>{{stagiaire.ville}}</td>
+                <td hidden>{{stagiaire.pays}}</td>
+                <td hidden>{{stagiaire.username}}</td>
+                <td hidden>{{stagiaire.password}}</td>
+                <td hidden>{{stagiaire.enable}}</td>
+
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

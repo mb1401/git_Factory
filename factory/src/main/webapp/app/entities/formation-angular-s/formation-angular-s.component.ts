@@ -8,6 +8,8 @@ import { FormationAngularSService } from './formation-angular-s.service';
 import { Principal } from '../../shared';
 import {ModuleAngularS, ModuleAngularSService} from '../module-angular-s';
 import {StagiaireAngularS, StagiaireAngularSService} from '../stagiaire-angular-s';
+import {FormateurAngularS, FormateurAngularSService} from "../formateur-angular-s";
+import {GestionnaireAngularS, GestionnaireAngularSService} from "../gestionnaire-angular-s";
 
 @Component({
     selector: 'jhi-formation-angular-s',
@@ -23,10 +25,12 @@ export class FormationAngularSComponent implements OnInit, OnDestroy {
 
     constructor(
         private formationService: FormationAngularSService,
+        private formateurService: FormateurAngularSService,
         private moduleService: ModuleAngularSService,
         private stagiaireService: StagiaireAngularSService,
         private jhiAlertService: JhiAlertService,
         private eventManager: JhiEventManager,
+        private gestionnaireService: GestionnaireAngularSService,
         private principal: Principal
     ) {
     }
@@ -54,12 +58,36 @@ export class FormationAngularSComponent implements OnInit, OnDestroy {
         }
     }
 
+    loadFormateur () {
+        for (const f of this.formations) {
+            this.formateurService.find(f.formateurId).subscribe(
+                (resF: HttpResponse<FormateurAngularS>) => {
+                    f.formateur =  resF.body;
+                },
+                (resF: HttpErrorResponse) => this.onError(resF.message)
+            );
+        }
+    }
+
+    loadGestionnaire() {
+        for (const f of this.formations) {
+            this.gestionnaireService.find(f.gestionnaireId).subscribe(
+                (resF: HttpResponse<GestionnaireAngularS>) => {
+                    f.gestionnaire =  resF.body;
+                },
+                (resF: HttpErrorResponse) => this.onError(resF.message)
+            );
+        }
+    }
+
     loadAll() {
         this.formationService.query().subscribe(
             (res: HttpResponse<FormationAngularS[]>) => {
                 this.formations = res.body;
                 this.loadModules();
                 this.loadStagiaire();
+                this.loadFormateur();
+                this.loadGestionnaire();
             },
             (res: HttpErrorResponse) => this.onError(res.message)
         );

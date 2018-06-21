@@ -50,14 +50,14 @@
         </dd>
         <dt><span jhiTranslate="factoryApp.stagiaire.formation">Formation</span></dt>
         <dd>
-            <div *ngIf="stagiaire.formationId">
-                <a [routerLink]="['/formation-angular-s', stagiaire.formationId]">{{stagiaire.formationId}}</a>
+            <div *ngIf="stagiaire.formation">
+                <a [routerLink]="['/formation-angular-s', stagiaire.formationId]">{{stagiaire.formation.description}}</a>
             </div>
         </dd>
         <dt><span jhiTranslate="factoryApp.stagiaire.ordinateur">Ordinateur</span></dt>
         <dd>
-            <div *ngIf="stagiaire.ordinateurId">
-                <a [routerLink]="['/ordinateur-angular-s', stagiaire.ordinateurId]">{{stagiaire.ordinateurId}}</a>
+            <div *ngIf="stagiaire.ordinateur">
+                <a [routerLink]="['/ordinateur-angular-s', stagiaire.ordinateurId]">{{stagiaire.ordinateur.code}}</a>
             </div>
         </dd>
     </dl>
