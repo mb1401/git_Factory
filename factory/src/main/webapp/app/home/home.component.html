@@ -1,4 +1,9 @@
 <a id="haut"></a>
+<div class="modal-header">
+    <h4 class="modal-title" jhiTranslate="login.title">Sign in</h4>
+    <button aria-label="Close" data-dismiss="modal" class="close" type="button" (click)="activeModal.dismiss('closed')"><span aria-hidden="true">x</span>
+    </button>
+</div>
 <div [ngSwitch]="isAuthenticated()">
     <div class="alert alert-success" *ngSwitchCase="true">
                 <span *ngIf="account" jhiTranslate="home.logged.message"
@@ -187,11 +192,7 @@
         </div>
         <!-- Add Google Maps -->
 
-        <div class="modal-header">
-            <h4 class="modal-title" jhiTranslate="login.title">Sign in</h4>
-            <button aria-label="Close" data-dismiss="modal" class="close" type="button" (click)="activeModal.dismiss('closed')"><span aria-hidden="true">x</span>
-            </button>
-       </div>
+
 
 
 

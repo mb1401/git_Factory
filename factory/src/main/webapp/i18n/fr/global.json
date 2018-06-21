@@ -35,6 +35,12 @@
                 "utilisateurAngularS": "Ressources humaines",
                 "calendrierAngularS": "Calendrier"
             },
+            "ressources-humaines": {
+                "main": "Ressources humaines",
+                "formateurAngularS": "Formateurs",
+                "gestionnaireAngularS":"Gestionnaires",
+                "technicienAngularS": "Technicien"
+            },
             "account": {
                 "main": "Compte",
                 "settings": "Profil",
