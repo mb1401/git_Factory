@@ -15,7 +15,7 @@ import { Router, NavigationEnd } from '@angular/router';
 export class HomeComponent implements OnInit {
     account: Account;
     modalRef: NgbModalRef;
-    
+
     constructor(
         private principal: Principal,
         private loginModalService: LoginModalService,
