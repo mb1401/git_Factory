@@ -8,6 +8,14 @@
             </span>
         </button>
     </h2>
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                <input type="text" class="form-control" name="filtre" placeholder="Type to search..." [(ngModel)]="filtre">
+            </div>
+        </div>
+    </form>
     <jhi-alert></jhi-alert>
     <div class="row">
     </div>
@@ -33,7 +41,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let formateur of formateurs ;trackBy: trackId">
+            <tr *ngFor="let formateur of filtrer() ;trackBy: trackId">
                 <td><a [routerLink]="['../formateur-angular-s', formateur.id ]">{{formateur.id}}</a></td>
                 <td>{{formateur.nom}}</td>
                 <td>{{formateur.prenom}}</td>

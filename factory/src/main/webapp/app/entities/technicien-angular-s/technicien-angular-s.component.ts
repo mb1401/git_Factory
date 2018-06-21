@@ -27,8 +27,7 @@ export class TechnicienAngularSComponent implements OnInit, OnDestroy {
     // filter
     public filtrer() {
         return this.techniciens.filter((c) =>
-            c.nom.toLowerCase().indexOf(this.filtre.toLowerCase()) !== -1 ||
-            c.prenom.toLowerCase().indexOf(this.filtre.toLowerCase()) !== -1
+            c.nom.toLowerCase().indexOf(this.filtre.toLowerCase()) !== -1
         );
     }
     // filter

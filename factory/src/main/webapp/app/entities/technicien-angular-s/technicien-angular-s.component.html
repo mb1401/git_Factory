@@ -10,14 +10,14 @@
     </h2>
 
 
-    <div class="input-group mb-2">
-        <div class="input-group-prepend">
-            <div class="input-group-text">Filter by Name</div>
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                <input type="text" class="form-control" name="filtre" placeholder="Type to search..." [(ngModel)]="filtre">
+            </div>
         </div>
-
-        <input type="text" class="form-control" [(ngModel)]="filtre" placeholder="Write name or first name ..."/>
-    </div>
-
+    </form>
 
     <jhi-alert></jhi-alert>
     <div class="row">

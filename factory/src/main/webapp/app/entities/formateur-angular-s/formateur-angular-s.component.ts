@@ -15,6 +15,7 @@ export class FormateurAngularSComponent implements OnInit, OnDestroy {
 formateurs: FormateurAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
+    private filtre= '';
 
     constructor(
         private formateurService: FormateurAngularSService,
@@ -22,6 +23,12 @@ formateurs: FormateurAngularS[];
         private eventManager: JhiEventManager,
         private principal: Principal
     ) {
+    }
+    // filter
+    public filtrer() {
+        return this.formateurs.filter((c) =>
+            c.nom.toLowerCase().indexOf(this.filtre.toLowerCase()) !== -1
+        );
     }
 
     loadAll() {

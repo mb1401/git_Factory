@@ -15,6 +15,7 @@ export class GestionnaireAngularSComponent implements OnInit, OnDestroy {
 gestionnaires: GestionnaireAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
+    private filtre= '';
 
     constructor(
         private gestionnaireService: GestionnaireAngularSService,
@@ -22,6 +23,11 @@ gestionnaires: GestionnaireAngularS[];
         private eventManager: JhiEventManager,
         private principal: Principal
     ) {
+    }
+    public filtrer() {
+        return this.gestionnaires.filter((c) =>
+            c.nom.toLowerCase().indexOf(this.filtre.toLowerCase()) !== -1
+        );
     }
 
     loadAll() {

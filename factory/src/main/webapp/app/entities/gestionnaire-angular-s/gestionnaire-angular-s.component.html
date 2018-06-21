@@ -8,6 +8,14 @@
             </span>
         </button>
     </h2>
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                <input type="text" class="form-control" name="filtre" placeholder="Type to search..." [(ngModel)]="filtre">
+            </div>
+        </div>
+    </form>
     <jhi-alert></jhi-alert>
     <div class="row">
     </div>
@@ -32,7 +40,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let gestionnaire of gestionnaires ;trackBy: trackId">
+            <tr *ngFor="let gestionnaire of filtrer() ;trackBy: trackId">
                 <td><a [routerLink]="['../gestionnaire-angular-s', gestionnaire.id ]">{{gestionnaire.id}}</a></td>
                 <td>{{gestionnaire.nom}}</td>
                 <td>{{gestionnaire.prenom}}</td>
