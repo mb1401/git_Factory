@@ -9,17 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-<<<<<<< HEAD
-    date = "2018-06-20T15:47:05+0200",
-    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_161 (Oracle Corporation)"
-=======
-<<<<<<< HEAD
-    date = "2018-06-20T10:50:49+0200",
-=======
-    date = "2018-06-20T10:02:42+0200",
->>>>>>> master
+    date = "2018-06-21T09:46:46+0200",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_171 (Oracle Corporation)"
->>>>>>> master
 )
 @Component
 public class VideoProjecteurMapperImpl implements VideoProjecteurMapper {

@@ -20,6 +20,9 @@ export class RessourceAngularSComponent implements OnInit, OnDestroy {
     materiels: any[];
     currentAccount: any;
     eventSubscriber: Subscription;
+    private filtre: any;
+    nom: any;
+    sliderValue = 20;
 
     constructor(
         private ordinateurService: OrdinateurAngularSService,

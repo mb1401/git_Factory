@@ -9,7 +9,14 @@
             </span>
         </button>
 
-
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                <input type="text" class="form-control" name="filtre" placeholder="Type to search..." [(ngModel)]="filtre">
+            </div>
+        </div>
+    </form>
 
     <jhi-alert></jhi-alert>
     <div class="row">
@@ -31,7 +38,7 @@
             </thead>
             <tbody>
 
-            <tr *ngFor="let ordinateur of ordinateurs ;trackBy: trackIdOrdinateur">
+            <tr *ngFor="let ordinateur of ordinateurs| filter : 'code' : filtre; let i = index  ;trackBy: trackIdOrdinateur">
                 <!--<td><a [routerLink]="['../ordinateur-angular-s', ordinateur.id ]">{{ordinateur.id}}</a></td>-->
                 <td>{{ordinateur.code}}</td>
                 <td>{{ordinateur.cout}}</td>
@@ -76,6 +83,14 @@
             Create new VideoProjecteur
             </span>
             </button>
+    <form>
+        <div class="form-group">
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+                <input type="text" class="form-control" name="filtre" placeholder="Type to search..." [(ngModel)]="filtre">
+            </div>
+        </div>
+    </form>
     <div class="table-responsive" *ngIf="'videoProjecteurs'">
         <table class="table table-striped">
             <thead>
@@ -88,7 +103,7 @@
             </thead>
             <tbody>
 
-            <tr *ngFor="let videoProjecteur of videoProjecteurs ;trackBy: trackIdVideoProjecteur">
+            <tr *ngFor="let videoProjecteur of videoProjecteurs | filter : 'code' : filtre; let i = index ;trackBy: trackIdVideoProjecteur">
                 <!--<td><a [routerLink]="['../videoProjecteur-angular-s', videoProjecteur.id ]">{{videoProjecteur.id}}</a></td>-->
                 <td>{{videoProjecteur.code}}</td>
                 <td>{{videoProjecteur.cout}}</td>

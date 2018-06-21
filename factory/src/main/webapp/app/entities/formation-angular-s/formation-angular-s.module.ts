@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FilterPipe } from './formation-angular-s.pipe';
 
 import { FactorySharedModule } from '../../shared';
 import {
@@ -14,6 +15,7 @@ import {
     formationRoute,
     formationPopupRoute,
 } from './';
+import {CapFilterPipe} from '../salle-angular-s/salle-angular-s.pipe';
 
 const ENTITY_STATES = [
     ...formationRoute,
@@ -26,6 +28,7 @@ const ENTITY_STATES = [
         RouterModule.forChild(ENTITY_STATES)
     ],
     declarations: [
+        FilterPipe,
         FormationAngularSComponent,
         FormationAngularSDetailComponent,
         FormationAngularSDialogComponent,
@@ -43,6 +46,9 @@ const ENTITY_STATES = [
     providers: [
         FormationAngularSService,
         FormationAngularSPopupService,
+    ],
+    exports: [
+        FilterPipe
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

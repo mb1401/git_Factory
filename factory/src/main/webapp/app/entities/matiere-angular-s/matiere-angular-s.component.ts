@@ -15,6 +15,9 @@ export class MatiereAngularSComponent implements OnInit, OnDestroy {
 matieres: MatiereAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
+    private filtre: any;
+    nom: any;
+    sliderValue = 20;
 
     constructor(
         private matiereService: MatiereAngularSService,

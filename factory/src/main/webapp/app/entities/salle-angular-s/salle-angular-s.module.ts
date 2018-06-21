@@ -28,7 +28,7 @@ const ENTITY_STATES = [
         RouterModule.forChild(ENTITY_STATES)
     ],
     declarations: [
-        // CapFilterPipe,
+        CapFilterPipe,
         FilterPipe,
         SalleAngularSComponent,
         SalleAngularSDetailComponent,
@@ -50,7 +50,7 @@ const ENTITY_STATES = [
     ],
     exports: [
         FilterPipe,
-        // CapFilterPipe
+        CapFilterPipe
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

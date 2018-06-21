@@ -1,5 +1,6 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FilterPipe } from './ressource-angular-s.pipe';
 
 import { FactorySharedModule } from '../../shared';
 import {
@@ -16,6 +17,7 @@ import {
 } from './';
 import {OrdinateurAngularSComponent} from '../ordinateur-angular-s';
 import {FactoryOrdinateurAngularSModule} from '../ordinateur-angular-s/ordinateur-angular-s.module';
+import {CapFilterPipe} from '../salle-angular-s/salle-angular-s.pipe';
 const ENTITY_STATES = [
     ...ressourceRoute,
     ...ressourcePopupRoute,
@@ -28,6 +30,7 @@ const ENTITY_STATES = [
         FactoryOrdinateurAngularSModule
     ],
     declarations: [
+        FilterPipe,
         RessourceAngularSComponent,
         RessourceAngularSDetailComponent,
         RessourceAngularSDialogComponent,
@@ -45,6 +48,9 @@ const ENTITY_STATES = [
     providers: [
         RessourceAngularSService,
         RessourceAngularSPopupService,
+    ],
+    exports: [
+        FilterPipe
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

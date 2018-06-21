@@ -15,6 +15,9 @@ export class StagiaireAngularSComponent implements OnInit, OnDestroy {
 stagiaires: StagiaireAngularS[];
     currentAccount: any;
     eventSubscriber: Subscription;
+    private filtre: any;
+    nom: any;
+    sliderValue = 20;
 
     constructor(
         private stagiaireService: StagiaireAngularSService,
