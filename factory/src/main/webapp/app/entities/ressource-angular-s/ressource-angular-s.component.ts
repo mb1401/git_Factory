@@ -17,7 +17,7 @@ import {VideoProjecteurAngularS} from '../video-projecteur-angular-s/video-proje
 export class RessourceAngularSComponent implements OnInit, OnDestroy {
     ordinateurs: OrdinateurAngularS[];
     videoProjecteurs: VideoProjecteurAngularS[];
-    materiels: any[];
+    ressources: any[];
     currentAccount: any;
     eventSubscriber: Subscription;
     private filtre: any;

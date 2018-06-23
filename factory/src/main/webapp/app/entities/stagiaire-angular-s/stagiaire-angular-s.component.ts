@@ -6,10 +6,10 @@ import { JhiEventManager, JhiAlertService } from 'ng-jhipster';
 import { StagiaireAngularS } from './stagiaire-angular-s.model';
 import { StagiaireAngularSService } from './stagiaire-angular-s.service';
 import { Principal } from '../../shared';
-import {FormationAngularS, FormationAngularSService} from "../formation-angular-s";
-import {FormateurAngularS} from "../formateur-angular-s";
-import {MatiereAngularS} from "../matiere-angular-s";
-import {OrdinateurAngularS, OrdinateurAngularSService} from "../ordinateur-angular-s";
+import {FormationAngularS, FormationAngularSService} from '../formation-angular-s';
+import {FormateurAngularS} from '../formateur-angular-s';
+import {MatiereAngularS} from '../matiere-angular-s';
+import {OrdinateurAngularS, OrdinateurAngularSService} from '../ordinateur-angular-s';
 
 @Component({
     selector: 'jhi-stagiaire-angular-s',
@@ -45,15 +45,12 @@ export class StagiaireAngularSComponent implements OnInit, OnDestroy {
                         (resM: HttpErrorResponse) => this.onError(resM.message)
                     );
 
-
                     this.formationService.find(s.formationId).subscribe(
                         (resF: HttpResponse<FormationAngularS>) => {
                             s.formation =  resF.body;
                         },
                         (resF: HttpErrorResponse) => this.onError(resF.message)
                     );
-
-
                 }
             },
             (res: HttpErrorResponse) => this.onError(res.message)

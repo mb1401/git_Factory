@@ -1,6 +1,6 @@
 import { BaseEntity } from './../../shared';
-import {OrdinateurAngularS} from "../ordinateur-angular-s";
-import {FormationAngularS} from "../formation-angular-s";
+import {OrdinateurAngularS} from '../ordinateur-angular-s';
+import {FormationAngularS} from '../formation-angular-s';
 
 export class StagiaireAngularS implements BaseEntity {
     constructor(

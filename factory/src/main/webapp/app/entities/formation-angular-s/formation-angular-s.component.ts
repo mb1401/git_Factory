@@ -8,8 +8,8 @@ import { FormationAngularSService } from './formation-angular-s.service';
 import { Principal } from '../../shared';
 import {ModuleAngularS, ModuleAngularSService} from '../module-angular-s';
 import {StagiaireAngularS, StagiaireAngularSService} from '../stagiaire-angular-s';
-import {FormateurAngularS, FormateurAngularSService} from "../formateur-angular-s";
-import {GestionnaireAngularS, GestionnaireAngularSService} from "../gestionnaire-angular-s";
+import {FormateurAngularS, FormateurAngularSService} from '../formateur-angular-s';
+import {GestionnaireAngularS, GestionnaireAngularSService} from '../gestionnaire-angular-s';
 
 @Component({
     selector: 'jhi-formation-angular-s',
@@ -58,7 +58,7 @@ export class FormationAngularSComponent implements OnInit, OnDestroy {
         }
     }
 
-    loadFormateur () {
+    loadFormateur() {
         for (const f of this.formations) {
             this.formateurService.find(f.formateurId).subscribe(
                 (resF: HttpResponse<FormateurAngularS>) => {

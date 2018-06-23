@@ -6,10 +6,10 @@ import {JhiAlertService, JhiEventManager} from 'ng-jhipster';
 
 import { StagiaireAngularS } from './stagiaire-angular-s.model';
 import { StagiaireAngularSService } from './stagiaire-angular-s.service';
-import {FormationAngularS, FormationAngularSService} from "../formation-angular-s";
-import {FormateurAngularS} from "../formateur-angular-s";
-import {MatiereAngularS} from "../matiere-angular-s";
-import {OrdinateurAngularS, OrdinateurAngularSService} from "../ordinateur-angular-s";
+import {FormationAngularS, FormationAngularSService} from '../formation-angular-s';
+import {FormateurAngularS} from '../formateur-angular-s';
+import {MatiereAngularS} from '../matiere-angular-s';
+import {OrdinateurAngularS, OrdinateurAngularSService} from '../ordinateur-angular-s';
 
 @Component({
     selector: 'jhi-stagiaire-angular-s-detail',

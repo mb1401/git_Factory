@@ -1,6 +1,6 @@
 import { BaseEntity } from './../../shared';
-import {FormateurAngularS} from "../formateur-angular-s";
-import {GestionnaireAngularS} from "../gestionnaire-angular-s";
+import {FormateurAngularS} from '../formateur-angular-s';
+import {GestionnaireAngularS} from '../gestionnaire-angular-s';
 
 export class FormationAngularS implements BaseEntity {
     constructor(

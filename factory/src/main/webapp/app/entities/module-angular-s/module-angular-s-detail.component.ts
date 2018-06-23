@@ -18,7 +18,7 @@ import {SalleAngularSService} from '../salle-angular-s';
 })
 export class ModuleAngularSDetailComponent implements OnInit, OnDestroy {
 
-    private  module: ModuleAngularS;
+    module: ModuleAngularS;
     private subscription: Subscription;
     private eventSubscriber: Subscription;
 
